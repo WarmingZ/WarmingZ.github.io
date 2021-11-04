@@ -13,7 +13,7 @@ instagram_username:  warmiddle
 linkedin_username:   ivan-soloviov-62403b193
 
 # Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+google_analytics:   UA-211989430-1 
 
 # Build settings
 markdown:           kramdown
