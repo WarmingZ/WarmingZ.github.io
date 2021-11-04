@@ -3,7 +3,7 @@ email:              vany.soloviov@gmail.com
 description:        A Blog Theme by Start Bootstrap
 author:             Soloviov Ivan
 baseurl:           
-url:               "https://soloviov.com"
+url:                
 
 # Social Profiles
 twitter_username:   
@@ -18,10 +18,7 @@ google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 # Build settings
 markdown:           kramdown
 paginate:           5
-#paginate_path:      "/posts/page:num/"
-
-timezone: Europe/Kiev
-permalink: /:year/:month/:day/:title.html
+paginate_path:      "/posts/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
