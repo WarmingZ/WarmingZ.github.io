@@ -1,0 +1,25 @@
+title:              Soloviov Blog
+email:              vany.soloviov@gmail.com
+description:        A Blog Theme by Start Bootstrap
+author:             Soloviov Ivan
+baseurl:           
+url:               
+
+# Social Profiles
+twitter_username:   
+github_username:    WarmingZ
+facebook_username:  
+instagram_username:  warmiddle
+linkedin_username:   ivan-soloviov-62403b193
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
