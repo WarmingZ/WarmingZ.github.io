@@ -18,7 +18,10 @@ google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 # Build settings
 markdown:           kramdown
 paginate:           5
-paginate_path:      "/posts/page:num/"
+#paginate_path:      "/posts/page:num/"
+
+timezone: Europe/Kiev
+permalink: /:year/:month/:day/:title.html
 plugins:
   - jekyll-feed
   - jekyll-paginate
