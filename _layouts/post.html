@@ -5,7 +5,8 @@ layout: default
 <!-- Page Header -->
 {% if page.background %}
 <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="/_layouts/social.css">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico?">
   {% else %}
   <header class="masthead">
     {% endif %}
@@ -18,11 +19,26 @@ layout: default
             {% if page.subtitle %}
             <h2 class="subheading">{{ page.subtitle }}</h2>
             {% endif %}
+            
             <span class="meta">Posted by
               <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
               on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
               content=page.content %}
             </span>
+            
+            <span>
+              
+            </span>
+            <br>
+            <div class="share-page" data-source="simplesharingbuttons.com">
+              
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.soloviov.fun%2F&quote=Soloviov%20Blog={{ site.url }}{{ page.url }}" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/img/social/Facebook.png" /></a></li>
+              <a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.soloviov.fun%2F&text=Soloviov%20Blog:%20https%3A%2F%2Fwww.soloviov.fun%2F={{ site.url }}{{ page.url }}" target="_blank" title="Tweet"><img alt="Tweet" src="/img/social/Twitter.png" /></a></li>
+             
+              <a href="http://www.reddit.com/submit?url=https%3A%2F%2Fwww.soloviov.fun%2F&title=Soloviov%20Blog={{ site.url }}{{ page.url }}" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="/img/social/Reddit.png" /></a></li>
+              <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.soloviov.fun%2F&title=Soloviov%20Blog&summary=A%20blog%20about%20technology%20and%20programming.&source=https%3A%2F%2Fwww.soloviov.fun%2F={{ site.url }}{{ page.url }}" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/img/social/LinkedIn.png" /></a></li>
+              <a href="mailto:?subject=Soloviov%20Blog&body=A%20blog%20about%20technology%20and%20programming.:%20https%3A%2F%2Fwww.soloviov.fun%2F={{ site.url }}{{ page.url }}" target="_blank" title="Send email"><img alt="Send email" src="/img/social/Email.png" /></a></li>
+            </div>
           </div>
         </div>
       </div>
@@ -32,13 +48,10 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-
+        
         {{ content }}
 
         <hr>
-
-        <div class="clearfix">
-
           {% if page.previous.url %}
           <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
               Post</span></a>

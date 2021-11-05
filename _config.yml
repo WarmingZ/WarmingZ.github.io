@@ -23,6 +23,12 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap 
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
 # Disqus Comments
 disqus:
   # Leave shortname blank to disable comments site-wide.
