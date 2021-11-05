@@ -3,7 +3,6 @@ layout: post
 title: "Second blog"
 subtitle: "First post"
 date: 2021-05-11 19:10:13 -0400
-background: ""
+background: "/img/AmAZUHZ.jpg"
 tags: hello
-
 ---
