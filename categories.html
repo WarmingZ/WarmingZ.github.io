@@ -2,8 +2,9 @@
 layout: page
 permalink: /categories/
 title: Categories
+description: Welcome to the categories page of my posts.
+background: "/img/AmAZUHZ.jpg"
 ---
-
 
 <div id="archives">
 {% for category in site.categories %}
@@ -12,11 +13,11 @@ title: Categories
     <div id="#{{ category_name | slugize }}"></div>
     <p></p>
 
-    <h3 class="category-head">{{ category_name }}</h3>
+    <h4 class="category-head">{{ category_name }}</h4>
     <a name="{{ category_name | slugize }}"></a>
     {% for post in site.categories[category_name] %}
     <article class="archive-item">
-      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
     </article>
     {% endfor %}
   </div>
