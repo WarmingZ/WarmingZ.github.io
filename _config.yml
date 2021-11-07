@@ -27,6 +27,8 @@ plugins:
   - jekyll-seo-tag
 permalink: /:categories/:title/
 
+gem 'jekyll-admin', group: :jekyll_plugins
+
 highlighter: rouge
 kramdown:
   input: GFM
