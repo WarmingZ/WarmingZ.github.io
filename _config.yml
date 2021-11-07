@@ -4,12 +4,13 @@ description:        A Blog Theme by Start Bootstrap
 author:             Soloviov Ivan
 baseurl:           
 url:               "https://www.soloviov.fun/"
+enforce_ssl: soloviov.fun
 
 # Social Profiles
 twitter_username:   
 github_username:    WarmingZ
-facebook_username:  
-instagram_username:  warmiddle
+facebook_username:  Soloviov.IA
+instagram_username:  warmiddle/
 linkedin_username:   ivan-soloviov-62403b193
 
 # Add your google-analytics ID here to activate google analytics
@@ -23,7 +24,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap 
-
+  - jekyll-seo-tag
 permalink: /:categories/:title/
 
 highlighter: rouge
