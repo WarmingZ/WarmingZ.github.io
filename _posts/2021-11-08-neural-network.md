@@ -5,10 +5,7 @@ subtitle: The most interesting sites with a neural network in my opinion.
 date: '2021-11-08 13:17:39'
 background: "/img/AmAZUHZ.jpg"
 categories: Tips Tech
-image:
-  path: /img/neuralNetwork.
-  height: 309 px 
-  width: 73 px
+og:image: "/img/neuralNetwork.jpeg"
 ---
 
 Hi, in this post I would like to share interesting sites with you. Some work with a neural network, and some are just cool😉.Consider this post as the top cool sites that vryatli once can be useful in real life, [**but if you like looking at cats, then why not**](https://thiscatdoesnotexist.com/)😏 (just refresh the page). In the end, I also wanted to talk a little about neural networks and what it is for a programmer.
