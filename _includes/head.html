@@ -6,7 +6,7 @@
   <meta property="og:image:secure_url" content="{{ site.url }}/{{ page.image }}" />
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:description" content="{{ page.subtitle }}" />
-
+  {% feed_meta%}
   <title>
     {% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}
     {% else %}{{ site.title | escape }}{% endif %}
