@@ -74,7 +74,7 @@ I cannot share with everyone this hype about piece intelligence. Since it seems 
 ***
 
 ### How artificial intelligence can help a programmer❓
-Understand, at this stage I cannot say that I am a professional programmer, so you should not rely on my words. I believe that artificial intelligence (now) cannot replace the programmer, but it can help emu in development. I formed this opinion after looking at the report of [Yegor Bugaenko](https://www.yegor256.com/) (this link leads to his blog).
+Understand, at this stage I cannot say that I am a professional programmer, so you should not rely on my words. I believe that artificial intelligence (now) cannot replace a programmer, but it can help him in development. I formed this opinion after looking at the report of [Yegor Bugaenko](https://www.yegor256.com/) (this link leads to his blog).
 For me as a programmer, it would really be cool if artificial intelligence could help me do unit tests and validate my code, give me advice or something like that.
 Of course, he will analyze millions of lines of code and give me recommendations based on this. How does google or youtube give me recommendations based on my preferences. Even if he could decompose the problem for me, it would greatly simplify development and save time.
 
