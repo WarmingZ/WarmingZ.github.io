@@ -50,10 +50,10 @@ layout: default
             <br>
             <div class="share-page" data-source="simplesharingbuttons.com">
               
-              <a href="http://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/img/social/Facebook.png" /></a></li>
+              <a href="http://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl}}{{ page.url }}&title={{ page.title }}&summary={{ page.description }}" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/img/social/Facebook.png" /></a></li>
               <a href="https://twitter.com/share?url={{ site.url }}{{ page.url }}&amp;text={{ page.title | cgi_escape }}" target="_blank" title="Tweet"><img alt="Tweet" src="/img/social/Twitter.png" /></a></li>
               <a href="http://reddit.com/submit?url={{ site.url }}{{ page.url }}%3F{{ page.date | date: "%Y-%U" }}&amp;title={{ page.title | cgi_escape }}" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="/img/social/Reddit.png" /></a></li>
-              <a href="https://www.linkedin.com/cws/share?url={{ site.url }}{{ page.url }}" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/img/social/LinkedIn.png" /></a></li>
+              <a href="https://www.linkedin.com/cws/share?url={{ site.url }}{{ site.baseurl}}{{ page.url }}" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/img/social/LinkedIn.png" /></a></li>
               <a href="mailto:?subject=Soloviov%20Blog&body=A%20blog%20about%20technology%20and%20programming.:%20https%3A%2F%2Fwww.soloviov.fun%2F={{ site.url }}{{ page.url }}" target="_blank" title="Send email"><img alt="Send email" src="/img/social/Email.png" /></a></li>
             </div>
           </div>
