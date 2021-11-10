@@ -1,12 +1,13 @@
 ---
 title: First post
+lang: en
+lang-ref: first-post
 layout: post
 subtitle: This is the first post on my new blog and the desire to say hello
 date: '2021-11-07 17:04:39'
 background: "/img/AmAZUHZ.jpg"
 categories: Personal
 ---
-
 This is the first post on my new blog and the desire to say hello 👋
 
 Therefore, there is nothing specific here. I want to describe a bit of the possibilities of my blog.
