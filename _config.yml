@@ -15,7 +15,7 @@ linkedin_username:   ivan-soloviov-62403b193
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-211989430-1 
-lang: en
+
 # Build settings
 markdown:           kramdown
 paginate:           5
