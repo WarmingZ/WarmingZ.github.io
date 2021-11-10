@@ -5,6 +5,7 @@ subtitle: This is the first post on my new blog and the desire to say hello
 date: '2021-11-07 17:04:39'
 background: "/img/AmAZUHZ.jpg"
 categories: Personal
+comments: true
 ---
 This is the first post on my new blog and the desire to say hello 👋
 
