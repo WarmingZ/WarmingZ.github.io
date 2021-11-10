@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Start Bootstrap"]
   spec.email         = ["feedback@startbootstrap.com"]
 
-  spec.summary       = "A simple blog theme based on Bootstrap 4 by Start Bootstrap."
+  spec.summary       = ""
   spec.homepage      = "https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll"
   spec.license       = "MIT"
 

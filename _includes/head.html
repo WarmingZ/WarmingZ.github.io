@@ -14,6 +14,11 @@
   </title>
   {% seo %}
 
+   <!-- 404 page -->
+{% if page.url == "/404.html" %}
+<meta http-equiv="refresh" content="5; url=/">
+{% endif %}
+<!-- 404 page -->
 
   <meta name="description" content="{{ page.excerpt | default: site.subtitle | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
