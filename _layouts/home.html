@@ -52,6 +52,17 @@ layout: default
             on
             {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
           </p>
+             <p class="post-meta" style="margin-top: -20px;">Categories:
+                {% if post %}
+                  {% assign categories = post.categories %}
+                {% else %}
+                  {% assign categories = page.categories %}
+                {% endif %}
+                {% for category in categories %}
+                <a href="{{site.baseurl}}/categories/#{{category|slugize}}" class="link" style="background: url(/img/posts/tag16.png) no-repeat 0 5px; padding-left: 18px;">{{category}}</a>
+                {% unless forloop.last %}&nbsp;{% endunless %}
+                {% endfor %}
+          </p>
         </article>
 
         <hr>

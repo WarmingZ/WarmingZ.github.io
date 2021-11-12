@@ -35,16 +35,12 @@ layout: default
                   {% assign categories = page.categories %}
                 {% endif %}
                 {% for category in categories %}
-                <a href="{{site.baseurl}}/categories/#{{category|slugize}}" class="link">{{category}}</a>
+                <a href="{{site.baseurl}}/categories/#{{category|slugize}}" class="link" style="background: url(/img/posts/tag16.png) no-repeat 0 5px; padding-left: 18px;">{{category}}</a>
                 {% unless forloop.last %}&nbsp;{% endunless %}
                 {% endfor %}
               </div>
-              <style>
-                A.link {
-                  background: url(/img/posts/tag16.png) no-repeat 0 5px;
-                  padding-left: 18px;
-                }
-              </style>
+              
+              
               </span>
 
             <br>
