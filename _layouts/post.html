@@ -47,11 +47,11 @@ layout: default
                 {% assign posts=site.posts | where:"lang", page.lang %}
                 {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
                 {% for post in posts %} 
-                <a href="{{ post.url }}" class="{{ post.lang }}"style="background: url(/img/posts/en.png) no-repeat 0 5px; padding-left: 18px;">{{ post.lang }}</a>
+                <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
                 {% endfor %}
                 {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
                 {% for page in pages %}
-                <a href="{{ page.url }}" class="{{ page.lang }}"style="background: url(/img/posts/ua.png) no-repeat 0 5px; padding-left: 18px;">{{ page.lang }}</a>
+                <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
                 {% endfor %}
               </div>
             <br>
