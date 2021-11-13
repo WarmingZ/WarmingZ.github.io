@@ -4,7 +4,7 @@ description:        This is my blog on IT theme and more.
 author:             Soloviov Ivan
 baseurl:           
 url:               "https://www.soloviov.fun/"
-enforce_ssl: soloviov.fun
+enforce_ssl: www.soloviov.fun
 
 # Social Profiles
 twitter_username:   
