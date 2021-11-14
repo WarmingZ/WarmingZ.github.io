@@ -7,12 +7,13 @@
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:description" content="{{ page.subtitle }}" />
   <meta name="google-site-verification" content="Jg09gh6y7saQNmeZ_pkwBrbmNHdTt-Yas-dnzbE0Hx8" />
-  {% feed_meta%}
+  {% feed_meta %}
   <title>
     {% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}
     {% else %}{{ site.title | escape }}{% endif %}
   </title>
   {% seo %}
+  
   <meta name="description" content="{{ page.excerpt | default: site.subtitle | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>

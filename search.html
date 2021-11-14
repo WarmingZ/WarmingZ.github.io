@@ -1,0 +1,47 @@
+---
+layout: page
+permalink: /search/
+title:   Search🔍
+description: Look for posts on my site!
+background: "/img/AmAZUHZ.jpg"
+---
+
+<!-- Html Elements for Search -->
+<div id="search-container">
+    <form>
+        <input type="text" id="search-input" placeholder="Search..." style="text-align: center; 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;">
+
+        <ul id="results-container" style="list-style-type: none;">
+            
+        </ul>
+    </form>
+    <style>
+        input {
+            border-radius: 42px;
+            border: 2px solid #324b4e;
+            outline: none;
+            position: relative;
+            transition: .3s linear;
+        }
+    </style>
+</div>
+
+<!-- Script pointing to search-script.js -->
+<script src="/js/search-script.js" type="text/javascript"></script>
+
+<!-- Configuration -->
+<script>
+    SimpleJekyllSearch({
+
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        noResultsText: '<li><p>Nothing found😔<a href="//www.google.com/">Try search in google!</a></p></li>',
+        json: '/search.json',
+        searchResultTemplate: '<div><a href="{url}"><h4>{title}</h4></a><span>{subtitle}</span></div>',
+    })
+</script>
+  </div>

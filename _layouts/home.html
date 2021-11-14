@@ -19,22 +19,24 @@ layout: default
             <span class="subheading">{{ site.description }}</span>
             {% endif %}
           </div>
+          
         </div>
       </div>
+      
     </div>
+    
     {% seo %}
   </header>
 
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-
+        
         {{ content }}
 
+      
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}
-        
-
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h2 class="post-title">{{ post.title }}</h2>
@@ -65,7 +67,6 @@ layout: default
                 {% endfor %}
           </p>
         </article>
-
         <hr>
 
         {% endfor %}
