@@ -7,7 +7,8 @@ background: "/img/AmAZUHZ.jpg"
 categories: Personal
 comments: true
 Language: "Доступний авторський переклад:  "
-
+lang: ua
+lang-ref: first-post
 ---
 Це перший пост у моєму новому блозі і бажання привітатися 👋
 

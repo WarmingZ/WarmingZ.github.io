@@ -36,7 +36,8 @@ layout: default
 
       
         <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
+        {% assign sorted-posts = site.posts | where: "lang", "en" %}
+        {% for post in sorted-posts limit: 5 %}
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h2 class="post-title">{{ post.title }}</h2>
@@ -70,6 +71,7 @@ layout: default
         <hr>
 
         {% endfor %}
+     
 
         <!-- Pager -->
         <div class="clearfix">
