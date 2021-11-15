@@ -5,9 +5,10 @@
     {% endif %}
     {% if posts.size > 1 %}
      <span class="meta">
-        <em> {{ site.data.translations['differentLanguage'][page.lang] }}: </em>
+        <em> {{ site.data.translations['differentLanguage'][page.lang] }} </em> 
+        <br>
         {% for post in posts %}
-        <a title="{{ site.data.translations['viewIn'][page.lang] }} {{ site.data.languages[post.lang].label }}" class="{{post.lang}}" href="{{ site.base-url }}{{ post.url }}">{{ site.data.languages[post.lang].icon }} {{ site.data.languages[post.lang].label }}</a>
+        <a title="{{ site.data.translations['viewIn'][page.lang] }} {{ site.data.languages[post.lang].label }}" class="{{post.lang}}" href="{{ site.base-url }}{{ post.url }}">{{ site.data.languages[post.lang].icon }}   {{ site.data.languages[post.lang].label }}</a>
         {% endfor %}
      </span>
     {% endif %}
