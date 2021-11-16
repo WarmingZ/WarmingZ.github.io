@@ -9,10 +9,7 @@ og:description: Recommendations help a person to find content of interest to him
 lang: en
 lang-ref: recommendation
 ---
-YouTube has said it takes its responsibility for supporting diverse opinions seriously, 
- <img src="/img/posts/YouTube.png" alt="YouTube" style="width: 100px; height: auto;margin-left: 25px; margin-right: 60px; float:right;">
-while reducing the spread of "harmful misinformation". 
-"More than 70% of the time you spend watching a huge Google video hosting site is attracted to one of the service's recommendations based on artificial intelligence", said YouTube Chief Product Officer Neal Mohan. 
+YouTube has said it takes its responsibility for supporting diverse opinions seriously, while reducing the spread of "harmful misinformation". "More than 70% of the time you spend watching a huge Google video hosting site is attracted to one of the service's recommendations based on artificial intelligence", said YouTube Chief Product Officer Neal Mohan. 
 
 
 <img src="/img/posts/recommendation.jpg" alt="Network" class="responsive" style="width: 100%; height: auto;">
