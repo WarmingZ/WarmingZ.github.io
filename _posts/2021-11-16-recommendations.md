@@ -5,6 +5,7 @@ subtitle: Recommendations help a person to find content of interest to him, or m
 date: '2021-11-16 22:10:39'
 background: "/img/AmAZUHZ.jpg"
 categories: Personal Translated
+og:image: "/img/posts/recommendation.jpg"
 og:description: Recommendations help a person to find content of interest to him, or make him ignorant?
 lang: en
 lang-ref: recommendation
