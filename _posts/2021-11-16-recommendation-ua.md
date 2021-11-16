@@ -5,6 +5,7 @@ subtitle: Рекомендації допомагають людині знай�
 date: '2021-11-16 22:10:39'
 background: "/img/AmAZUHZ.jpg"
 categories: Personal Translated
+og:image: "/img/posts/recommendation.jpg"
 og:description: Рекомендації допомагають людині знайти цікавий їй контент, чи роблять з неї невігласа?
 lang: ua
 lang-ref: recommendation
