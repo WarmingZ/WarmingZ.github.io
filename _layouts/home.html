@@ -66,6 +66,8 @@ layout: default
                 <a href="{{site.baseurl}}/categories/#{{category|slugize}}" class="link" style="background: url(/img/posts/tag16.png) no-repeat 0 5px; padding-left: 18px;">{{category}}</a>
                 {% unless forloop.last %}&nbsp;{% endunless %}
                 {% endfor %}
+                {{ post.excerpt }}
+               <h5><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }} " style="text-decoration:underline;"  >Continue...</a></h5> 
           </p>
         </article>
         <hr>
