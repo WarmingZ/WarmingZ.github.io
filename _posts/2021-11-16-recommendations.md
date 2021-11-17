@@ -45,10 +45,10 @@ Have the algorithms of recommendations changed the political system of states? -
 <small>©House of Cards 2013</small>
 
 ***
-Also, movies and TV series always help, giving people the appropriate patterns of behavior in different situations. "We are for everything good and against everything bad!" - such models of behavior are shown in movies, and determine where is bad and where is good. Of course, no one intended to impose anything on us, but unfortunately we always perceive the actions of the protagonist as a pattern of behavior that we use in life (who are we if not robots? 😂). But of course there are exceptions, such as "Rescue Private Ryan" and many other films that promote the war for their country and the undeniable rightness of the American military. Although this does not negate the fact that the picture is really beautiful.
+Also, movies and TV series always help, giving people the appropriate patterns of behavior in different situations. "We are for everything good and against everything bad!" - such models of behavior are shown in movies, and determine where is bad and where is good. Of course, no one intended to impose anything on us, but unfortunately we always perceive the actions of the protagonist as a pattern of behavior that we use in life (who we are if not robots? 😂). But of course there are exceptions, such as "Rescue Private Ryan" and many other films that promote the war for their country and the undeniable rightness of the American military. Although this does not negate the fact that the picture is really beautiful.
 
 <img src="/img/posts/Saving.jpg" alt="Saving" class="responsive" style="width: 100%; height: auto;">
 
 ***
 
-So the recommendations still help a person find the content that interests him, or make him ignorant? You decide! This post should not be taken as truth in the last resort. I just wanted to  the hook reader, or even shock him, in order to make him think.
+So the recommendations still help a person find the content that interests him, or make him ignorant? You decide! This post should not be taken as truth in last resort. I just wanted to  the hook reader, or even shock him, in order to make him think.
