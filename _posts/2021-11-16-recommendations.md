@@ -13,7 +13,7 @@ lang-ref: recommendation
 YouTube has said it takes its responsibility for supporting diverse opinions seriously, while reducing the spread of "harmful misinformation". "More than 70% of the time you spend watching a huge Google video hosting site is attracted to one of the service's recommendations based on artificial intelligence", said YouTube Chief Product Officer Neal Mohan. 
 
 
-<img src="/img/posts/recommendation.jpg" alt="Network" class="responsive" style="width: 100%; height: auto;">
+<img src="/img/posts/Recommendations/recommendation.jpg" alt="Network" class="responsive" style="width: 100%; height: auto;">
 
 ***
 
@@ -25,7 +25,7 @@ But can YouTube really control the spread of "malicious misinformation" and guar
 This topic is more interesting to me from a philosophical point of view. After all, the algorithm of recommendations of the platform is based on your preferences. You may have noticed when the main service recommendations page displays content based on what you've viewed before. It seems to me that this helps us to stay with our thoughts, not listening to alternative opinions and statements. By the example of the American people, we can clearly demonstrate the intolerance of alternative and critical thinking.
 Black Lives Matter, racism, feminism and many other phenomena “on the lips” of the population. Is this a long-term upbringing of the young population by algorithms of recommendations? Did the recommendation algorithms help you to sit in your "paper house" without accepting alternative opinions? This is probably a question for philosophical science.
 
-<img src="/img/posts/PaperHouse.jpg" alt="Paperhous" class="responsive" style="width: 100%; height: auto;">
+<img src="/img/posts/Recommendations/PaperHouse.jpg" alt="Paperhous" class="responsive" style="width: 100%; height: auto;">
 <small>©Paperhous 1988</small>
 
 ***
@@ -35,19 +35,19 @@ Maybe Jack Patrick Dorsey (known as the creator of Twitter) - decided that Donal
 Could it be that Mark Zuckerberg (a well-known developer of outright bad products) decided to block certain political bloggers in America and around the world in order to protect me from bad content?
 Large social networks, giant corporations, have extremely great power over people and their thoughts. They can make us think in a way that is beneficial to a certain circle of faces. It may sound like a conspiracy theory, but I don't believe in them and I don't advise you😉.
 
-<img src="/img/posts/Mark.jpg" alt="Network" class="Mark" style="width: 100%; height: auto;">
+<img src="/img/posts/Recommendations/Mark.jpg" alt="Network" class="Mark" style="width: 100%; height: auto;">
 
 ***
 
 Have the algorithms of recommendations changed the political system of states? - Definitely! Now, the more you are in the media circle, the more political points you have. The more your video recommends the algorithm, the better you are known. The more you watch the video with Joseph Biden Jr., the more recommendations you get with him. One component of propaganda is repetition, and in the end a person forms his vision and does not accept alternative opinions, hanging labels on people with the words "and with him everything is clear - a liberal!". And of course, you can always block political opponents in the network, the main thing is to know the right people and have enough resources for it.
 
-<img src="/img/posts/Politics.jpg" alt="HouseofCards" class="responsive" style="width: 100%; height: auto;">
+<img src="/img/posts/Recommendations/Politics.jpg" alt="HouseofCards" class="responsive" style="width: 100%; height: auto;">
 <small>©House of Cards 2013</small>
 
 ***
 Also, movies and TV series always help, giving people the appropriate patterns of behavior in different situations. "We are for everything good and against everything bad!" - such models of behavior are shown in movies, and determine where is bad and where is good. Of course, no one intended to impose anything on us, but unfortunately we always perceive the actions of the protagonist as a pattern of behavior that we use in life (who we are if not robots? 😂). But of course there are exceptions, such as "Rescue Private Ryan" and many other films that promote the war for their country and the undeniable rightness of the American military. Although this does not negate the fact that the picture is really beautiful.
 
-<img src="/img/posts/Saving.jpg" alt="Saving" class="responsive" style="width: 100%; height: auto;">
+<img src="/img/posts/Recommendations/Saving.jpg" alt="Saving" class="responsive" style="width: 100%; height: auto;">
 
 ***
 

@@ -5,14 +5,14 @@ subtitle: The most interesting sites with a neural network in my opinion.
 date: '2021-11-08 13:17:39'
 background: "/img/AmAZUHZ.jpg"
 categories: Tips Tech
-og:image: "/img/neuralNetwork.jpeg"
+og:image: "/img/posts/NeuralNetwork/neuralNetwork.jpeg"
 og:description: The most interesting sites with a neural network in my opinion.
 lang: en
 lang-ref: neural-network
 ---
 Hi, in this post I would like to share interesting sites with you. Some work with a neural network, and some are just cool😉.Consider this post as the top cool sites that will hardly ever come in handy in real life, [**but if you like looking at cats, then why not**](https://thiscatdoesnotexist.com/)😏 (just refresh the page). In the end, I also wanted to talk a little about neural networks and what it is for a programmer.
 
-<img src="/img/posts/neuralNetwork.jpeg" alt="Network" class="responsive">
+<img src="/img/posts/NeuralNetwork/neuralNetwork.jpeg" alt="Network" class="responsive">
 <style>
     .responsive {
     width: 100%;
@@ -40,7 +40,7 @@ If you are interested, you can go to the [github project repository](https://git
 This application uses the power of NVIDIA GPUs and deep learning algorithms to replace any portion of the image. You can upload your photo there and retouch it, or even cut out entire objects. I do not know how innovative this application is, because such functions are already provided by Google algorithms in the [Snapseed](https://play.google.com/store/apps/details?id=com.niksoftware.snapseed&hl=uk&gl=US) smartphone application. In this application, you can also perform such retouching.
 
 But it's still very interesting, here's how I cut myself out of the background:
-<img src="/img/posts/Screen08.15.05.jpg" alt="Nature" class="responsive">
+<img src="/img/posts/NeuralNetwork/Screen08.15.05.jpg" alt="Nature" class="responsive">
 Agree, it looks good. Of course, this can be done much more carefully. Try it!👍
 
 *** 
@@ -61,7 +61,7 @@ For example, let's choose the category of movies. Gnod will ask you to fill out 
 By going to this site you will be stuck on it for a long time (as it was with me).It provides a great opportunity to remember and play old games. Please log in from your computer, as it is terrible on smartphones.
 When you get to the site, choose an operating system and play, it's really cool!👍👍
 Here is a screenshot of the desktop with game icons:
-<img src="/img/posts/Screen08.16.22.jpg" alt="Nature" class="responsive">
+<img src="/img/posts/NeuralNetwork/Screen08.16.22.jpg" alt="Nature" class="responsive">
 You can even play Doom and Quake!🤯
 
 ***
