@@ -5,10 +5,10 @@ subtitle: Recommendations help a person to find content of interest to him, or m
 date: '2021-11-16 22:10:39'
 background: "/img/AmAZUHZ.jpg"
 categories: Personal Translated
-og:image: "/img/404.png"
-og:subtitle: Recommendations help a person to find content of interest to him, or make him ignorant?
 lang: en
 lang-ref: recommendation
+image: /img/posts/Recommendations/recommendation.jpg
+description: Recommendations help a person to find content of interest to him, or make him ignorant?
 ---
 YouTube has said it takes its responsibility for supporting diverse opinions seriously, while reducing the spread of "harmful misinformation". "More than 70% of the time you spend watching a huge Google video hosting site is attracted to one of the service's recommendations based on artificial intelligence", said YouTube Chief Product Officer Neal Mohan. 
 
