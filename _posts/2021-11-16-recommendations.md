@@ -6,7 +6,7 @@ date: '2021-11-16 22:10:39'
 background: "/img/AmAZUHZ.jpg"
 categories: Personal Translated
 og:image: "/img/404.png"
-og:description: Recommendations help a person to find content of interest to him, or make him ignorant?
+og:subtitle: Recommendations help a person to find content of interest to him, or make him ignorant?
 lang: en
 lang-ref: recommendation
 ---
