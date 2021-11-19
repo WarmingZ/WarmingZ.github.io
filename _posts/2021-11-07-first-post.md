@@ -7,6 +7,7 @@ date: '2021-11-07 17:04:39'
 background: "/img/AmAZUHZ.jpg"
 categories: Personal Translated
 comments: true
+image: /img/404.png
 lang: en
 lang-ref: first-post
 ---
