@@ -3,7 +3,7 @@ title: Perception of the world through the prism of recommendations🕹️
 layout: post
 subtitle: Recommendations help a person to find content of interest to him, or make him ignorant?
 date: '2021-11-16 22:10:39'
-background: "/img/AmAZUHZ.jpg"
+background: "/img/AmAZUHZ.webp"
 categories: Personal Translated
 lang: en
 lang-ref: recommendation

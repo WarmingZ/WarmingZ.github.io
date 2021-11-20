@@ -3,7 +3,7 @@ title: Перший пост👋
 layout: post
 subtitle: Це перший пост у моєму новому блозі та бажання привітатися
 date: '2021-11-07 17:04:39'
-background: "/img/AmAZUHZ.jpg"
+background: "/img/AmAZUHZ.webp"
 comments: true
 lang: ua
 lang-ref: first-post

@@ -3,7 +3,7 @@ title: Сприйняття світу через призму рекоменд�
 layout: post
 subtitle: Рекомендації допомагають людині знайти цікавий їй контент, чи роблять з неї невігласа?
 date: '2021-11-16 22:10:39'
-background: "/img/AmAZUHZ.jpg"
+background: "/img/AmAZUHZ.webp"
 lang: ua
 lang-ref: recommendation
 image: /img/posts/Recommendations/recommendation.jpg
