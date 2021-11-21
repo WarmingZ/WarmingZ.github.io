@@ -1,0 +1,388 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left_Side">
+            <div class="profileText">
+                {% for item in site.data.cv.Main %}
+                <div class="imgBx">
+                    <img src={{item.image}}>
+                </div>
+                {% endfor %}
+                {% for item in site.data.cv.Main %}
+                <h2>{{item.name}}<br><span>{{item.position}}</span></h2>
+                {% endfor %}
+            </div>
+
+            <div class="contactInfo">
+                {% for item in site.data.cv.Contact %}
+                <h3 class="title">{{item.title}}</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span class="text">{{item.phone}}</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <span class="text">{{item.email}}</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                        <span class="text">{{item.site}}</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-map-signs" aria-hidden="true"></i></span>
+                        <span class="text">{{item.location}}</span>
+                    </li>
+                </ul>
+                {% endfor %}
+            </div>
+
+            <div class="contactInfo education">
+                {% for item in site.data.cv.Education %}
+                <h3 class="title">{{item.title}}</h3>
+                <ul>
+                    <li>
+                        <h5>{{item.year}}</h5>
+                        <h4>{{item.degree}}</h4>
+                        <h4>{{item.university}}</h4>
+                    </li>
+                </ul>
+                {% endfor %}
+            </div>
+
+
+            <div class="contactInfo language">
+                {% for item in site.data.cv.Languages %}
+                <h3 class="title">{{item.title}}</h3>
+                <ul>
+                    <li>
+                        <span class="text">{{item.lang}}</span>
+                        <span class="percent">
+                            <div style="width: {{item.level}}%;"></div>
+                        </span>
+                    </li>
+                </ul>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="right_Side">
+            <div class="about">
+                {% for item in site.data.cv.Profile %}
+                <h2 class="title2">{{item.profile}}</h2>
+                <p>{{item.text}}</p>
+                {% endfor %}
+            </div>
+            <div class="about">
+                {% for item in site.data.cv.Experience %}
+                <h2 class="title2">{{item.experience}}</h2>
+                <div class="box">
+                    <div class="year_project">
+                        <h5>{{item.projectyear}}</h5>
+                        <h5>{{item.projectname}}</h5>
+                    </div>
+                    <div class="text">
+                        <h4>{{item.technology}}</h4>
+                        <p>{{item.descriptions}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="about skills">
+                {% for item in site.data.cv.Skills %}
+                <h2 class="title2">{{item.titleskill}}</h2>
+                <div class="box">
+                    <h4>{{item.tech}}</h4>
+                    <div class="percent">
+                    <div style="width: {{item.percent}}%"></div>
+                    </div>
+                </div>
+                {% endfor %} 
+            </div>
+
+            <div class="about interest">
+                <h2 class="title2">Interest</h2>
+                <ul>
+                    <li><i class="fa fa-camera-retro" aria-hidden="true"></i>Photography</li>
+                    <li><i class="fa fa-rss" aria-hidden="true"></i>Blogging</li>
+                    <li><i class="fa fa-book" aria-hidden="true"></i>Reading</li>
+                    <li><i class="fa fa-laptop" aria-hidden="true"></i>Gadgets</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+    *
+    {
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:'Libre+Baskerville', serif ;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: lightblue;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        min-height: 1000px;
+        display: grid;
+        margin: 50px;
+        background: #fff;
+        grid-template-columns: 1fr 2fr;
+        box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+    }
+
+    .container .left_Side {
+        position: relative;
+        padding: 40px;
+        background: #003147;
+    }
+
+    .container .right_Side {
+        position: relative;
+        padding: 40px;
+        background: #fff;
+    }
+
+    .profileText {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .profileText .imgBx {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .profileText .imgBx img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .profileText h2 {
+        color: #fff;
+        font-size: 1.5em;
+        margin-top: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+        line-height: 1.4em;
+    }
+
+    .profileText h2 span {
+        font-size: 0.8em;
+        font-weight: 300;
+    }
+
+    .contactInfo {
+        padding-top: 40px;
+    }
+
+    .contactInfo ul {
+        position: relative;
+    }
+
+    .contactInfo ul li {
+        list-style: none;
+        position: relative;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+
+    .contactInfo ul li .icon {
+        display: inline-block;
+        width: 30px;
+        font-size: 18px;
+        color: #03a9f4;
+    }
+
+    .contactInfo ul li span {
+        font-weight: 300;
+        color: #fff;
+    }
+
+    .title {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    .contactInfo.education li {
+        margin-bottom: 15px;
+    }
+
+    .contactInfo.education h5 {
+        color: #03a9f4;
+        font-weight: 500;
+    }
+
+    .contactInfo.education h4:nth-child(2) {
+        color: #fff;
+        font-weight: 500;
+    }
+
+    .contactInfo.education h4 {
+        color: #fff;
+        font-weight: 300;
+    }
+
+    .contactInfo.language .percent {
+        position: relative;
+        width: 100%;
+        height: 6px;
+        background: #081921;
+        display: block;
+        margin-top: 5px;
+    }
+
+    .contactInfo.language .percent div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: #03a9f4;
+    }
+
+    .about{
+       margin-bottom: 50px; 
+    }
+
+    .about:last-child{
+        margin-bottom: 0px;
+    }
+
+    .title2{
+        color:#003147;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+    p{
+        color: #333;
+    }
+
+    .about .box{
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0;
+    }
+
+    .about .box .year_project{
+        min-width: 150px;
+    }
+    .about .box .year_project h5{
+        text-transform: uppercase;
+        color: #848c90;
+        font-weight: 600;
+    }
+    .about .box .text h4{
+        text-transform: uppercase;
+        color: #2a7da2;
+        font-size: 16px;
+    }
+    .skills .box{
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        align-items: center;
+    }
+    .skills .box h4{
+        text-transform: uppercase;
+        color: #848c99;
+        font-weight: 500;
+    }
+    .skills .box .percent{
+        position: relative;
+        width: 100%;
+        height: 10px;
+        background: #f0f0f0;
+    }
+    .skills .box .percent div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: #03a9f4;
+    }
+    .interest ul{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .interest ul li{
+        list-style: none;
+        color: #333;
+        font-weight: 500;
+        margin: 10px 0;
+    }
+    .interest ul li .fa{
+        color: #03a9f4;
+        font-size: 18px;
+        width: 20px;
+    }
+    @media (max-width: 1000px){
+        .container{
+            margin: 10px;
+            grid-template-columns: repeat(1,1fr);
+        }
+        .interest ul{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @media (max-width: 600px){
+        .about .box{
+            flex-direction: column;
+        }
+        .about .box .year_project{
+            margin-bottom: 5px;
+        }
+        .interest ul{ 
+            grid-template-columns: repeat(1,1fr);
+        }
+        .skills .box{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+</style>

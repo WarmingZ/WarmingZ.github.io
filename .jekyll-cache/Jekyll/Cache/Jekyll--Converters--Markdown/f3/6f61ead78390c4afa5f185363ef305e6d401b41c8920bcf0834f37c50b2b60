@@ -1,15 +1,10 @@
----
-layout: page
-title: About Me
-description: This is what I do.
-background: '/img/bg-about.webp'
----
-<style>
+I"�<style>
   .responsive {
   width: 100%;
   height: auto;
 }
 </style>
+
 <p><img alt="" src="https://i.imgur.com/wKO0ttV.jpg" class="responsive" style="float:right; margin-left:40px; margin-right:40px; height:290px; width:300px" /></p>
 <p>I`m Soloviov Ivan (&nbsp;Ukrainian: Соловйов Іван ) a programmer without commercial experience,&nbsp;but&nbsp;with a great technical outlook.&nbsp;</p>
 <p>I am a programmer, I write mostly in С#, but also in PHP, and quite a bit on&nbsp;JavaScript.&nbsp;
@@ -22,15 +17,5 @@ background: '/img/bg-about.webp'
 
 <p>My hobby is mobile and analog photography.&nbsp;I like technology and gadgets.</p>
 
-<div class="btn-group">
-    
-    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-      Download my CV 
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="img/CV.pdf" download>Download to pdf</a>
-      <a class="dropdown-item" href="img/CV.docx" download>Download to docx</a> 
-    </div>
-  </div>
-
+<p><b><strong>🔥💡<a href="/Summary/">My summary</a></strong></b></p>
+:ET
