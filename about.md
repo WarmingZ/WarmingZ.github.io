@@ -10,7 +10,7 @@ background: '/img/bg-about.webp'
   height: auto;
 }
 </style>
-<p><img alt="" src="https://i.imgur.com/wKO0ttV.jpg" class="responsive" style="float:right; margin-left:40px; margin-right:40px; height:290px; width:300px" /></p>
+<p><img alt="" src="/img/me.jpg" class="responsive" style="float:right; margin-left:40px; margin-right:40px; height:290px; width:300px" /></p>
 <p>I`m Soloviov Ivan (&nbsp;Ukrainian: Соловйов Іван ) a programmer without commercial experience,&nbsp;but&nbsp;with a great technical outlook.&nbsp;</p>
 <p>I am a programmer, I write mostly in С#, but also in PHP, and quite a bit on&nbsp;JavaScript.&nbsp;
     I often use ASP.Net Core to create web applications <strong><a href="https://github.com/WarmingZ" target="_blank"> 

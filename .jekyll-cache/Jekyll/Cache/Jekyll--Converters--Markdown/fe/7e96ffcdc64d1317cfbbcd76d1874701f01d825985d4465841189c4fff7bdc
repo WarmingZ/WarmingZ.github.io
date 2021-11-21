@@ -1,4 +1,4 @@
-I"�<style>
+I"�<style>
   .responsive {
   width: 100%;
   height: auto;
@@ -8,7 +8,7 @@
 <p><img alt="" src="https://i.imgur.com/wKO0ttV.jpg" class="responsive" style="float:right; margin-left:40px; margin-right:40px; height:290px; width:300px" /></p>
 <p>I`m Soloviov Ivan (&nbsp;Ukrainian: Соловйов Іван ) a programmer without commercial experience,&nbsp;but&nbsp;with a great technical outlook.&nbsp;</p>
 <p>I am a programmer, I write mostly in С#, but also in PHP, and quite a bit on&nbsp;JavaScript.&nbsp;
-    I often use ASP.Net Core to create web applications <strong><a href="https://github.com/WarmingZ" target="_blank"> 
+    I often use ASP.Net Core to create web applications <strong><a href="/img/me.jpg" target="_blank"> 
         (watch my github)</a>&nbsp;</strong>for this I use MySQL and a EntityFramework.</p>
 
 <p>I was a student of Lviv Polytechnic. Where he received a bachelor&#39;s degree.</p>
@@ -17,5 +17,5 @@
 
 <p>My hobby is mobile and analog photography.&nbsp;I like technology and gadgets.</p>
 
-<p># <strong><a href="/Summary/">My summary</a></strong></p>
+<p><b><strong>🔥💡<a href="/Summary/">My summary</a></strong></b></p>
 :ET
