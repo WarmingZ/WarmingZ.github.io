@@ -48,11 +48,14 @@ Experience:
     projectname: Web Calculator
     technology: ASP.Net Core
     descriptions: The project is designed for learning purposes. The "Strategy" pattern was used in the development.
+  - projectyear: 2020
+    projectname: SavePC Web
+    technology: ASP.Net Core MVC
+    descriptions: Web application for service center automation. This site was developed during training, for my own business of maintenance of computer equipment.
   - projectyear: 2021
-    projectname: Console Game 
+    projectname: MySmallGame
     technology: C#
-    descriptions: Just a console mini game👍‍
-  
+    descriptions: Just a console mini game👍‍😀
 Skills:
   - titleskill: Professional Skills
     tech: .Net
