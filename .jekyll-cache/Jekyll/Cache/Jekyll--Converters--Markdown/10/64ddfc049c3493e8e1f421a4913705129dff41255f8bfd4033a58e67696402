@@ -1,11 +1,11 @@
-I"�<style>
+I"?<style>
   .responsive {
   width: 100%;
   height: auto;
 }
 </style>
 
-<p><img alt="" src="https://i.imgur.com/wKO0ttV.jpg" class="responsive" style="float:right; margin-left:40px; margin-right:40px; height:290px; width:300px" /></p>
+<p><img alt="" src="/img/me.jpg" class="responsive" style="float:right; margin-left:40px; margin-right:40px; height:290px; width:300px" /></p>
 <p>I`m Soloviov Ivan (&nbsp;Ukrainian: Соловйов Іван ) a programmer without commercial experience,&nbsp;but&nbsp;with a great technical outlook.&nbsp;</p>
 <p>I am a programmer, I write mostly in С#, but also in PHP, and quite a bit on&nbsp;JavaScript.&nbsp;
     I often use ASP.Net Core to create web applications <strong><a href="https://github.com/WarmingZ" target="_blank"> 
@@ -17,5 +17,6 @@
 
 <p>My hobby is mobile and analog photography.&nbsp;I like technology and gadgets.</p>
 
-<p><b><strong>🔥💡<a href="/Summary/">My summary</a></strong></b></p>
+<p><b><strong>🔥💡<a href="/Summary/">My summary</a></strong></b>
+<b><strong>🔥💡<a href="/img/download/www-soloviov-fun-Summary2.pdf">Download to pdf</a></strong></b></p>
 :ET

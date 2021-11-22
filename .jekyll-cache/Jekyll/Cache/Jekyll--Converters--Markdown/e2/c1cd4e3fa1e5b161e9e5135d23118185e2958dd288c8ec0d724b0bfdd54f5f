@@ -1,15 +1,10 @@
----
-layout: page
-title: About Me
-description: This is what I do.
-background: '/img/bg-about.webp'
----
-<style>
+I"<style>
   .responsive {
   width: 100%;
   height: auto;
 }
 </style>
+
 <p><img alt="" src="/img/me.jpg" class="responsive" style="float:right; margin-left:40px; margin-right:40px; height:290px; width:300px" /></p>
 <p>I`m Soloviov Ivan (&nbsp;Ukrainian: Соловйов Іван ) a programmer without commercial experience,&nbsp;but&nbsp;with a great technical outlook.&nbsp;</p>
 <p>I am a programmer, I write mostly in С#, but also in PHP, and quite a bit on&nbsp;JavaScript.&nbsp;
@@ -22,4 +17,5 @@ background: '/img/bg-about.webp'
 
 <p>My hobby is mobile and analog photography.&nbsp;I like technology and gadgets.</p>
 
-<b><strong>🔥[View]({{ site.baseurl }}{% link Summary.html %})</strong> or <strong>💡[download]({{ site.baseurl }}/img/download/www-soloviovSummary2.pdf)</strong> summary.
+<p><b><strong>🔥💡<a href="/Summary/">My summary</a></strong> or <a href="/img/download/www-soloviov-fun-Summary2.pdf">download</a></b></p>
+:ET
