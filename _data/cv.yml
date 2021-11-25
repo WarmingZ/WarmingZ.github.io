@@ -62,6 +62,8 @@ Skills:
     percent: 60
   - tech: ASP.Net Core
     percent: 55
+  - tech: Windows Forms
+    percent: 55
   - tech: SQL
     percent: 45
   - tech: Entity Framework
