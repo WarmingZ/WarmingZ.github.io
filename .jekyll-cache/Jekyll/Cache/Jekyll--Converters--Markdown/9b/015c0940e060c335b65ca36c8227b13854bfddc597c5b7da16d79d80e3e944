@@ -1,0 +1,126 @@
+I"�2<p>I recently started studying databases, namely SQL. Based on this, I want to share with you the information I learned during my studies. I will continue to write about this topic, as it is impossible to describe everything in one post. I would also like to say in advance that I view databases from a programmer and how to use them for a programmer. This will not be a technical guide that will help you learn SQL, but I hope that I can interest people who know nothing about databases and perhaps show something new to people who work with them.</p>
+
+<p><img src="/img/posts/Database/imageDatabase.webp" alt="Network" class="responsive" style="width: 100%; height: 350px;" /></p>
+
+<hr />
+
+<h3 id="a-little-theory">A little theory</h3>
+<p>To begin with, as always, you need to understand the terminology. Unfortunately, no way without it. So, first of all, it is necessary to define what a database is? A database is a data that is organized according to certain rules and which can be managed following certain rules.</p>
+
+<p>A common example of a database is the folder hierarchy on your hard drive. You usually organize these folders according to your own rules, such as photo folders that are neatly packaged by year in your operating system.</p>
+
+<p>This example will help us understand what a DBMS is. After all, a database management system, we can imagine as your operating system, which contains folders with photos. A database management system (DBMS) is a software tool that allows you to create and use a database. Finally, it’s time to define SQL. It is a declarative language of structured queries, which is used to manage data in relational databases. SQL databases are built on a relational model, ie data can be stored in tables that are logically related to each other through common values, so there is no need for additional information to link them together. One of the most important features of SQL databases is that they are normalized. This means that there are at least two tables in each SQL database that should be combined if possible, as this reduces redundancy and simplifies data entry.</p>
+
+<hr />
+
+<h3 id="commands-to-interact-with-the-server">Commands to interact with the server</h3>
+<p>So, to work with databases, I installed a docker with an SQL server. Instructions for installing and configuring this program can be found online. It will also not be difficult to find a test database, which you can download to your Docker server. If you downloaded Docker, but do not know how to start a container with a MySQL server, just enter the command in the terminal - <code class="language-plaintext highlighter-rouge">docker pull mysql</code>.  Then, to start the container with the image and parameters, write in the terminal - <code class="language-plaintext highlighter-rouge">docker run --name example-mysql -e MYSQL_ROOT_PASSWORD = pass -d mysql</code>. You can enter any name instead of “example”. In the future, to connect to our database you will need to enter the command - <code class="language-plaintext highlighter-rouge">docker exec -it example-mysql mysql -uroot -ppass</code>. <br />
+Now here are some commands to interact with our server:</p>
+<ol>
+  <li>View databases on the server - (<code class="language-plaintext highlighter-rouge">show databases;</code>)</li>
+  <li>Switch to the database - (<code class="language-plaintext highlighter-rouge">use nameDatabase;</code>)</li>
+  <li>View tables in the database - (<code class="language-plaintext highlighter-rouge">show tables;</code>)</li>
+  <li>View columns - (<code class="language-plaintext highlighter-rouge">describe Example;</code>)</li>
+</ol>
+
+<p>Next, if you find a test database on the Internet, to import a new dump, use the command - <br />
+<code class="language-plaintext highlighter-rouge">docker exec -i example-mysql mysql -uroot -ppass &lt;example.sql</code>. In this case, example.sql is the file name of our dump. And we enter the same command to import data by changing the file name. Of course, you can find another way to install SQL Server without Docker. I’m just demonstrating how I installed the server SQL.</p>
+
+<hr />
+
+<h3 id="simple-select-query">Simple SELECT query</h3>
+<p>It is also worth remembering that SQL is a declarative language, meaning that we do not give a command to the compiler or interpreter of the language, but we describe the desired result we want to get.</p>
+
+<p>Of course, my first query to the database was the well-known Select. It looked something like this - <code class="language-plaintext highlighter-rouge">select * from table_name;</code>. I don’t know if I need to explain this query, but it may be interesting for someone who doesn’t know SQL at all. Select -means to select, and the asterisk “*” means that we get all the data entered in the table, well, respectively, “From” means from which table. We can also retrieve data from multiple columns by renaming them at once. It should be noted that these requests do not make any changes to the server. Entering such a command on the server - <code class="language-plaintext highlighter-rouge">SELECT name NewName, example as NewID FROM example;</code>. We will get about this result in the terminal.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+----------+-------+
+|  NewName | NewID |
++----------+-------+
+| Value 1  | 0     |
++----------+-------+
+| Value 2  | 1     |
++----------+-------+
+</code></pre></div></div>
+
+<p>Having analyzed this query, you can understand the logic of almost all SQL queries. The query sounds something like this - select data from the name column (NewName in this case is not an explicit renaming of the column in the output), and the example column (where the keyword <mark>as</mark> means explicitly renaming the example column to NewID), from the example table.
+We can also perform mathematical operations on numbers on the server (I do not know who needs it, but it interestingly demonstrates the capabilities of MySQL). For example, write the following query: <code class="language-plaintext highlighter-rouge">select 5/3 as result;</code> and get the result of the division which is displayed in the column “result”.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--------+
+| result |
++--------+
+| 1.6667 |
++--------+
+</code></pre></div></div>
+
+<p>It does not sound very complicated, because it is a simple request to the server to obtain information from the database. In my practice, I have noticed that most SQL database server queries are simple select queries without using aggregate functions. But there are times when you need to write specific queries to get data that can be filtered right away or something.</p>
+
+<hr />
+
+<h3 id="filtering-of-sampling-results">Filtering of sampling results</h3>
+
+<p>I selected a user table to filter the results. This will demonstrate the operation of the where parameter. For example, I have a table with the names and details of users of a site. Let’s say I want to get single-user data. My query will look like this: <code class="language-plaintext highlighter-rouge">select * from user where first_name = 'Madelle';</code>. Here we select everything from the user table and then use the <mark>"where"</mark> keyword wherein the <mark>first_name</mark> column we look for the name Madelle. Now we have not received all the information about the user but simply filtered it among all users. We can also get the information we need about this user - <code class="language-plaintext highlighter-rouge">select first_name, last_name, user_id from user where first_name = 'Madelle';</code>. Where we create a request to the server to get the user <mark>ID</mark> in the system, <mark>name</mark>, and <mark>surname</mark>. And this is the result we get.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+------------+-----------+---------+
+| first_name | last_name | user_id |
++------------+-----------+---------+
+| Madelle    | Jonathan  | 8209    |
++------------+-----------+---------+
+</code></pre></div></div>
+
+<p>If you remove this condition, we can display the name, surname, and id of all users of the site, which are entered into the database - <code class="language-plaintext highlighter-rouge">select first_name, last_name, user_id from user;</code>. <br />
+In general, <mark>“where”</mark> is a very flexible tool. It can meet almost any data filtering need. I will not list all the possibilities of the parameter, but I will demonstrate the most interesting in my opinion, which can be applied in real life.</p>
+
+<p>Imagine we have a database of users who have given us their email address and we need to filter it by domain. We will display all users who have a domain zone e-mail “gmail.com”.
+I will enter the following query:  <code class="language-plaintext highlighter-rouge">Select email, user_id from user where email like '%@gmail.com';</code>. <br />
+The keyword here is <mark>"like"</mark> and the symbol <mark>"%"</mark> means that before the beginning of the tape (ie up to %) we can have as many characters as we want. This is the conclusion we will get in the terminal.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+------------------------+---------+
+|          email         | user_id |
++------------------------+---------+
+|  soloviov.ia@gmail.com | 7498    |
++------------------------+---------+
+| mnda@gmail.com         | 7515    |
++------------------------+---------+
+| annekey@gmail.com      | 7519    |
++------------------------+---------+
+| alexey@gmail.com       | 7601    |
++------------------------+---------+
+| sofi.grabova@gmail.com | 7908    |
++------------------------+---------+
+</code></pre></div></div>
+
+<p>Also, for a better understanding of the <mark>%</mark> sign, I would like to give a few small examples. We will also filter users. Let’s list the users whose name starts with the letter <mark>"A"</mark> - <code class="language-plaintext highlighter-rouge">select first_name, last_name, user_id from user where first_name like 'A%';</code>. Here we see that the <mark>%</mark> sign is located after the letter, and it means that after the beginning of the line we can have as many characters as we want. Another small example where we filter users at the beginning and end of the feed is <code class="language-plaintext highlighter-rouge">select first_name, last_name, user_id from user where first_name like 'A% e';</code>.</p>
+
+<p>Here I think it is clear that the tape should start on <mark>"A"</mark> and end on <mark>"e"</mark>. We can also filter users by id in which the id is less than 8000 - <code class="language-plaintext highlighter-rouge">select email, user_id from user where user_id &lt;8000;</code>. We can also filter users by registration date, in ranges of specific calendar dates. My user table records the date the user registered. <code class="language-plaintext highlighter-rouge">(select email, registration_time from user where registration_time between '2019-01-31' and '2020-01-01';)</code> The keywords here are <mark>"between"</mark> and <mark>"and"</mark>. And we get all the users who have been registered in this period.</p>
+
+<p>Finally, I would like to demonstrate the work of the query, where we can combine several conditions. The query will look like this: <br />
+<code class="language-plaintext highlighter-rouge">select first_name, is_active from user where (is_active = true and first_name like 'A%') or (is_active = false and last_name like '% n');</code> <br />
+And we will receive such an answer to the request.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+------------+-----------+
+| first_name | is_active |
++------------+-----------+
+| Ammit      | 1         |
++------------+-----------+
+| Addie      | 1         |
++------------+-----------+
+| Agnesse    | 1         |
++------------+-----------+
+| Anna-diane | 0         |
++------------+-----------+
+| Adrianna   | 0         |
++------------+-----------+
+| Modesta    | 0         |
++------------+-----------+
+| Noellyn    | 0         |
++------------+-----------+
+| Amandi     | 1         |
++------------+-----------+
+</code></pre></div></div>
+
+<p>Now scroll through this query in your head, and think about why we received such data.</p>
+
+<hr />
+
+<p>So, in this post, which is the first in a series of posts about SQL for a programmer, I shared with you my knowledge of building queries on the server and some theoretical knowledge. My article should not be taken as an educational one. After all, I would not like to take on such a responsibility. In any case, I advise you to use Google and study with me! In the next post, I will try to tell you about the use of simple and aggregate functions. See you in the next post!</p>
+:ET
