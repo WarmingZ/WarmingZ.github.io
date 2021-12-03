@@ -8,7 +8,7 @@ categories: SQL Tech Translated
 lang: en
 lang-ref: sql
 image: /img/posts/Database/imageDatabase.jpg
-description: In this post, we will look at simple server requests
+description: In this post, we will look at simple server requests SQL
 ---
 <a href="https://dev.mysql.com/doc/"><img src="/img/posts/Database/SQL.png" style="width:128px;max-width:100%;" align="right"></a>
 I recently started studying databases, namely SQL🤓. Based on this, I want to share with you the information I learned during my studies. I will continue to write about this topic, as it is impossible to describe everything in one post. I would also like to say in advance that I view databases from a programmer and how to use them for a programmer👨‍💻. This will not be a technical guide that will help you learn SQL, but I hope that I can interest people who know nothing about databases and perhaps show something new to people who work with them.
