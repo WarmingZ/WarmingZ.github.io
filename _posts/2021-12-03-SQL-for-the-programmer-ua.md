@@ -7,7 +7,7 @@ background: "/img/AmAZUHZ.webp"
 categories: SQL Tech Translated
 lang: ua
 lang-ref: sql
-image: /img/posts/Database/imageDatabase.webp
+image: /img/posts/Database/imageDatabase.jpg
 description: Розглядаємо прості серверні запити SQL
 ---
 <a href="https://dev.mysql.com/doc/"><img src="/img/posts/Database/SQL.png" style="width:128px;max-width:100%;" align="right"></a>

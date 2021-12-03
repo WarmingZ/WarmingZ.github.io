@@ -7,7 +7,7 @@ background: "/img/AmAZUHZ.webp"
 categories: SQL Tech Translated
 lang: en
 lang-ref: sql
-image: /img/posts/Database/imageDatabase.webp
+image: /img/posts/Database/imageDatabase.jpg
 description: In this post, we will look at simple server requests
 ---
 <a href="https://dev.mysql.com/doc/"><img src="/img/posts/Database/SQL.png" style="width:128px;max-width:100%;" align="right"></a>
