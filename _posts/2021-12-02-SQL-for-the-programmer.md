@@ -48,7 +48,9 @@ Next, if you find a test database on the Internet, to import a new dump, use the
 
 It is also worth remembering that SQL is a declarative language, meaning that we do not give a command to the compiler or interpreter of the language, but we describe the desired result we want to get.
 
-Of course, my first query to the database was the well-known Select. It looked something like this - `select * from table_name;`. I don't know if I need to explain this query, but it may be interesting for someone who doesn't know SQL at all. Asterisk <mark>"*"</mark> means that we get all the data entered in the table, well, respectively, <mark>"From"</mark> means from which table. We can also retrieve data from multiple columns by renaming them at once. It should be noted that these requests do not make any changes to the server. Entering such a command on the server <br>
+Of course, my first query to the database was the well-known Select. It looked something like this - `select * from table_name;`. I don't know if I need to explain this query, but it may be interesting for someone who doesn't know SQL at all. Asterisk <mark>"*"</mark> means that we get all the data entered in the table, well, respectively, <mark>"From"</mark> means from which table.
+
+ We can also retrieve data from multiple columns by renaming them at once. It should be noted that these requests do not make any changes to the server. Entering such a command on the server <br>
 `SELECT name NewName, example as NewID FROM example;`<br>
 We will get about this result in the terminal.
 
@@ -122,6 +124,11 @@ Here I think it is clear that the tape should start on <mark>"A"</mark> and end 
 We can also filter users by registration date, in ranges of specific calendar dates. My user table records the date the user registered.<br>
  `(select email, registration_time from user where registration_time between '2019-01-31' and '2020-01-01';)`<br>
   The keywords here are <mark>"between"</mark> and <mark>"and"</mark>. And we get all the users who have been registered in this period.
+
+I have a cell `in_active` which stores a variable of type `int`. It holds the values ​​"1" and "0". We can derive all values ​​where the variable is a unit value.<br>
+This is what my request to the server looks like: <br>
+ `select user_id, is_active from user where is_active = true;`. <br>
+ It should be explained that SQL is smart enough to understand that the so-called `true` flag is one and the `false` flag is zero.
 
 Finally, I would like to demonstrate the work of the query, where we can combine several conditions. The query will look like this: <br>
 ```select first_name, is_active from user where (is_active = true and first_name like 'A%') or (is_active = false and last_name like '% n');``` <br>
