@@ -61,7 +61,7 @@ We will get about this result in the terminal.
   |----------+-------|
   | Value 2  | 1     |
   |----------+-------|
-  {: .tablelines}
+  {: .table .table-responsive}
 
 Having analyzed this query, you can understand the logic of almost all SQL queries. The query sounds something like this - select data from the name column (<mark>NewName</mark> in this case is not an explicit renaming of the column in the output), and the example column (where the keyword <mark>as</mark> means explicitly renaming the example column to <mark>NewID</mark>), from the example table.
 We can also perform mathematical operations on numbers on the server (I do not know who needs it, but it interestingly demonstrates the capabilities of MySQL). For example, write the following query: <br>
@@ -71,7 +71,7 @@ We can also perform mathematical operations on numbers on the server (I do not k
   | result |
   |--------|
   | 1.6667 |
-  {: .tablelines}
+  {: .table .table-responsive}
 
 It does not sound very complicated, because it is a simple request to the server to obtain information from the database. In my practice, I have noticed that most SQL database server queries are simple select queries without using aggregate functions. But there are times when you need to write specific queries to get data that can be filtered right away or something.
 
@@ -84,12 +84,14 @@ I selected a user table to filter the results. This will demonstrate the operati
  Here we select everything from the user table and then use the <mark>"where"</mark> keyword wherein the <mark>first_name</mark> column we look for the name Madelle. Now we have not received all the information about the user but simply filtered it among all users. We can also get the information we need about this user - <br> `select first_name, last_name, user_id from user where first_name = 'Madelle';` <br>
   Where we create a request to the server to get the user <mark>ID</mark> in the system, <mark>name</mark>, and <mark>surname</mark>. And this is the result we get.
 
+
   |------------+-----------+---------|
   | first_name | last_name | user_id |
   |------------+-----------+---------|
   | Madelle    | Jonathan  | 8209    |
   |------------+-----------+---------|
-  {: .tablelines}
+  {: .table .table-responsive}
+  
 
 If you remove this condition, we can display the name, surname, and id of all users of the site, which are entered into the database - `select first_name, last_name, user_id from user;`. <br>
 In general, <mark>“where”</mark> is a very flexible tool. It can meet almost any data filtering need. I will not list all the possibilities of the parameter, but I will demonstrate the most interesting in my opinion, which can be applied in real life. 
@@ -112,7 +114,7 @@ The keyword here is <mark>"like"</mark> and the symbol <mark>"%"</mark> means th
   |------------------------+---------|
   | sofi.grabova@gmail.com | 7908    |
   |------------------------+---------|
-  {: .tablelines}
+  {: .table .table-responsive}
 
 Also, for a better understanding of the <mark>%</mark> sign, I would like to give a few small examples. We will also filter users. Let's list the users whose name starts with the letter <mark>"A"</mark> <br>
  `select first_name, last_name, user_id from user where first_name like 'A%';` <br>
@@ -134,7 +136,6 @@ Finally, I would like to demonstrate the work of the query, where we can combine
 ```select first_name, is_active from user where (is_active = true and first_name like 'A%') or (is_active = false and last_name like '% n');``` <br>
 And we will receive such an answer to the request.
 
-
   |------------+-----------|
   | first_name | is_active |
   |------------+-----------|
@@ -154,7 +155,7 @@ And we will receive such an answer to the request.
   |------------+-----------|
   | Amandi     | 1         |
   |------------+-----------|
-   {: .tablelines}
+  {: .table .table-responsive}
 
 Now scroll through this query in your head, and think about why we received such data.😇
 
