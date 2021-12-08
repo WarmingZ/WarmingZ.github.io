@@ -1,2 +1,0 @@
-I"<p>In the last post, I described the work of simple server requests to the database. A minimal set of theories for understanding what we are dealing with was also described. Considered simple SELECT queries where we filtered data using WHERE. In this post, I would like to demonstrate the use of simple and aggregate functions. Maybe now it seems to you that everything is very easy, but so it is. It is true that we have not yet made any changes to our tables and created new ones, but this is just the beginning 😊.</p>
-:ET
