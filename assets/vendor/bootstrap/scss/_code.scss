@@ -1,7 +1,12 @@
 // Inline code
 code {
   @include font-size($code-font-size);
- 
+  background-color: lightgray;
+  border-radius: 3px;
+  font-size: 90%;
+  hyphens: none;
+  line-height: 20px;
+  padding: 0 3px;
   word-wrap: break-word;
 
   // Streamline the style when inside anchors to avoid broken underline and more
@@ -10,11 +15,7 @@ code {
     
   }
 }
-code {
-  background-color: lightgray;
-  border-radius: 3px;
-  padding: 0 3px;
-}
+
 // User input typically entered via keyboard
 kbd {
   padding: $kbd-padding-y $kbd-padding-x;
@@ -32,15 +33,24 @@ kbd {
   }
 }
 
+.highlight {
+  border-left: 3px solid lightgray;
+  margin-left: 40px;
+  padding-left: 10px !important;
+}
+figure {
+  margin: 0;
+  position: relative;
+}
 // Blocks of code
 pre {
   display: block;
   @include font-size($code-font-size);
-  color: $pre-color;
+  background-color: inherit;
   // Account for some code outputs that place code tags in pre tags
   code {
     @include font-size(inherit);
-    color: inherit;
+    background-color: inherit;
 
     word-break: normal;
   }
