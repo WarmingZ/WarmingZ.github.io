@@ -153,4 +153,4 @@ So far, we have considered only one aggregate function, which I found quite inte
 
 ***
 
-So, this post may seem a bit confusing, but I advise you to reproduce all the queries that have been made in this post. This will help you better understand how these queries work. Experiment and use the documentation, but be careful. Because if you installed SQL Server according to my example ([from the previous article](https://www.soloviov.fun/sql/tech/translated/SQL-for-the-programmer-ua/)), you can break the server since we work as a `root` user with unlimited access rights on the server. See you in the next post👋😉.
+So, this post may seem a bit confusing, but I advise you to reproduce all the queries that have been made in this post. This will help you better understand how these queries work. Experiment and use the documentation, but be careful. Because if you installed SQL Server according to my example ([from the previous article](https://www.soloviov.fun/sql/tech/translated/SQL-for-the-programmer/)), you can break the server since we work as a `root` user with unlimited access rights on the server. See you in the next post👋😉.
