@@ -2,7 +2,7 @@
 title: Databases for programmers - Part 2🗂️
 layout: post
 subtitle: Consider simple and aggregate functions
-date: '2021-12-02 17:10:39'
+date: '2021-12-08 13:10:39'
 background: "/img/AmAZUHZ.webp"
 categories: SQL Tech Translated
 lang: en
