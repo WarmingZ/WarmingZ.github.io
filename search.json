@@ -3,7 +3,8 @@
 ---
 
 [
-  {% for post in site.posts %}
+  {% assign sorted-posts = site.posts | where: "lang", "en" %}
+  {% for post in sorted-posts %}
     {
 
       "title"    : "{{ post.title | escape }}",
