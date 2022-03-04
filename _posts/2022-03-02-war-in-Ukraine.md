@@ -9,6 +9,20 @@ lang: en
 lang-ref: war
 image: /img/posts/War/image.jpg
 description: The war came to my Ukraine
+carousels:
+  - images: 
+    - image: /img/posts/War/Kharkiv1.webp
+    - image: /img/posts/War/Kharkiv2.webp
+    - image: /img/posts/War/Kharkiv3.webp
+    - image: /img/posts/War/Kharkiv4.webp
+    - image: /img/posts/War/Kharkiv5.webp
+    - image: /img/posts/War/Kharkiv6.webp
+    - image: /img/posts/War/Kharkiv8.webp
+  - images:
+    - image: /img/posts/War/Kyiv1.webp
+    - image: /img/posts/War/Kyiv2.webp
+    - image: /img/posts/War/Kyiv3.webp
+    - image: /img/posts/War/Kyiv4.webp
 ---
 
 The occupier from the Russian Federation came to my native country. He kills people and destroys cities, strikes and fires at apartment buildings, uses vacuum bombs and vicious attacks on my homeland. The occupier made a mistake and entered our land on February 24, 2022. This post didn't come out earlier because blogging wasn't a priority these days.
