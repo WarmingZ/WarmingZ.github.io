@@ -80,12 +80,11 @@ The zombie people of Russia report that Ukrainian troops are shelling their home
 
 ### Propaganda
 
+Russian President Putin and Russian propaganda call Russia's aggressive war against Ukraine, which is accompanied by Russia's invasion of Ukraine's southern, eastern and northern borders, a "special military operation in the Donbas" to "demilitarize and denationalize Ukraine. Neo-Nazism is a major theme of pro-Russian propaganda and is attributed to the current Ukrainian government and its allies. In fact, there are no signs of Nazism in Ukraine, including territorial ambitions, state-sponsored terrorism, unbridled anti-Semitism, bigotry, and dictatorship. Putin also said that NATO countries support neo-Nazis.
+
 <center>
 <img src="/img/posts/War/Propaganda.webp" alt="Network" class="responsive" style="width: 100%; height: auto;">
 </center>
-
-
-Russian President Putin and Russian propaganda call Russia's aggressive war against Ukraine, which is accompanied by Russia's invasion of Ukraine's southern, eastern and northern borders, a "special military operation in the Donbas" to "demilitarize and denationalize Ukraine. Neo-Nazism is a major theme of pro-Russian propaganda and is attributed to the current Ukrainian government and its allies. In fact, there are no signs of Nazism in Ukraine, including territorial ambitions, state-sponsored terrorism, unbridled anti-Semitism, bigotry, and dictatorship. Putin also said that NATO countries support neo-Nazis.
 
 Russia's Federal Service for Supervision of Communications, Information Technology and Mass Communications has called on a number of media outlets to remove "inaccurate information about a special military operation by the Russian Armed Forces to protect Donbass." Later, at the request of the Prosecutor General's Office, Roskomnadzor blocked access to the Internet resources of the Echo of Moscow radio station and the Dozhd TV channel. The Nastoyaschee Vremya TV channel, created by Radio Svoboda with the participation of Voice of America, Echo of Moscow radio station, The Village radio station, Taiga.info, DOXA, DOXA, The New Times and a number of Ukrainian TV channels, was also blocked. publications.
 Deputies of the State Duma of the Russian Federation approved in the first reading amendments to the Criminal Code to 15 years in prison for "misinformation about the actions of the Armed Forces of the Russian Federation in military operations."
