@@ -16,7 +16,7 @@ carousels:
     - image: /img/posts/War/Kyiv3.webp
     - image: /img/posts/War/Kyiv4.webp
 subtitle: The war came to my Ukraine
-date: '2022-03-04 23:30:39'
+date: '2022-03-04 22:10:39'
 background: "/img/Ukraine2.webp"
 categories:
 lang: en
