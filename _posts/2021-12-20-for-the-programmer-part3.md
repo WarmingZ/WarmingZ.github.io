@@ -1,5 +1,5 @@
 ---
-title: Databases for programmers - Part 3
+title: Databases for programmers - Part 3 🗂️
 layout: post
 subtitle: Combining selection and sorting and constraints of results
 date: '2021-12-20 12:10:39'
