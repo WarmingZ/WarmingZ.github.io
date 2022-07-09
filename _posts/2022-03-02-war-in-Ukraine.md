@@ -1,9 +1,8 @@
 ---
-title: The war in Ukraine
+title: The war in Ukraine 🇺🇦 
 layout: post
 subtitle: The war came to my Ukraine
 date: '2022-03-04 22:10:39'
-background: "/img/Ukraine2.webp"
 categories:
 lang: en
 lang-ref: war
