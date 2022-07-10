@@ -4,7 +4,7 @@ layout: post
 subtitle: Розглядаємо прості серверні запити SQL
 date: '2021-12-02 17:10:39'
 background: "/img/AmAZUHZ.webp"
-categories: SQL Tech Translated
+categories:
 lang: ua
 lang-ref: sql
 image: /img/posts/Database/imageDatabase.jpg

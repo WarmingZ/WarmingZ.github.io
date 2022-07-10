@@ -4,8 +4,7 @@ layout: post
 subtitle: З'єднання вибірок та сортування й обмеження результатів
 date: '2021-12-20 12:10:39'
 background: "/img/AmAZUHZ.webp"
-categories: SQL Tech Translated
-lang: ua
+categories:
 lang-ref: sql3
 image: /img/posts/Database3/DB.png
 description: З'єднання вибірок та сортування й обмеження результатів

@@ -4,7 +4,7 @@ layout: post
 subtitle: Розглядаємо прості та агрегатні функції
 date: '2021-12-08 13:10:39'
 background: "/img/AmAZUHZ.webp"
-categories: SQL Tech Translated
+categories:
 lang: ua
 lang-ref: sql2
 image: /img/posts/Database2/DB.png
