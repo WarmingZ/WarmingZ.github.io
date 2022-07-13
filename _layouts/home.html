@@ -49,8 +49,7 @@ layout: default
           </a>
           <p class="post-meta">
             {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
-            <script id="dsq-count-scr" src="//warmingz.disqus.com/count.js" async></script>
-            <a class="post-subtitle" href="{{ post.url }}#disqus_thread">comments</a>
+            
           </p>
                 {{ post.excerpt }}
                <h5><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }} " style="text-decoration:underline;"  >Continue...</a></h5> 
