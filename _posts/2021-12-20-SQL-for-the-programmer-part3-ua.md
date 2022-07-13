@@ -5,6 +5,7 @@ subtitle: З'єднання вибірок та сортування й обме
 date: '2021-12-20 12:10:39'
 background: "/img/AmAZUHZ.webp"
 categories:
+lang: ua
 lang-ref: sql3
 image: /img/posts/Database3/DB.png
 description: З'єднання вибірок та сортування й обмеження результатів
