@@ -36,8 +36,18 @@ layout: default
                 {% assign categories = page.categories %}
                 {% endif %}
                 {% for category in categories %}
+                
                 <a href="{{site.baseurl}}/categories/#{{category|slugize}}" class="link"
-                  style="background: url(/img/posts/tag16.png) no-repeat 0 5px; padding-left: 18px;">{{category}}</a>
+                  style="
+                    text-align: center;
+  line-height: 35px;
+  font-size: 14.5px;
+  padding: 2px 13px;
+  border: none;
+  background-color: #4CAF50;
+  border-radius: 50px;
+  color: #fff;  
+                  ">{{category}}</a>
                 {% unless forloop.last %}&nbsp;{% endunless %}
                 {% endfor %}
 
