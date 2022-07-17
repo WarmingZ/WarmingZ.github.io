@@ -19,7 +19,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box; // 1
+  box-sizing: content-box;
+  
 }
 
 html {
