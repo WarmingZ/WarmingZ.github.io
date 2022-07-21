@@ -4,7 +4,7 @@ layout: post
 subtitle: Combining selection and sorting and constraints of results
 date: '2021-12-20 12:10:39'
 background: "/img/AmAZUHZ.webp"
-categories: SQL Tech Translated
+categories: SQL Tech Translated 
 lang: en
 lang-ref: sql3
 image: /img/posts/Database3/DB.png
