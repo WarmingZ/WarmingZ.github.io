@@ -4,8 +4,8 @@ layout: post
 subtitle: Створи власний медіа ресурс за допомогою Jekyll та GitHub Pages
 date: '2022-07-21 14:05:39'
 categories:
-lang: ua
-lang-ref: jekyll 
+lang: 
+lang-ref:  
 image: /img/posts/Jekyll/Git.jpg
 description: Створи власний медіа ресурс за допомгою Jekyll та GitHub Pages
 ---
