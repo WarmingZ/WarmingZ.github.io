@@ -3,6 +3,7 @@ title: Jekyll is the best tool for creating your own media
 layout: post
 subtitle: Create your own media resource using Jekyll and GitHub Pages
 date: '2022-07-21 14:05:39'
+background:
 categories: Tech Translated
 lang: en
 lang-ref: jekyll

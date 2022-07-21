@@ -3,9 +3,10 @@ title: Jekyll - це інструмент для створення власно
 layout: post
 subtitle: Створи власний медіа ресурс за допомогою Jekyll та GitHub Pages
 date: '2022-07-21 14:05:39'
+background:
 categories:
-lang: 
-lang-ref:  
+lang: ua 
+lang-ref: jekyll  
 image: /img/posts/Jekyll/Git.jpg
 description: Створи власний медіа ресурс за допомгою Jekyll та GitHub Pages
 ---
