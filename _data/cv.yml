@@ -3,13 +3,14 @@
 Main:
   - name: Soloviov Ivan 
     position: .Net Developer
-    image: "/img/me.jpg"
+    image: "/img/me.jpeg"
 
 Contact:
   - title: Contact Info 
     phone: +380 93 866 5746
     email: soloviov.ia@gmail.com
     site:  www.soloviov.fun
+    github:  github.com/WarmingZ
     location: Lviv, Ukrain
 
 Education:
