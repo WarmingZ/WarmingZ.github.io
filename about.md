@@ -22,4 +22,4 @@ background: '/img/bg-about.webp'
 
 <p>My hobby is mobile and analog photography.&nbsp;I like technology and gadgets.</p>
 
-<b><strong>🔥[View]({{ site.baseurl }}{% link Summary.html %})</strong> or <strong>💡[download]({{ site.baseurl }}/img/download/www-soloviovSummary2.pdf)</strong> summary.
+<b><strong>🔥[View]({{ site.baseurl }}{% link Summary.html %})</strong> or <strong>💡[download]({{ site.baseurl }}/img/download/Summary.pdf)</strong> summary.
