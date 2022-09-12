@@ -63,7 +63,7 @@ If the creation date is greater than `2020.01.01` it is new, otherwise - old. He
  {: .table .table-responsive}
  As you can see from the request, we renamed our cells to normal.
 
- ####  function ⚙️
+#### `COALESCE` function⚙️
 
  The SQL language has functions such as `COALESCE` and` ISNULL`, which check the input parameters of `NULL`.
 
@@ -88,7 +88,7 @@ Here is the result of the query:
   {: .table .table-responsive}
 I think everything is clear here. Let's move on to the CONCAT functions.
 
- #### `CONCAT` function⚙️
+#### `CONCAT` function⚙️
 
 This feature helps to glue cells. For example, we can glue the cell `firstname` and` lastname` - creating the following query:
 {% highlight sql %}
