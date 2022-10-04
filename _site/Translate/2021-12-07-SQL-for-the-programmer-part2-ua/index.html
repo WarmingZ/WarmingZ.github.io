@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Бази даних для програмістів - Частина 2🗂️ - Soloviov Blog🇺🇦
+    
+  </title>
+
+  <meta name="description" content="This is my blog on IT theme and more.">
+
+  <link href='https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/Translate/2021-12-07-SQL-for-the-programmer-part2-ua/">
+  <link rel="alternate" type="application/rss+xml" title="Soloviov Blog🇺🇦" href="/feed.xml">
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Soloviov Blog🇺🇦</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/AmAZUHZ.webp')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Бази даних для програмістів - Частина 2🗂️</h1>
+            <!-- 
+            <h2 class="subheading">Розглядаємо прості та агрегатні функції</h2>
+             -->
+            <!-- <span class="meta">Posted by
+              <a href="#">Soloviov Ivan</a> -->
+							<p class="post-meta">
+              8 December 2021 
+							<span class="reading-time" title="Estimated read time">
+  
+   8 mins  read </span>
+
+							1104 words 
+							<a class="post-meta" href="#disqus_thread"></a> 
+						</p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p>В минулому пості я описував роботу простих серверних запитів до СУБД. Також, було описано мінімальний набір теорії для розуміння, з чим ми маємо справу. Розглянули прості SELECT запити, де ми фільтрували дані за допомогою WHERE. В цьому пості я хотів би продемонструвати використання простих та агрегованих функцій. Можливо зараз вам здається що все дуже легко, але так воно і є. Щоправда ми ще не вносили ніяких змін в наші таблиці та не створювали нові, але це поки що😊.</p>
+<center>
+<img src="/img/posts/Database2/DB.png" alt="Network" class="responsive" style="width: 65%; height: auto;" />
+</center>
+
+<hr />
+
+<h3 id="використання-простих-функцій">Використання простих функцій</h3>
+
+<p>В першу чергу хотілось би сказати що в SQL багато вбудованих функцій для виконання різних завдань. Я б хотів продемонструвати самі найчастіше використовувані функції. Також, якщо вам необхідно написати який специфічний запит і вам не вистачає функцій, які будуть розглянуті в цій статті, ви завжди можете відвідати офіційну документацію.
+Оскільки, можна демонструвати дуже багато прикладів, я обрав лише самі цікаві на мою думку, для того, щоб рухатись швидше і не перевантажувати зайвою інформацією. Можливо в мне поки що не виходить писати коротко і локанічно, але вчуся🙄.</p>
+
+<h4 id="функція-if️">Функція <code class="language-plaintext highlighter-rouge">IF</code>⚙️</h4>
+
+<p>Отже, в таблиці <code class="language-plaintext highlighter-rouge">discussion_group</code> ми маємо комірку <code class="language-plaintext highlighter-rouge">approve_required</code>, в якій зберігається підтвердження користувача про реєстрацію в вигляді нулів та одиниць. І нам необхідно вивести користувачів. Для цього ми будемо використовувати оператор <code class="language-plaintext highlighter-rouge">if</code>.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">if</span><span class="p">(</span><span class="n">approve_required</span><span class="p">,</span> <span class="s1">'required'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span> 
+<span class="n">approve_required</span> <span class="k">from</span> <span class="n">discussion_group</span><span class="p">;</span></code></pre></figure>
+
+<p>Ось такий результат ми отримали:</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="text-align: center">if(approve_required, ‘required’, ‘’)</th>
+      <th>approve_required from</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">required</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"> </td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">required</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">required</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"> </td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ми бачимо, що в назві колонки виводиться наша функція. Ми це можемо змінити до нормального вигляду за допомогою оператор <code class="language-plaintext highlighter-rouge">as</code>.</p>
+
+<p>Також, в наступному прикладні ми перейдемо в колонку <code class="language-plaintext highlighter-rouge">disscusion_group</code>, де будемо визначати старі та нові групи. Запит буде виглядати так: <br /></p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"> <span class="k">select</span> <span class="n">group_id</span> <span class="k">as</span> <span class="n">ID</span> <span class="p">,</span> <span class="n">creation_time</span> <span class="k">as</span> <span class="n">CreationData</span> <span class="p">,</span>
+  <span class="n">if</span><span class="p">(</span><span class="n">creation_time</span> <span class="o">&gt;</span> <span class="s1">'2020-01-01'</span><span class="p">,</span> <span class="s1">'new'</span><span class="p">,</span> <span class="s1">'old'</span><span class="p">)</span>
+  <span class="k">as</span> <span class="k">Type</span> <span class="k">from</span> <span class="n">discussion_group</span><span class="p">;</span></code></pre></figure>
+
+<p>Якщо дата створення більша ніж <code class="language-plaintext highlighter-rouge">2020.01.01</code> це нові, в протилежному випадку — старі. Ось результат:</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th style="text-align: center">CreationData</th>
+      <th style="text-align: center">Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>570779</td>
+      <td style="text-align: center">2018-12-21 00:39:04</td>
+      <td style="text-align: center">old</td>
+    </tr>
+    <tr>
+      <td>570890</td>
+      <td style="text-align: center">2019-12-25 00:40:09</td>
+      <td style="text-align: center">old</td>
+    </tr>
+    <tr>
+      <td>570853</td>
+      <td style="text-align: center">2019-12-29 00:39:04</td>
+      <td style="text-align: center">old</td>
+    </tr>
+    <tr>
+      <td>570863</td>
+      <td style="text-align: center">2020-05-17 00:39:05</td>
+      <td style="text-align: center">new</td>
+    </tr>
+    <tr>
+      <td>570922</td>
+      <td style="text-align: center">2021-01-13 00:39:04</td>
+      <td style="text-align: center">new</td>
+    </tr>
+    <tr>
+      <td>570888</td>
+      <td style="text-align: center">2021-03-02 00:39:04</td>
+      <td style="text-align: center">new</td>
+    </tr>
+  </tbody>
+</table>
+<p>Як видно по запиту, ми перейменували наші комірки до зручного вигляду.</p>
+
+<h4 id="функція-coalesce️">Функція <code class="language-plaintext highlighter-rouge">COALESCE</code>⚙️</h4>
+
+<p>У мові SQL є такі функції, як <code class="language-plaintext highlighter-rouge">COALESCE</code> та <code class="language-plaintext highlighter-rouge">ISNULL</code>, які перевіряють вхідні параметри <code class="language-plaintext highlighter-rouge">NULL</code>.</p>
+
+<p>Отримуємо повідомлення з таблиці <code class="language-plaintext highlighter-rouge">user_private_message</code>, які були прочитані після певної дати. Але не у всіх повідомлень є дата прочитання, то ми будемо використовувати дату посилання для ще не прочитаних повідомлень і будемо використовувати цю дату в умові. Тут ми можемо використати функцію <code class="language-plaintext highlighter-rouge">coalesce</code> в умовах <code class="language-plaintext highlighter-rouge">where</code>.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"> <span class="k">Select</span> <span class="n">message_id</span><span class="p">,</span> <span class="n">user_from_id</span><span class="p">,</span>
+  <span class="n">user_to_id</span> <span class="k">from</span> <span class="n">user_private_message</span>
+  <span class="k">where</span> <span class="n">coalesce</span><span class="p">(</span><span class="n">read_time</span><span class="p">,</span> <span class="n">send_time</span><span class="p">)</span> <span class="o">&gt;</span> <span class="s1">'2020-10-20'</span><span class="p">;</span></code></pre></figure>
+
+<p>Ось який результати ми отримали:</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="text-align: center">message_id</th>
+      <th style="text-align: center">user_from_id</th>
+      <th style="text-align: center">user_to_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">6521171</td>
+      <td style="text-align: center">8425</td>
+      <td style="text-align: center">7838</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6521181</td>
+      <td style="text-align: center">8144</td>
+      <td style="text-align: center">8328</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6521186</td>
+      <td style="text-align: center">7614</td>
+      <td style="text-align: center">7720</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6521190</td>
+      <td style="text-align: center">7960</td>
+      <td style="text-align: center">7817</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6521200</td>
+      <td style="text-align: center">7683</td>
+      <td style="text-align: center">8163</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6521207</td>
+      <td style="text-align: center">7490</td>
+      <td style="text-align: center">8533</td>
+    </tr>
+  </tbody>
+</table>
+<p>Думаю тут все зрозуміло. Давайте перейдемо до функцій CONCAT.</p>
+
+<h4 id="функція-concat️">Функція <code class="language-plaintext highlighter-rouge">CONCAT</code>⚙️</h4>
+
+<p>Дана функція допомагає склеювати стрічки. Для прикладу ми можемо склеїти стрічку <code class="language-plaintext highlighter-rouge">firstname</code> і <code class="language-plaintext highlighter-rouge">lastname</code> - створивши такий запит:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"> <span class="k">select</span> <span class="n">concat</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="n">last_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">Name</span> <span class="k">from</span> <span class="k">user</span><span class="p">;</span> </code></pre></figure>
+
+<p>І отримати такий результат:</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="text-align: center">Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Carla Mariet</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Sophy Brags</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Ivan Soloviov</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Doug Anne marie</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Думаю тут також все зрозуміло і ми можемо переходити до наших агрегатних функцій.</p>
+
+<hr />
+
+<h2 id="агрегатні-функції-sql">Агрегатні функції SQL</h2>
+
+<p>Насамперед агрегатні функції SQL діють щодо значень стовпця з метою отримання єдиного результуючого значення.
+Розглянемо агрегатні функції на прикладі <code class="language-plaintext highlighter-rouge">COUNT</code>.</p>
+
+<h4 id="функція-count">Функція <code class="language-plaintext highlighter-rouge">COUNT</code>🔩</h4>
+
+<p>В цьому прикладі давайте  підрахуємо, скільки ми маємо надісланих повідомлень та скільки з них було прочитано. Зробимо ми це за допомогою такого запиту:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"> <span class="k">select</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">from</span> <span class="n">user_private_message</span> 
+  <span class="k">where</span> <span class="n">read_time</span> <span class="k">is</span> <span class="k">not</span> <span class="k">null</span> <span class="p">;</span></code></pre></figure>
+
+<p>Тут ми підрахували скільки надісланих та прочитаних повідомлень. Тобто, ми рахували лише ті колонки, в яких відсутній <code class="language-plaintext highlighter-rouge">null</code>, в таблиці <code class="language-plaintext highlighter-rouge">user_private_message</code>. Спочатку надсилаємо стрічку <code class="language-plaintext highlighter-rouge">from user_private_message</code> і потім фільтруємо її (<code class="language-plaintext highlighter-rouge">where read_time is not null</code>) та надсилаємо в наш <code class="language-plaintext highlighter-rouge">count(*)</code>. 
+В цьому випадку коли ми використовуємо зірочку ми вибираємо всі стрічки та завантажуємо їх в пам’ять.
+Тепер якщо ми будемо передавати замість зірочки, параметр, то запит буде виглядати так:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"> <span class="k">select</span> <span class="k">count</span><span class="p">(</span><span class="n">read_time</span><span class="p">)</span> <span class="k">from</span> <span class="n">user_private_message</span><span class="p">;</span></code></pre></figure>
+
+<p>Тобто ми можемо оцінити, на скільки наш запит, став компактнішим. <br />
+💡<strong>Також, варто запам’ятати! Багато програмістів використовують таку оптимізаційну “фішку”, передаючи в <code class="language-plaintext highlighter-rouge">count(1)</code> одиницю. Тобто, вибираючи з таблиці, ми не використовуємо проміжну пам’ять, просто для кожної стрічки ми виконуємо функцію <code class="language-plaintext highlighter-rouge">count(1)</code>, яка взагалі не потребує ніяких значень ( вона просто додає +1 до деякого агрегатного значення ). Таким чином, ми не користуємося проміжною пам’яттю для зберігання значення, які ми навіть не збираємось вертати з СУБД.</strong></p>
+
+<p>Ще існують такі функції як: <code class="language-plaintext highlighter-rouge">Average</code>, <code class="language-plaintext highlighter-rouge">Min</code>, <code class="language-plaintext highlighter-rouge">Max</code>, <code class="language-plaintext highlighter-rouge">Sum</code>. Дані функції я не буду описувати, оскільки з їх назви все зрозуміло. Ви з легкістю зможете знайти їх в інтернеті. Перепрошую за це, але якщо розписувати кожну функцію ми ніколи не перейдемо до самих цікавих і складних функцій😉</p>
+
+<h4 id="функція-cast">Функція <code class="language-plaintext highlighter-rouge">CAST</code>🔩</h4>
+
+<p>І на останок розглянемо просто цікаву функцію <code class="language-plaintext highlighter-rouge">CAST</code>. Дана функція дозволяє перетворити вираз одного типу даних в інший і вона не являється агрегатною. Натисни на мене <a href="https://docs.microsoft.com/ru-ru/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver15"><code class="language-plaintext highlighter-rouge">CAST</code></a>, якщо хочеш детальніше дізнатися про функцію та аргументи, які вона може приймати.</p>
+
+<p>В багатьох старих базах даних, рік писали лише двома цифрами. За допомогою касту ми можемо перетворити ті дані в новий формат.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"> <span class="n">mysql</span><span class="o">&gt;</span> <span class="k">select</span> <span class="k">cast</span><span class="p">(</span><span class="nv">"21"</span><span class="k">as</span> <span class="nb">year</span><span class="p">);</span></code></pre></figure>
+
+<p>І отримати таку відповідь на наш запит:</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="text-align: center">cast(“21”as year)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">2021</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Зараз, ми розглянули лише одну агретану функцію, яка була на мій погляд досить цікавою. Якщо ви бажаєте дізнатися про них більше, перейдіть по цьому <a href="https://www.sqlservertutorial.net/sql-server-aggregate-functions/">посиланню</a>.</p>
+
+<hr />
+
+<p>Отже, можливо цей пост здався вам трішки заплутаним, але я раджу вам самостійно відтворювати всі запити, які були наведені в цьому пості. Це допоможе вам краще зрозуміти роботу цих запитів. Експерементуйте та користуйтесь документацією, але при цьому, будьте обережні. Оскільки, якщо ви встановили SQL Server по моєму прикладу ( <a href="https://www.soloviov.fun/sql/tech/translated/SQL-for-the-programmer-ua/">з минулої статті</a> ), ви можете зламати сервер, так як ми працюємо як <code class="language-plaintext highlighter-rouge">root</code> користувач, маючи необмежені права доступу на сервері. Побачимось в наступному пості👋😉.</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:vany.soloviov@gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/Soloviov.IA">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/ivan-soloviov-62403b193">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/WarmingZ">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/warmiddle/">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Soloviov Ivan 2022</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-211989430-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-211989430-1');
+</script>
+
+
+
+</body>
+
+</html>
