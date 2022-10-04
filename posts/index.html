@@ -1,11 +1,23 @@
 ---
 layout: page
 title: Posts
+description: All <span class="colortext"><b>9</b></span> posts on my blog 
 background: '/img/bg-post.webp'
 lang: en
 ---
-{% for post in paginator.posts %}
 
+<p>A little statistics of my blog:
+	<span class="colortext"><b>{% posts_word_count total %}</b></span> words in the entire blog,
+	<span class="colortext"><b>{% posts_word_count average %}</b></span> average word count across posts,
+	<span class="colortext"><b>{% posts_word_count longest %}</b></span> longest word count of any post.
+	<style>
+		.colortext{
+			color: green;
+		}
+	</style>
+</p>
+
+{% for post in paginator.posts %}
 <article class="post-preview">
   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
     <h2 class="post-title">{{ post.title }}</h2>
