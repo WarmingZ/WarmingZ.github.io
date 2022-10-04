@@ -1,0 +1,74 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+.fa {
+  padding: 15px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
+
+.fa:hover {
+    background: grey;
+    color: white;
+   
+}
+
+.fa-facebook {
+color: grey;
+ border: 1px solid gray;
+}
+
+.fa-twitter {
+color:gray;
+}
+
+.fa-google-plus {
+color:gray;
+ border: 1px;
+ border: 2px solid gray;
+}
+
+.fa-reddit{
+	color:gray;
+}
+
+.fa-linkedin{
+	color:gray;
+}
+
+.fa-envelope{
+	color:gray;
+}
+
+@media screen and (max-width:490px){
+	.fa {
+  padding: 13px;
+	font-size: 20px;
+  width: 20px;
+	}
+}
+</style>
+
+<div class="share-box">
+
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-facebook"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+<!-- <a class="g" href="https://plus.google.com/share?url={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-google-plus"></i></a> -->
+
+<a class="r" href="http://www.reddit.com/submit?url={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{site.baseurl}}{{ page.url }}&title={{ page.title }}&summary={{ page.desc }}&source=webjeda" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-linkedin"></i></a>
+
+</div> 
+<!-- <a class="e" href="mailto:?subject={{ page.title }}&amp;body=Check out this site {{ site.url }}{{site.baseurl}}{{ page.url }}"><i class="fa fa-envelope fa"></i></a>                          

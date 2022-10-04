@@ -2492,6 +2492,20 @@ header.masthead .page-heading .subheading, header.masthead .site-heading .subhea
 
 header.masthead .post-heading h1 { font-size: 35px; }
 
+header.masthead .post-heading > .post-meta { margin-top: 15px; padding-left: 0; font-size: 22px; font-style: normal; }
+
+header.masthead .post-heading > .post-meta li { list-style: none; display: inline; }
+
+header.masthead .post-heading > .post-meta li count { display: inline-block; margin-right: 10px; }
+
+header.masthead .post-heading > .post-meta li time { display: inline-block; }
+
+header.masthead .post-heading > .post-meta li span { display: inline-block; }
+
+header.masthead .post-heading .reading-time { margin-left: 10px; margin-right: 10px; display: inline; }
+
+@media only screen and (max-width: 235px) { header.masthead .post-heading .reading-time { margin-left: 0px; margin-right: 10px; display: inline; } }
+
 header.masthead .post-heading .meta, header.masthead .post-heading .subheading { line-height: 1.1; display: block; }
 
 header.masthead .post-heading .subheading { font-size: 24px; font-weight: 600; margin: 10px 0 30px; font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }

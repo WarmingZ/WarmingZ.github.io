@@ -19,12 +19,31 @@ layout: default
             {% endif %} -->
             <!-- <span class="meta">Posted by
               <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a> -->
-							<p class="post-meta">
-              {{ page.date | date: '%-d %B %Y' }} 
+							
+					<ul class="post-meta">
+						<!-- Posted by
+							{% if post.author %}
+							{{ post.author }}
+							{% else %}
+							{{ site.author }}
+							{% endif %}
+							on -->
+						<li>
+							<time itemprop="Data"> {{ page.date | date: '%-d %B %Y' }} </time>
+						</li>
+						<li itemprop="timeCount">
 							{% include read_time.html content=page.content %}
-							{{ page.content | number_of_words }} words 
-							<a class="post-meta" href="{{ post.url | relative_url }}#disqus_thread"></a> 
-						</p>
+						</li>
+						<li itemprop="wordCount">
+							<count>{{ page.content | number_of_words }} words</count>
+						</li>
+						<li>
+						<count>
+							<i class="fa fa-comment"></i>
+							<a style="color: whitesmoke;" class="post-meta" href="{{ page.url | relative_url }}#disqus_thread"></a>
+						</count>
+					</li>
+					</ul>
             </span>
           </div>
         </div>
@@ -35,7 +54,7 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-
+		
         {{ content }}
 
         <hr>

@@ -59,6 +59,44 @@ header.masthead {
             font-size: 35px;
         }
 
+		>.post-meta {
+		
+					li {
+						list-style: none;
+						display: inline;
+			
+						count {
+							display: inline-block;
+							margin-right: 10px;
+						}
+			
+						time {
+							display: inline-block;
+						}
+			
+						span {
+							display: inline-block;
+						}
+					}
+			
+					margin-top: 15px;
+					padding-left: 0;
+					font-size: 22px;
+					font-style: normal;
+				}
+
+				.reading-time {
+					margin-left:10px ;
+					margin-right: 10px;
+					display: inline;
+				}
+				@media only screen and (max-width: 235px){
+					.reading-time {
+						margin-left: 0px;
+						margin-right: 10px;
+						display: inline;
+					}
+				}
         .meta,
         .subheading {
             line-height: 1.1;
