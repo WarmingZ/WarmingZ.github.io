@@ -1,14 +1,10 @@
 ---
 title: Jekyll is the best tool for creating your own media
 layout: post
-subtitle: Create your own media resource using Jekyll and GitHub Pages
 date: '2022-07-21 14:05:39'
-background:
-categories: Tech Translated
-lang: en
-lang-ref: jekyll
 image: /img/posts/Jekyll/Git.jpg
 description: Create your own media resource using Jekyll and GitHub Pages
+comments: true
 ---
 
 11 months ago, I decided to develop a pet project. I mainly program in C Sharp, so I didn't have to think long about the choice of technologies for development. Since [ASP.Net Core MVC](https://en.wikipedia.org/wiki/ASP.NET_Core) is quite widespread, I thought it would be a good addition to my resume.
