@@ -22,7 +22,7 @@ highlighter: rouge
 
 # Build settings
 markdown: kramdown
-paginate:           5
+paginate:           10
 paginate_path:      "/posts/page:num/"
 plugins:
   - jekyll-feed
@@ -30,9 +30,9 @@ plugins:
   - jekyll-sitemap 
   - jekyll-seo-tag
   - jekyll-feed
-permalink: /:categories/:title/
+permalink: /:title/
 
-gem: [jekyll-admin]
+
 
 highlighter: rouge
 kramdown:

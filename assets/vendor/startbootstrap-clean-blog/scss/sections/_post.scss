@@ -1,49 +1,90 @@
 // Styling for the post page
 .post-preview {
-    >a {
-        color: $gray-900;
+	// padding-bottom: 25px;
+	>a {
+		color: $gray-900;
 
-        &:focus,
-        &:hover {
-            text-decoration: none;
-            color: $primary;
-        }
+		&:focus,
+		&:hover {
+			text-decoration: none;
+			color: $primary;
+		}
 
-        >.post-title {
-            font-size: 30px;
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
+		>.post-title {
+			font-size: 30px;
+			margin-top: 30px;
+			margin-bottom: 10px;
+		}
 
-        >.post-subtitle {
-            font-weight: 300;
-            margin: 0 0 10px;
-        }
-    }
+		>.post-subtitle {
+			font-weight: 300;
+			margin: 0 0 10px;
+		}
+	}
 
-    >.post-meta {
-        font-size: 18px;
-        font-style: italic;
-        margin-top: 0;
-        color: $gray-600;
+	.reading-time {
+		margin-left:10px ;
+		margin-right: 10px;
+		display: inline;
+	}
+	@media only screen and (max-width: 235px){
+			.reading-time {
+				margin-left: 0px;
+				margin-right: 10px;
+				display: inline;
+			}
+	}
+	p.post-excerp{
+		margin: 0px 0;
+	}
 
-        >a {
-            text-decoration: none;
-            color: $gray-900;
+	>.post-meta {
+		
+		li {
+			list-style: none;
+			display: inline;
 
-            &:focus,
-            &:hover {
-                text-decoration: underline;
-                color: $primary;
-            }
-        }
-    }
+			count {
+				display: inline-block;
+				margin-right: 10px;
+			}
 
-    @media only screen and (min-width: 768px) {
-        >a {
-            >.post-title {
-                font-size: 36px;
-            }
-        }
-    }
+			time {
+				display: inline-block;
+			}
+
+			span {
+				display: inline-block;
+			}
+		}
+
+		margin-top: 0;
+		padding-left: 0;
+		font-size: 19px;
+		font-style: normal;
+		margin-top: 0;
+		color: $gray-600;
+
+
+
+
+		>a {
+			text-decoration: none;
+			color: $gray-900;
+
+			&:focus,
+			&:hover {
+				text-decoration: underline;
+				color: $primary;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		>a {
+			>.post-title {
+				font-size: 36px;
+			}
+		}
+	}
 }

@@ -4,10 +4,7 @@ layout: default
 
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead"
-  style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-  <link rel="stylesheet" href="/_layouts/social.css">
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico?">
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
   <header class="masthead">
     {% endif %}
@@ -17,75 +14,45 @@ layout: default
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
             <h1>{{ page.title }}</h1>
-            {% if page.subtitle %}
+            <!-- {% if page.subtitle %}
             <h2 class="subheading">{{ page.subtitle }}</h2>
-            {% endif %}
-
-            <span class="meta">Posted by
-              <a href="/about/">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-              on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
-              content=page.content %}
+            {% endif %} -->
+            <!-- <span class="meta">Posted by
+              <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a> -->
+							<p class="post-meta">
+              {{ page.date | date: '%-d %B %Y' }} 
+							{% include read_time.html content=page.content %}
+							{{ page.content | number_of_words }} words 
+							<a class="post-meta" href="{{ post.url | relative_url }}#disqus_thread"></a> 
+						</p>
             </span>
-            <br>
-            <span class="meta">
-              <div class="post-categories">
-                Categories:
-                {% if post %}
-                {% assign categories = post.categories %}
-                {% else %}
-                {% assign categories = page.categories %}
-                {% endif %}
-                {% for category in categories %}
-                
-                <a href="{{site.baseurl}}/categories/#{{category|slugize}}" class="link"
-                  style="
-                    text-align: center;
-  line-height: 35px;
-  font-size: 14.5px;
-  padding: 2px 13px;
-  border: none;
-  background-color: #4CAF50;
-  border-radius: 50px;
-  color: #fff;  
-                  ">{{category}}</a>
-                {% unless forloop.last %}&nbsp;{% endunless %}
-                {% endfor %}
-
-              </div>
-            </span>
-            <br>
-            {% include selector.html %}
           </div>
         </div>
       </div>
     </div>
-    {% seo %}
   </header>
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-7 col-md-10 mx-auto">
-        
-        
-        {{ content }}
-      
-        <hr>
-        {% if page.previous.url %}
-        <a class="btn btn-primary float-left"
-          href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip"
-          data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
-            Post</span></a>
-        {% endif %}
-        {% if page.next.url %}
-        <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"
-          data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
-            Post</span> &rarr;</a>
-        {% endif %}
-        {% if site.disqus.shortname %}
-        {% include disqus_comments.html %}
-        {% endif %}
-      </div>
+      <div class="col-lg-8 col-md-10 mx-auto">
 
+        {{ content }}
+
+        <hr>
+
+        <div class="clearfix">
+
+          {% if page.previous.url %}
+          <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          {% endif %}
+          {% if page.next.url %}
+          <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          {% endif %}
+
+        </div>
+
+      </div>
     </div>
-  </div>
   </div>

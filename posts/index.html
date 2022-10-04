@@ -4,51 +4,45 @@ title: Posts
 background: '/img/bg-post.webp'
 lang: en
 ---
-{% assign sorted-posts = site.posts | where: "lang", page.lang %}
-{% if sorted-posts.size > 0 %}
-{% for post in sorted-posts %}
+{% for post in paginator.posts %}
+
 <article class="post-preview">
-  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}"></a>
     <h2 class="post-title">{{ post.title }}</h2>
-    {% if post.subtitle %}
+    <!-- {% if post.subtitle %}
     <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-    {% else %}
-    <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+    {% else %} -->
+    <!-- <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
     {% endif %}
-  </a>
-  <p class="post-meta">Posted by
-    {% if post.author %}
+  </a> -->
+  <ul class="post-meta">
+		<!--Posted by
+     {% if post.author %}
     {{ post.author }}
     {% else %}
     {{ site.author }}
-    {% endif %}
-    on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
-  </p>
-  <p class="post-meta" style="margin-top: -20px;">Categories:
-    {% if post %}
-    {% assign categories = post.categories %}
-    {% else %}
-    {% assign categories = page.categories %}
-    {% endif %}
-    {% for category in categories %}
-    <a href="{{site.baseurl}}/categories/#{{category|slugize}}" class="link"
-      style="  text-align: center;
-      line-height: 35px;
-      font-size: 14.5px;
-      padding: 2px 13px;
-      border: none;
-      background-color: #4CAF50;
-      border-radius: 50px;
-      color: #fff;">{{category}}</a>
-    {% unless forloop.last %}&nbsp;{% endunless %}
-    {% endfor %}
-  </p>
+    {% endif %} on -->
+    <li>
+			<time itemprop="Data"> {{ post.date | date: '%-d %B %Y' }} </time>
+		</li>
+		<li itemprop="timeCount">
+			{% include read_time.html content=post.content %}
+		</li>
+		<li itemprop="wordCount">
+			<count>{{ post.content | number_of_words }} words</count>
+		</li>
+		<li>
+		<count>
+			<i class="fa fa-comment"></i>
+			<a class="post-meta" href="{{ post.url | relative_url }}#disqus_thread"></a>
+		</count>
+	</li>
+	</ul>
 </article>
 
 <hr>
 
 {% endfor %}
-{% endif %}
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
@@ -56,15 +50,12 @@ lang: en
 <div class="clearfix">
 
   {% if paginator.previous_page %}
-  <a class="btn btn-primary float-left"
-    href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+  <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
     Newer<span class="d-none d-md-inline"> Posts</span></a>
   {% endif %}
 
   {% if paginator.next_page %}
-  <a class="btn btn-primary float-right"
-    href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span
-      class="d-none d-md-inline"> Posts</span> &rarr;</a>
+  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
   {% endif %}
 
 </div>
