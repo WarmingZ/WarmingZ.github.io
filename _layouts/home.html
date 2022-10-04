@@ -79,9 +79,9 @@ layout: default
 
 				<!-- Pager -->
 				<div class="clearfix">
-					<a class="btn btn-primary float-right" href="{{" posts" | relative_url }}">View All Posts &rarr;</a>
+					<a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
 				</div>
-
+				{% include disqus_comments.html %}
 			</div>
 		</div>
 	</div>

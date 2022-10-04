@@ -3,16 +3,6 @@
   
     {
 
-      "title"    : "Jekyll is the best tool for creating your own media",
-      "subtitle"    : "Create your own media resource using Jekyll and GitHub Pages",
-      "url"      : "/about-my-blog/",
-      "categories" : "TechTranslated",
-      "date"     : "2022-07-21 14:05:39 +0000"
-
-    } ,
-  
-    {
-
       "title"    : "Answers on questions 🇺🇦",
       "subtitle"    : "Let&#39;s try to answer frequently asked questions and claims of the Russian society towards Ukraine",
       "url"      : "/war/",
@@ -78,16 +68,6 @@
       "url"      : "/neural-network/",
       "categories" : "TipsTech",
       "date"     : "2021-11-08 13:17:39 +0000"
-
-    } ,
-  
-    {
-
-      "title"    : "First post👋",
-      "subtitle"    : "This is the first post on my new blog and the desire to say hello",
-      "url"      : "/first-post/",
-      "categories" : "PersonalTranslated",
-      "date"     : "2021-11-07 17:04:39 +0000"
 
     } 
   
