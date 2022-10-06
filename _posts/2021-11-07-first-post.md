@@ -6,6 +6,7 @@ categories: Personal Translated
 comments: true
 image: /img/posts/FirstPost/hello.jpg
 description: This is the first post on my new blog and the desire to say hello
+tag: jekyll
 ---
 
 This is the first post on my new blog and the desire to say hello 👋

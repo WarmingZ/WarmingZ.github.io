@@ -49,14 +49,14 @@
         <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
         </li>
+				<li class="nav-item">
+					<a class="nav-link" href="/posts"> All posts</a>
+				</li>
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/posts">Posts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
+          <a class="nav-link" href="/comments">Latest comments</a>
         </li>
       </ul>
     </div>
@@ -87,9 +87,61 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
-        <p>A little statistics of my blog:
-	<span class="colortext"><b>13226</b></span> words in the entire blog,
-	<span class="colortext"><b>1469</b></span> average word count across posts,
+        <h4>All site tags</h4>
+<br>
+
+<!-- All tags -->
+<div class="allTags">
+<ul class="post-meta-tags" style="margin-left: 0;padding-left: 0; display: inline;">
+  
+  
+  <li style="list-style-type: none; display: inline-block;"><a class="tag" href="/topics/jekyll/"><img src="/statick/image/tags/Jekyll-small-01.svg" style="width:20px;"></img> jekyll</a></li>
+  
+  
+  
+  <li style="list-style-type: none; display: inline-block;"><a class="tag" href="/topics/sql/"><img src="/statick/image/tags/mysql.png" style="width:20px;"></img> sql</a></li>
+  
+  
+</ul>
+</div>
+
+<style>
+
+.post-meta-tags {
+	text-decoration: none;
+	display: inline-block;
+}
+
+
+.tag {
+	text-align: center;
+	line-height: 35px;
+	font-size: 20px;
+	padding: 5px 15px;
+	border: none;
+	background-color: #3e8841;
+	border-radius: 50px;
+	color: #fff;
+}
+
+
+.tag:hover {
+	background-color: gray;
+	color: white;
+}
+
+a.tag {
+	text-decoration: none;
+	color: white;
+	margin-right: 10px;
+}
+
+</style>
+
+
+<p>A little statistics of my blog:
+	<span class="colortext"><b>13209</b></span> words in the entire blog,
+	<span class="colortext"><b>1467</b></span> average word count across posts,
 	<span class="colortext"><b>2731</b></span> longest word count of any post.
 	<style>
 		.colortext{
@@ -270,7 +322,7 @@
 
 		</li>
 		<li itemprop="wordCount">
-			<count>1476 words</count>
+			<count>1459 words</count>
 		</li>
 		<li>
 		<count>

@@ -4,7 +4,7 @@ layout: post
 subtitle: Consider simple and aggregate functions
 date: '2021-12-08 13:10:39'
 background: "/img/AmAZUHZ.webp"
-categories: SQL Tech Translated
+tag: sql
 lang: en
 lang-ref: sql2
 image: /img/posts/Database2/DB.png
@@ -26,10 +26,13 @@ Also, because there are so many examples to choose from, I chose only the most i
 #### `IF` function⚙️
 
 So, in the table `discussion_group` we have a cell` approve_required`, which stores user registration confirmations in the form of zeros and ones. And we need to get users out. To do this, we will use the operator `if`.
-{% highlight sql %}
+
+
 select if(approve_required, 'required', ''), 
 approve_required from discussion_group;
-{% endhighlight %}
+
+
+
 Here is the result of the query:
 
  | if(approve_required, 'required', '') | approve_required from |
@@ -92,7 +95,7 @@ I think everything is clear here. Let's move on to the CONCAT functions.
 
 This feature helps to glue cells. For example, we can glue the cell `firstname` and` lastname` - creating the following query:
 {% highlight sql %}
- select concat(first_name, ' ', last_name) as Name from user; 
+select concat(first_name, ' ', last_name) as Name from user; 
 {% endhighlight %}
 And get the following result:
 

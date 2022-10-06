@@ -44,6 +44,7 @@ $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
+$gray:     grey !default;
 
 $colors: () !default;
 $colors: map-merge(
@@ -1120,8 +1121,8 @@ $close-text-shadow:                 0 1px 0 $white !default;
 
 // Code
 
-$code-font-size:                    87.5% !default;
-$code-color:                        $pink !default;
+$code-font-size:                    86% !default;
+$code-color:                        $black !default;
 
 $kbd-padding-y:                     .2rem !default;
 $kbd-padding-x:                     .4rem !default;

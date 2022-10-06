@@ -44,6 +44,18 @@ layout: default
 						</count>
 					</li>
 					</ul>
+					Tags:
+					<!-- Tags	 -->
+					{% if page.tags %}
+					<ul class="post-meta-tags" style="margin-left: 0;padding-left: 0;">
+						{% for tag in page.tags %}
+						{% assign found_tags = site.topics | where: "slug", tag %}
+						{% for tag in found_tags limit:1 %}
+						<li style="list-style-type: none;"><a class="tag" href="{{ tag.url }}" title="{{ tag.title }}">{{tag.icon}} {{ tag.slug }}</a></li>
+						{% endfor %}
+						{% endfor %}
+					</ul>
+					{% endif %}
             </span>
           </div>
         </div>

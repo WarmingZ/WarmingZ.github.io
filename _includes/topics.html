@@ -1,0 +1,43 @@
+<!-- All tags -->
+<div class="allTags">
+<ul class="post-meta-tags" style="margin-left: 0;padding-left: 0; display: inline;">
+  {% for page in site.topics %}
+  {% if page.title and site.tags[page.slug] and page.hidden != true %}
+  <li style="list-style-type: none; display: inline-block;"><a class="tag" href="{{ page.url | prepend: site.baseurl }}">{{page.icon}} {{ page.name }}</a></li>
+  {% endif %}
+  {% endfor %}
+</ul>
+</div>
+
+<style>
+
+.post-meta-tags {
+	text-decoration: none;
+	display: inline-block;
+}
+
+
+.tag {
+	text-align: center;
+	line-height: 35px;
+	font-size: 20px;
+	padding: 5px 15px;
+	border: none;
+	background-color: #3e8841;
+	border-radius: 50px;
+	color: #fff;
+}
+
+
+.tag:hover {
+	background-color: gray;
+	color: white;
+}
+
+a.tag {
+	text-decoration: none;
+	color: white;
+	margin-right: 10px;
+}
+
+</style>

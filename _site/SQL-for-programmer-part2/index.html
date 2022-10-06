@@ -49,14 +49,14 @@
         <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
         </li>
+				<li class="nav-item">
+					<a class="nav-link" href="/posts"> All posts</a>
+				</li>
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/posts">Posts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
+          <a class="nav-link" href="/comments">Latest comments</a>
         </li>
       </ul>
     </div>
@@ -96,7 +96,7 @@
 
 						</li>
 						<li itemprop="wordCount">
-							<count>1476 words</count>
+							<count>1459 words</count>
 						</li>
 						<li>
 						<count>
@@ -105,6 +105,18 @@
 						</count>
 					</li>
 					</ul>
+					Tags:
+					<!-- Tags	 -->
+					
+					<ul class="post-meta-tags" style="margin-left: 0;padding-left: 0;">
+						
+						
+						
+						<li style="list-style-type: none;"><a class="tag" href="/topics/sql/" title="sql"><img src="/statick/image/tags/mysql.png" style="width:20px;"></img> sql</a></li>
+						
+						
+					</ul>
+					
             </span>
           </div>
         </div>
@@ -133,8 +145,8 @@ Also, because there are so many examples to choose from, I chose only the most i
 
 <p>So, in the table <code class="language-plaintext highlighter-rouge">discussion_group</code> we have a cell<code class="language-plaintext highlighter-rouge"> approve_required</code>, which stores user registration confirmations in the form of zeros and ones. And we need to get users out. To do this, we will use the operator <code class="language-plaintext highlighter-rouge">if</code>.</p>
 
-<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">if</span><span class="p">(</span><span class="n">approve_required</span><span class="p">,</span> <span class="s1">'required'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span> 
-<span class="n">approve_required</span> <span class="k">from</span> <span class="n">discussion_group</span><span class="p">;</span></code></pre></figure>
+<p>select if(approve_required, ‘required’, ‘’), 
+approve_required from discussion_group;</p>
 
 <p>Here is the result of the query:</p>
 
@@ -281,7 +293,7 @@ Also, because there are so many examples to choose from, I chose only the most i
 
 <p>This feature helps to glue cells. For example, we can glue the cell <code class="language-plaintext highlighter-rouge">firstname</code> and<code class="language-plaintext highlighter-rouge"> lastname</code> - creating the following query:</p>
 
-<figure class="highlight"><pre><code class="language-sql" data-lang="sql"> <span class="k">select</span> <span class="n">concat</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="n">last_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">Name</span> <span class="k">from</span> <span class="k">user</span><span class="p">;</span> </code></pre></figure>
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">concat</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="n">last_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">Name</span> <span class="k">from</span> <span class="k">user</span><span class="p">;</span> </code></pre></figure>
 
 <p>And get the following result:</p>
 

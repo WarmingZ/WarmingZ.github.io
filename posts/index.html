@@ -6,6 +6,12 @@ background: '/img/bg-post.webp'
 lang: en
 ---
 
+<h4>All site tags</h4>
+<br>
+
+{% include topics.html %}
+
+
 <p>A little statistics of my blog:
 	<span class="colortext"><b>{% posts_word_count total %}</b></span> words in the entire blog,
 	<span class="colortext"><b>{% posts_word_count average %}</b></span> average word count across posts,

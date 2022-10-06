@@ -3,6 +3,10 @@ code {
   @include font-size($code-font-size);
   color: $code-color;
   word-wrap: break-word;
+	border: lightgray solid 1px;
+	border-radius: 3px;
+	background-color: lightgray;
+
 
   // Streamline the style when inside anchors to avoid broken underline and more
   a > & {

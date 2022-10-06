@@ -62,13 +62,12 @@ layout: default
 							<count>{{ post.content | number_of_words }} words</count>
 						</li>
 						<li>
-						<count>
-							<i class="fa fa-comment"></i>
-							<a class="post-meta" href="{{ post.url | relative_url }}#disqus_thread"></a>
-						</count>
-					</li>
+							<count>
+								<i class="fa fa-comment"></i>
+								<a class="post-meta" href="{{ post.url | relative_url }}#disqus_thread"></a>
+							</count>
+						</li>
 					</ul>
-
 					<p class="post-excerp"> {{ post.content | markdownify | strip_html | truncatewords: 40 }}</p>
 					<a class="read-more" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">Read more...</a>
 				</article>
@@ -79,9 +78,9 @@ layout: default
 
 				<!-- Pager -->
 				<div class="clearfix">
-					<a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
+					<a class="btn btn-primary float-right" href="{{" /posts" | relative_url }}">View All Posts &rarr;</a>
 				</div>
-				
+
 			</div>
 		</div>
 	</div>

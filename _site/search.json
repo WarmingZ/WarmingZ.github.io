@@ -26,7 +26,7 @@
       "title"    : "Databases for programmers - Part 3 🗂️",
       "subtitle"    : "Combining selection and sorting and constraints of results",
       "url"      : "/for-the-programmer-part3/",
-      "categories" : "SQLTechTranslated",
+      "categories" : "",
       "date"     : "2021-12-20 12:10:39 +0000"
 
     } ,
@@ -36,7 +36,7 @@
       "title"    : "Databases for programmers - Part 2🗂️",
       "subtitle"    : "Consider simple and aggregate functions",
       "url"      : "/SQL-for-programmer-part2/",
-      "categories" : "SQLTechTranslated",
+      "categories" : "",
       "date"     : "2021-12-08 13:10:39 +0000"
 
     } ,
@@ -46,7 +46,7 @@
       "title"    : "Databases for programmers - Part 1🗂️",
       "subtitle"    : "In this post, we will look at simple server requests SQL",
       "url"      : "/SQL-for-the-programmer/",
-      "categories" : "SQLTechTranslated",
+      "categories" : "",
       "date"     : "2021-12-02 17:10:39 +0000"
 
     } ,

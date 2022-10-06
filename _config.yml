@@ -29,10 +29,13 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap 
   - jekyll-seo-tag
-  - jekyll-feed
+
 permalink: /:title/
 
-
+collections:
+  topics:
+    output: true
+    permalink: /topics/:name/
 
 highlighter: rouge
 kramdown:

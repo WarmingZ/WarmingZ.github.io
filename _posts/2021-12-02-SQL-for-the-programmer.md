@@ -4,7 +4,7 @@ layout: post
 subtitle: In this post, we will look at simple server requests SQL
 date: '2021-12-02 17:10:39'
 background: "/img/AmAZUHZ.webp"
-categories: SQL Tech Translated
+tag: sql
 lang: en
 lang-ref: sql
 image: /img/posts/Database/imageDatabase.jpg

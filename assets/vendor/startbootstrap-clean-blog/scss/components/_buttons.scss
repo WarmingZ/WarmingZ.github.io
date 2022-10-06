@@ -1,32 +1,62 @@
 // Bootstrap overrides for this template
 .btn {
-    font-size: 14px;
-    font-weight: 800;
-    padding: 15px 25px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 0;
-    font-family: $headings-font-family;
+	font-size: 14px;
+	font-weight: 800;
+	padding: 15px 25px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	border-radius: 0;
+	font-family: $headings-font-family;
 }
 
-.read-more{
+.read-more {
 	text-decoration: underline;
 }
 
 .btn-primary {
-    background-color: $primary;
-    border-color: $primary;
+	background-color: $primary;
+	border-color: $primary;
 
-    &:hover,
-    &:focus,
-    &:active {
-        color: $white;
-        background-color: darken($primary, 7.5) !important;
-        border-color: darken($primary, 7.5) !important;
-    }
+	&:hover,
+	&:focus,
+	&:active {
+		color: $white;
+		background-color: darken($primary, 7.5) !important;
+		border-color: darken($primary, 7.5) !important;
+	}
 }
 
 .btn-lg {
-    font-size: 16px;
-    padding: 25px 35px;
+	font-size: 16px;
+	padding: 25px 35px;
 }
+
+.post-meta-tags {
+	text-decoration: none;
+	display: inline-block;
+}
+
+
+.tag {
+	text-align: center;
+	line-height: 35px;
+	font-size: 20px;
+	padding: 5px 15px;
+	border: none;
+	background-color: #3e8841;
+	border-radius: 50px;
+	color: #fff;
+}
+
+
+.tag:hover {
+	background-color: gray;
+	color: white;
+}
+
+a.tag {
+	text-decoration: none;
+	color: white;
+	margin-right: 10px;
+}
+
