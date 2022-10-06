@@ -4,7 +4,7 @@ layout: post
 subtitle: Recommendations help a person to find content of interest to him, or make him ignorant?
 date: '2021-11-16 22:10:39'
 background: "/img/AmAZUHZ.webp"
-categories: Personal Translated
+tag: personal 
 lang: en
 lang-ref: recommendation
 image: /img/posts/Recommendations/recommendation.jpg

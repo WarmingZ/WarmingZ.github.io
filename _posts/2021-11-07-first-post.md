@@ -2,7 +2,7 @@
 title: First post👋
 layout: post
 date: '2021-11-07 17:04:39'
-categories: Personal Translated
+tag: personal 
 comments: true
 image: /img/posts/FirstPost/hello.jpg
 description: This is the first post on my new blog and the desire to say hello

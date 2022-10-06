@@ -71,7 +71,7 @@ layout: default
 						{% for tag in post.tags %}
 						{% assign found_tags = site.topics | where: "slug", tag %}
 						{% for tag in found_tags limit:1 %}
-						<li style="list-style-type: none;"><a class="tag" style="font-size: 18px;" href="{{ tag.url }}" title="{{ tag.title }}">{{tag.icon}} {{ tag.slug }}</a></li>
+						<li style="list-style-type: none;"><a class="tag" style="font-size: 14px;" href="{{ tag.url }}" title="{{ tag.title }}">{{tag.icon}} {{ tag.slug }}</a></li>
 						{% endfor %}
 						{% endfor %}
 					</ul>

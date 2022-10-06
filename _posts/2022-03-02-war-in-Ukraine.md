@@ -4,7 +4,7 @@ layout: post
 subtitle: The war came to my Ukraine
 date: '2022-03-04 22:10:39'
 background: "/img/Ukraine2.webp"
-categories:
+tag: personal
 lang: en
 lang-ref: war
 image: /img/posts/War/image.jpg

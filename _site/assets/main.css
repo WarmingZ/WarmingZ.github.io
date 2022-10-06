@@ -2442,7 +2442,7 @@ img::-moz-selection { color: #fff; background: transparent; }
 
 .post-meta-tags { text-decoration: none; display: inline-block; }
 
-.tag { text-align: center; line-height: 35px; font-size: 20px; padding: 5px 15px; border: none; background-color: #3e8841; border-radius: 50px; color: #fff; }
+.tag { text-align: center; line-height: 35px; font-size: 14px; padding: 5px 15px; border: none; background-color: #3e8841; border-radius: 50px; color: #fff; }
 
 .tag:hover { background-color: gray; color: white; }
 
@@ -2500,7 +2500,7 @@ header.masthead .page-heading .subheading, header.masthead .site-heading .subhea
 
 header.masthead .post-heading h1 { font-size: 35px; }
 
-header.masthead .post-heading > .post-meta { margin-top: 15px; padding-left: 0; font-size: 22px; font-style: normal; }
+header.masthead .post-heading > .post-meta { margin-top: 15px; padding-left: 0; font-size: 22px; font-style: italic; }
 
 header.masthead .post-heading > .post-meta li { list-style: none; display: inline; }
 

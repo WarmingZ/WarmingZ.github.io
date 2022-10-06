@@ -56,7 +56,7 @@
       "title"    : "Perception of the world through the prism of recommendations🕹️",
       "subtitle"    : "Recommendations help a person to find content of interest to him, or make him ignorant?",
       "url"      : "/recommendations/",
-      "categories" : "PersonalTranslated",
+      "categories" : "",
       "date"     : "2021-11-16 22:10:39 +0000"
 
     } ,
@@ -66,7 +66,7 @@
       "title"    : "Neural networks - entertainment or something more?🌎",
       "subtitle"    : "The most interesting sites with a neural network in my opinion.",
       "url"      : "/neural-network/",
-      "categories" : "TipsTech",
+      "categories" : "",
       "date"     : "2021-11-08 13:17:39 +0000"
 
     } 
