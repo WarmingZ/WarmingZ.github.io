@@ -28,7 +28,7 @@ carousels:
 The occupier from the Russian Federation came to my native country. He kills people and destroys cities, strikes and fires at apartment buildings, uses vacuum bombs and vicious attacks on my homeland. The occupier made a mistake and entered our land on February 24, 2022. This post didn't come out earlier because blogging wasn't a priority these days.
 
 <center>
-<img src="/img/posts/War/image.jpg" alt="Network" class="responsive" style="width: 90%; height: auto;">
+<img src="/img/posts/War/image.jpg" alt="Network" class="responsive" style="width: 100%; height: auto;">
 </center>
 
 ***
@@ -94,6 +94,6 @@ Deputies of the State Duma of the Russian Federation approved in the first readi
 No one will ever forgive you for that! Glory to Ukraine!
 
 <center>
-<img src="/img/posts/War/UkraineFlag.png" alt="Network" class="responsive" style="width: 90%; height: auto;">
+<img src="/img/posts/War/UkraineFlag.png" alt="Network" class="responsive" style="width: 100%; height: auto;">
 </center>
 
