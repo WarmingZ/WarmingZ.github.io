@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-06T18:36:38+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Soloviov Blog🇺🇦</title><subtitle>This is my blog on IT theme and more.</subtitle><author><name>Soloviov Ivan</name></author><entry><title type="html">Jekyll is the best tool for creating your own media</title><link href="http://localhost:4000/about-my-blog/" rel="alternate" type="text/html" title="Jekyll is the best tool for creating your own media" /><published>2022-07-21T14:05:39+00:00</published><updated>2022-07-21T14:05:39+00:00</updated><id>http://localhost:4000/about-my-blog</id><content type="html" xml:base="http://localhost:4000/about-my-blog/"><![CDATA[<p>11 months ago, I decided to develop a pet project. I mainly program in C Sharp, so I didn’t have to think long about the choice of technologies for development. Since <a href="https://en.wikipedia.org/wiki/ASP.NET_Core">ASP.Net Core MVC</a> is quite widespread, I thought it would be a good addition to my resume.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-07T11:32:28+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Soloviov Blog🇺🇦</title><subtitle>This is my blog on IT theme and more.</subtitle><author><name>Soloviov Ivan</name></author><entry><title type="html">Jekyll is the best tool for creating your own media</title><link href="http://localhost:4000/about-my-blog/" rel="alternate" type="text/html" title="Jekyll is the best tool for creating your own media" /><published>2022-07-21T14:05:39+00:00</published><updated>2022-07-21T14:05:39+00:00</updated><id>http://localhost:4000/about-my-blog</id><content type="html" xml:base="http://localhost:4000/about-my-blog/"><![CDATA[<p>11 months ago, I decided to develop a pet project. I mainly program in C Sharp, so I didn’t have to think long about the choice of technologies for development. Since <a href="https://en.wikipedia.org/wiki/ASP.NET_Core">ASP.Net Core MVC</a> is quite widespread, I thought it would be a good addition to my resume.</p>
 
 <center>
 <img src="/img/posts/Jekyll/Genius.webp" alt="Network" class="responsive" style="width: 100%; height: auto;" />
@@ -22,7 +22,7 @@ Now let’s recall all the stories about AWS and Google Cloud Platform that I de
 <p>I have developed more than one site using ASP.Net Core MVC. But if you really just want to run your blog, or create a nice page with your product documentation, you won’t find a better option than Jekyll. You can check out my projects by visiting my <a href="https://github.com/WarmingZ?tab=repositories">GitHub</a> account, or by <a href="https://github.com/WarmingZ/WarmingZ.github .io">link</a> you can familiarize yourself with the files and code of this site.</p>]]></content><author><name>Soloviov Ivan</name></author><category term="jekyll" /><summary type="html"><![CDATA[Create your own media resource using Jekyll and GitHub Pages]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/img/posts/Jekyll/Git.jpg" /><media:content medium="image" url="http://localhost:4000/img/posts/Jekyll/Git.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="en"><title type="html">Answers on questions 🇺🇦</title><link href="http://localhost:4000/war/" rel="alternate" type="text/html" title="Answers on questions 🇺🇦" /><published>2022-06-12T22:10:39+00:00</published><updated>2022-06-12T22:10:39+00:00</updated><id>http://localhost:4000/war</id><content type="html" xml:base="http://localhost:4000/war/"><![CDATA[<p>Hello, after looking at the statements of some representatives of Russian IT and Russian society in general about the war in Ukraine, I wanted to try to answer some of their claims and questions. I don’t know if I can convince anyone, but I will express my point of view. The article turned out to be quite simple and superficial because I tried to cover the most common questions, so I did’t manage to look deeper.</p>
 
 <center>
-<img src="/img/posts/War2/War2.webp" alt="Network" class="responsive" style="width: 90%; height: auto;" />
+<img src="/img/posts/War2/War2.webp" alt="Network" class="responsive" style="width: 100%; height: auto;" />
 </center>
 
 <hr />
@@ -31,7 +31,7 @@ Now let’s recall all the stories about AWS and Google Cloud Platform that I de
 I am writing this post because, as it seems to me, I can counter some of the arguments Yegor said about Ukraine in this interview. I also urge you to try to understand the position of the hero.</p>
 
 <center>
-<img src="/img/posts/War2/Pol.webp" alt="Network" class="responsive" style="width: 90%; height: auto;" />
+<img src="/img/posts/War2/Pol.webp" alt="Network" class="responsive" style="width: 100%; height: auto;" />
 </center>
 
 <p>From the beginning, Egor said that in Russia, in particular in Moscow, the society is not so politicized in comparison with Ukraine. And this is true,going up to a person on the street and asking him what he thinks about such and such a political situation, 80% of respondents will tell you their points of view. But is it really that bad? Ukraine, all the time to be between two opposing forces, has experienced many Maidans and presidents.
@@ -42,7 +42,7 @@ Almost all the years of independence, the society wanted changes, the proof of t
 <p>Further, Yegor speaks about not accepting a different position, a different opinion, which can radically differ from the opinion of the interlocutor. On this account, I would like to say that such a phenomenon is observed not only in Ukraine, and not only in this country, people hang labels on a person. Taking the Russian society as a whole, which, by the way, hangs labels no worse than the Ukrainian one, and listen to the opinion of the Russian about the Ukrainian, I don’t think that we will hear anything good.</p>
 
 <center>
-<img src="/img/posts/War2/Tuzla.webp" alt="Network" class="responsive" style="width: 90%; height: auto;" />
+<img src="/img/posts/War2/Tuzla.webp" alt="Network" class="responsive" style="width: 100%; height: auto;" />
 </center>
 
 <p>Yes, for many years we were considered brothers, but at the same time they sold us gas at exorbitant prices and had views of the island of Kos Tuzla, back in 2003. And that’s just what I can remember. Also, let’s pay attention to the linguistic features, when Russians constantly say “in Ukraine”, explaining this by the fact that Ukraine as such did not exist and it was “on the outskirts” which is absolute nonsense. Since Kyiv existed when there was a swamp on the site of Moscow. You can also read historical summaries of the term Oukraina on the Internet, I also think when they say “on”, then this country is going to war. As it happened, Russia went to war with Ukraine.
@@ -53,7 +53,7 @@ But it is worth paying tribute to Yegor, he was not talking about Ukrainians, bu
 <p>Egor gives several arguments about the Ukrainian language, which, it seems to me, are due to Ukraine’s long stay in the Soviet Union. We perfectly understand what language children were taught in schools and what language the Ukrainian Soviet government spoke. Egor cites the words of Vaserman as an example, who stated that the Ukrainian language during its existence could not form from the southern dialect of the Russian language into an independent language. The author of the opinion also speaks of “Surzhik”, calling it an intermediate language, which is between Russian and Ukrainian. But I will not describe the phenomena of “Surzhik”, I would like to comment on the words about the unformed language. Based on historical events, one can understand why so few people speak Ukrainian. I believe that this is precisely the consequence of Russia’s policy for all the years of its existence. I also urge you to study the Russian language before the period of the revolution, before the Bolsheviks abolished the language. It will also be interesting to study the appearance of the first institutions and graduates of these institutions.</p>
 
 <center>
-<img src="/img/posts/War2/sssr.webp" alt="Network" class="responsive" style="width: 90%; height: auto;" />
+<img src="/img/posts/War2/sssr.webp" alt="Network" class="responsive" style="width: 100%; height: auto;" />
 </center>
 
 <p>Let’s pay attention to the words about “Surzhik”. Do 100% of Russians really speak a pure Russian dialect? If we start to explore the issue of dialectics, we will come across a greater number of so-called “surzhiks” than in Ukraine. I do not know the specific percentage of people who speak a dialect, but based on the size of the territory of Russia, we can conclude that not everyone speaks pure Russian. So I don’t think the “surzhik” argument is that good. I urge you to also study the linguistic issue in the Kuban and take a closer look at the names of villages in the Belgorod region, it seems to me that if you carefully study this issue, you can find a lot of interesting things.</p>
@@ -63,7 +63,7 @@ But it is worth paying tribute to Yegor, he was not talking about Ukrainians, bu
 <p>My opinion on this matter is as simple as possible, maximum preferences for the Ukrainian language, freedom for Russian. If they go back a little higher and read my arguments about Zelensky’s election, it can be repeated again that people wanted a centric government that would take a less radical approach, including to the language issue. And this issue was resolved, but for a long time, but hard, but in the end of development it could have been resolved if Russia had not crossed everything out with its invasion of a foreign country.</p>
 
 <center>
-<img src="/img/posts/War2/surzhik.webp" alt="Network" class="responsive" style="width: 90%; height: auto;" />
+<img src="/img/posts/War2/surzhik.webp" alt="Network" class="responsive" style="width: 100%; height: auto;" />
 </center>
 
 <p>Just as everything Yegor brings to the account of the ban on everything Russian in Ukraine can be applied to Russia itself. But for some reason these bans are better than in Ukraine. Quite a lot has also been said about freedom of speech and that Yegor advocates that it generally does not exist in any state. With which, in principle, I agree, but again, in Russia for Yegor, for some reason, censorship is better than in Ukraine. Perhaps I somehow did not understand the words of the author of these words, but I got the impression.</p>
@@ -74,7 +74,7 @@ But it is worth paying tribute to Yegor, he was not talking about Ukrainians, bu
 This question can also be asked to the people of Russia, but where were you for 8 years? Why were you silent while “we bombed Donbass”? And who has destabilized the situation in these regions all these years?</p>
 
 <center>
-<img src="/img/posts/War2/Donbas.webp" alt="Network" class="responsive" style="width: 90%; height: auto;" />
+<img src="/img/posts/War2/Donbas.webp" alt="Network" class="responsive" style="width: 100%; height: auto;" />
 </center>
 
 <p>By the way, since 2017 Ukraine has wanted to introduce peacekeeping forces in the occupied regions. However, such plans have not been implemented so far due to the ambitions of the Russian government and Putin’s efforts to carry out a UN peacekeeping mission on favorable terms. The fact is that Ukraine and its Western allies have differing views with Russia on the mandate of such a UN mission.</p>
@@ -82,7 +82,7 @@ This question can also be asked to the people of Russia, but where were you for 
 <p>In particular, the Ukrainian position was that peacekeepers should be in the entire occupied territory, while Russia wanted to deploy peacekeeping units only on the line of demarcation. It is clear that it was not profitable for Putin to give peacekeepers de facto control at the border, because the pseudo-republics would simply fall apart without supplies of food, ammunition and, most importantly, financial infusions.</p>
 
 <center>
-<img src="/img/posts/War2/UN.webp" alt="Network" class="responsive" style="width: 90%; height: auto;" />
+<img src="/img/posts/War2/UN.webp" alt="Network" class="responsive" style="width: 100%; height: auto;" />
 </center>
 
 <p>Didn’t your government supply weapons there? According to <a href="https://en.wikipedia.org/wiki/Igor_Girkin">Girkin</a>, he and the company, after the capture of Crimea, without an order from the military authorities, went to raise a wave of protest in the regions of Donbass. And by the way, all these people who took part in the operation to seize the Crimea and other regions were not regular military personnel of the RF Armed Forces. Do you think it is possible to draw an analogy with the oprichnik’s, Ivan Grozny ( Ivan the Terrible)? I think that these citizens even surpassed their historical ancestors, since the guardsmen at least stood in the ranks of the oprichnik’s.
@@ -92,7 +92,7 @@ By the way, I urge you to look at the statistics of the shelling of Donbass by t
 So is it really that the majority of people living in the regions of Donbass really wanted to go to Russia so badly? We will never know the answer to this question.</p>
 
 <center>
-<img src="/img/posts/War2/Nato.webp" alt="Network" class="responsive" style="width: 90%; height: auto;" />
+<img src="/img/posts/War2/Nato.webp" alt="Network" class="responsive" style="width: 100%; height: auto;" />
 </center>
 
 <p>And what about NATO? I believe that America as a whole has made little effort to destabilize the situation in Ukraine. The endless struggle between Russia and America has brought us to this point. Only Russia shows us unjustified imperial ambitions. If someone does not people Russia, she will make you love her by force. It is also an interesting question, but would Ukraine want to join NATO if Russia had not pursued such a bloody policy? Let’s look at the number of “armed conflicts” involving Russia that I can highlight.</p>
@@ -115,7 +115,7 @@ So is it really that the majority of people living in the regions of Donbass rea
 <p>And to this, any Russian will answer something like “but how many wars has America unleashed?”. And this will be the standard justification of their state. But interestingly, it turns out that the Russians hate America and call it bloodthirsty, when they themselves do the same thing. So how are you different from the “bloodthirsty Americans”?</p>]]></content><author><name>Soloviov Ivan</name></author><category term="personal" /><summary type="html"><![CDATA[Let's try to answer frequently asked questions and claims of the Russian society towards Ukraine]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/img/posts/War2/A.jpg" /><media:content medium="image" url="http://localhost:4000/img/posts/War2/A.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="en"><title type="html">The war in Ukraine</title><link href="http://localhost:4000/war-in-Ukraine/" rel="alternate" type="text/html" title="The war in Ukraine" /><published>2022-03-04T22:10:39+00:00</published><updated>2022-03-04T22:10:39+00:00</updated><id>http://localhost:4000/war-in-Ukraine</id><content type="html" xml:base="http://localhost:4000/war-in-Ukraine/"><![CDATA[<p>The occupier from the Russian Federation came to my native country. He kills people and destroys cities, strikes and fires at apartment buildings, uses vacuum bombs and vicious attacks on my homeland. The occupier made a mistake and entered our land on February 24, 2022. This post didn’t come out earlier because blogging wasn’t a priority these days.</p>
 
 <center>
-<img src="/img/posts/War/image.jpg" alt="Network" class="responsive" style="width: 90%; height: auto;" />
+<img src="/img/posts/War/image.jpg" alt="Network" class="responsive" style="width: 100%; height: auto;" />
 </center>
 
 <hr />
@@ -1023,7 +1023,7 @@ Deputies of the State Duma of the Russian Federation approved in the first readi
 <p>No one will ever forgive you for that! Glory to Ukraine!</p>
 
 <center>
-<img src="/img/posts/War/UkraineFlag.png" alt="Network" class="responsive" style="width: 90%; height: auto;" />
+<img src="/img/posts/War/UkraineFlag.png" alt="Network" class="responsive" style="width: 100%; height: auto;" />
 </center>]]></content><author><name>Soloviov Ivan</name></author><category term="personal" /><summary type="html"><![CDATA[The war came to my Ukraine]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/img/posts/War/image.jpg" /><media:content medium="image" url="http://localhost:4000/img/posts/War/image.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="en"><title type="html">Databases for programmers - Part 3 🗂️</title><link href="http://localhost:4000/for-the-programmer-part3/" rel="alternate" type="text/html" title="Databases for programmers - Part 3 🗂️" /><published>2021-12-20T12:10:39+00:00</published><updated>2021-12-20T12:10:39+00:00</updated><id>http://localhost:4000/for-the-programmer-part3</id><content type="html" xml:base="http://localhost:4000/for-the-programmer-part3/"><![CDATA[<p>In this post, I want to show the connection of the sample results vertically and show some examples of sorting and limiting the sample results. I urge you to repeat all the commands I have given in the examples and modify them to suit your needs. This way you will better understand and assimilate the material. Let’s start without words. Enjoy reading 👋!</p>
 
 <center>
