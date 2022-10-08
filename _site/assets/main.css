@@ -2416,7 +2416,7 @@ a { color: #212529; }
 
 a:focus, a:hover { color: #0085A1; }
 
-blockquote { font-style: italic; color: #6c757d; }
+blockquote { font-style: italic; color: #6c757d; padding-left: 15px; }
 
 .section-heading { font-size: 36px; font-weight: 700; margin-top: 60px; }
 

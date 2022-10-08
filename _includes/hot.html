@@ -1,0 +1,27 @@
+<div class="hot">
+	{% for item in site.data.hot.Main %}
+	<ul>
+		<li>
+			<blockquote>
+				{{item.notice}}
+			</blockquote>
+		</li>
+	</ul>
+	{% endfor %}
+</div>
+
+<style>
+	.hot{
+		margin-bottom: 50px;
+	}
+	.hot ul li {
+		border-left: 3px solid gray;
+		display: block;
+
+		list-style: none;
+	}
+	ul, li {
+margin: 0;
+padding: 0;
+}
+</style>
