@@ -9,6 +9,9 @@ lang: en
 lang-ref: sql3
 image: /img/posts/Database3/DB.png
 description: Combining selection and sorting and constraints of results
+redirect_from:
+  - sql/tech/translated/for-the-programmer-part3/
+permalink: for-the-programmer-part3/
 ---
 In this post, I want to show the connection of the sample results vertically and show some examples of sorting and limiting the sample results. I urge you to repeat all the commands I have given in the examples and modify them to suit your needs. This way you will better understand and assimilate the material. Let's start without words. Enjoy reading 👋!
 

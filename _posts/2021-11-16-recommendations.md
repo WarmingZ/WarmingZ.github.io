@@ -9,6 +9,9 @@ lang: en
 lang-ref: recommendation
 image: /img/posts/Recommendations/recommendation.jpg
 description: Recommendations help a person to find content of interest to him, or make him ignorant?
+redirect_from:
+  - personal/translated/recommendations/
+permalink: recommendations/
 ---
 YouTube has said it takes its responsibility for supporting diverse opinions seriously, while reducing the spread of "harmful misinformation". "More than 70% of the time you spend watching a huge Google video hosting site is attracted to one of the service's recommendations based on artificial intelligence", said YouTube Chief Product Officer Neal Mohan. 
 
