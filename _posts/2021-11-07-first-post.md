@@ -7,8 +7,6 @@ comments: true
 image: /img/posts/FirstPost/hello.jpg
 description: This is the first post on my new blog and the desire to say hello
 tag: jekyll
-redirect_from:
-  - https://www.soloviov.fun/tech/translated/about-my-blog/
 ---
 
 This is the first post on my new blog and the desire to say hello 👋
