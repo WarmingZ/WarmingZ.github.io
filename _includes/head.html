@@ -1,30 +1,35 @@
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>
-    {% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}
-    {% else %}{{ site.title | escape }}{% endif %}
-  </title>
+	<title>
+		{% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}
+		{% else %}{{ site.title | escape }}{% endif %}
+	</title>
 
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+	<meta name="description"
+		content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-  <link href='https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap'
+		rel='stylesheet' type='text/css'>
+	<link
+		href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+		rel='stylesheet' type='text/css'>
 
-  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-	<script id="dsq-count-scr" src="//https-warmingz-github-io.disqus.com/count.js" async></script> 
+	<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+	<script id="dsq-count-scr" src="//https-warmingz-github-io.disqus.com/count.js" async></script>
 
-  <link rel="stylesheet" href="{{"/assets/main.css" | relative_url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+	<link rel="stylesheet" href="{{" /assets/main.css" | relative_url }}">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ " /feed.xml" |
+		relative_url }}">
 
 
-		<!-- Favicons  -->
-		<link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/statick/image/favicons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/statick/image/favicons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/statick/image/favicons/favicon-16x16.png">
-		<link rel="manifest" href="{{site.baseurl}}/statick/image/favicons/site.webmanifest">
-		
+	<!-- Favicons  -->
+	<link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/statick/image/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/statick/image/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/statick/image/favicons/favicon-16x16.png">
+	<link rel="manifest" href="{{site.baseurl}}/statick/image/favicons/site.webmanifest">
+	{% seo %}
 </head>
