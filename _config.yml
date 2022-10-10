@@ -16,7 +16,7 @@ telegram_username:   SoloviovIA
 rss_path: feed.xml
 
 # Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-211989430-1 
+google_analytics:   UA-211989430-1  
 
 markdown: kramdown
 highlighter: rouge
