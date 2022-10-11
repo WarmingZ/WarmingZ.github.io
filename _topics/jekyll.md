@@ -2,7 +2,7 @@
 layout: topic
 title:  "jekyll"
 name: jekyll
-icon: <img src="/statick/image/tags/Jekyll-small-01.svg" style="width:20px;"></img>
+icon: <i class="fa fa-pagelines" aria-hidden="true" style="font-size:13px;"></i>
 description: All posts are tagged Jekyll.
 description_page: |
   <img src="/statick/image/tags/Jekyll.png" style="width:30%; float: right; margin:7px 0 7px 7px;" alt="alternatetext"></img>

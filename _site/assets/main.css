@@ -2442,9 +2442,9 @@ img::-moz-selection { color: #fff; background: transparent; }
 
 .post-meta-tags { text-decoration: none; display: inline-block; }
 
-.tag { text-align: center; line-height: 35px; font-size: 14px; padding: 5px 15px; border: none; background-color: #3e8841; border-radius: 50px; color: #fff; }
+.tag { text-align: center; line-height: 35px; font-size: 14px; padding: 5px 15px; border: none; background-color: grey; border-radius: 50px; color: #fff; }
 
-.tag:hover { background-color: gray; color: white; }
+.tag:hover { background-color: #0085A1; color: white; }
 
 a.tag { text-decoration: none; color: white; margin-right: 10px; }
 
