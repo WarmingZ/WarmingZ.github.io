@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Posts
-description: All <span class="colortext"><b>9</b></span> posts on my blog 
+description: All <span class="colortext"><b>9</b></span> posts on my blog
 background: '/img/bg-post.webp'
 lang: en
 ---
@@ -17,31 +17,49 @@ lang: en
 	<span class="colortext"><b>{% posts_word_count average %}</b></span> average word count across posts,
 	<span class="colortext"><b>{% posts_word_count longest %}</b></span> longest word count of any post.
 	<style>
-		.colortext{
+		.colortext {
 			color: #0085A1;
 		}
 	</style>
 </p>
 
-{% for post in paginator.posts %}
+	<!-- <div id='sorters'>
+	Sort by:
+	<span id="by_date" onclick="sort_by_date();" class="sorter active">date</span>
+	|
+	<span id="by_comments" onclick="sort_by_comments();" class="sorter">comments</span>
+	|
+	<span id="by_length" onclick="sort_by_length();" class="sorter">length</span>
+	</div>
+
+	<script>
+	function sort_by_date() {
+
+	}
+	function sort_by_comments() {
+		document.getElementById("test").innerHTML = "Hello btoh";
+	}
+	</script> -->
+
+	{% for post in paginator.posts %}
 <article class="post-preview">
-  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-    <h2 class="post-title" style="font-size: 22px;">{{ post.title }}</h2>
+	<a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+		<h2 class="post-title" style="font-size: 22px;">{{ post.title }}</h2>
 	</a>
-    <!-- {% if post.subtitle %}
+	<!-- {% if post.subtitle %}
     <h3 class="post-subtitle">{{ post.subtitle }}</h3>
     {% else %} -->
-    <!-- <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+	<!-- <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
     {% endif %}
   </a> -->
-  <ul class="post-meta">
+	<ul class="post-meta">
 		<!--Posted by
      {% if post.author %}
     {{ post.author }}
     {% else %}
     {{ site.author }}
     {% endif %} on -->
-    <li>
+		<li>
 			<time itemprop="Data" style="margin-right:10px ;"> {{ post.date | date: '%-d %B %Y' }} </time>
 		</li>
 		<!-- <li itemprop="timeCount">
@@ -52,22 +70,23 @@ lang: en
 		</li> -->
 		<li>
 			{% if post.tags %}
-	<ul class="post-meta-tags" style="margin-left: 0;padding-left: 0;">
-		{% for tag in post.tags %}
-		{% assign found_tags = site.topics | where: "slug", tag %}
-		{% for tag in found_tags limit:1 %}
-		<li style="list-style-type: none;"><a class="tag" style="font-size: 14px; margin-top: 2px;" href="{{ tag.url }}" title="{{ tag.title }}">{{tag.icon}} {{ tag.slug }}</a></li>
-		{% endfor %}
-		{% endfor %}
-	</ul>
-	{% endif %}
+			<ul class="post-meta-tags" style="margin-left: 0;padding-left: 0;">
+				{% for tag in post.tags %}
+				{% assign found_tags = site.topics | where: "slug", tag %}
+				{% for tag in found_tags limit:1 %}
+				<li style="list-style-type: none;"><a class="tag" style="font-size: 14px; margin-top: 2px;" href="{{ tag.url }}"
+						title="{{ tag.title }}">{{tag.icon}} {{ tag.slug }}</a></li>
+				{% endfor %}
+				{% endfor %}
+			</ul>
+			{% endif %}
 		</li>
 		<li>
-		<count>
-			<i class="fa fa-comment"></i>
-			<a class="post-meta" href="{{ post.url | relative_url }}#disqus_thread"></a>
-		</count>
-	</li>
+			<count>
+				<i class="fa fa-comment"></i>
+				<a class="post-meta" href="{{ post.url | relative_url }}#disqus_thread"></a>
+			</count>
+		</li>
 	</ul>
 </article>
 
@@ -80,14 +99,17 @@ lang: en
 
 <div class="clearfix">
 
-  {% if paginator.previous_page %}
-  <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
-    Newer<span class="d-none d-md-inline"> Posts</span></a>
-  {% endif %}
+	{% if paginator.previous_page %}
+	<a class="btn btn-primary float-left"
+		href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+		Newer<span class="d-none d-md-inline"> Posts</span></a>
+	{% endif %}
 
-  {% if paginator.next_page %}
-  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-  {% endif %}
+	{% if paginator.next_page %}
+	<a class="btn btn-primary float-right"
+		href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span
+			class="d-none d-md-inline"> Posts</span> &rarr;</a>
+	{% endif %}
 
 </div>
 

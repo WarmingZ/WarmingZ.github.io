@@ -2,7 +2,7 @@
 layout: topic
 title:  "sql"
 name: sql
-icon: <i class="fa fa-database" aria-hidden="true" style="font-size:13px;"></i>
+icon: <i class="fa fa-database" aria-hidden="true" style="font-size:15px;"></i>
 description: All posts are tagged SQL.
 description_page: |
   <img src="/statick/image/tags/sql.png" style="width:20%; float: right; margin:7px 0 7px 7px;" alt="alternatetext"></img>

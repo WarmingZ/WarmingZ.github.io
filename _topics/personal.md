@@ -2,7 +2,7 @@
 layout: topic
 title:  "personal"
 name: personal
-icon: <i class="fa fa-grav" aria-hidden="true" style="font-size:14px"></i>
+icon: <i class="fa fa-grav" aria-hidden="true" style="font-size:15px"></i>
 description: All posts are tagged Personal.
 description_page: |
   <img src="/statick/image/tags/personal.png" style="width:25%; float: right; margin:-15px 0 7px 7px;" alt="alternatetext"></img>
