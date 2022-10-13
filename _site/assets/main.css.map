@@ -108,7 +108,7 @@
 	"sourcesContent": [
 		"@import \"styles\";\n",
 		"// Import Core Clean Blog SCSS\n@import \"../assets/vendor/startbootstrap-clean-blog/scss/styles.scss\";\n",
-		"// Import variables\n@import \"./variables\";\n\n// Import Bootstrap\n@import \"../../bootstrap/scss/bootstrap\";\n\n// Global CSS\n@import \"./global\";\n\n// Components\n@import \"./components/buttons\";\n@import \"./components/navbar\";\n\n// Sections\n@import \"./sections/contact\";\n@import \"./sections/footer\";\n@import \"./sections/masthead\";\n@import \"./sections/post\";\n@import \"./sass-code-highlight/github\";",
+		"// Import variables\n@import \"./variables\";\n\n// Import Bootstrap\n@import \"../../bootstrap/scss/bootstrap\";\n\n// Global CSS\n@import \"./global\";\n\n// Components\n@import \"./components/buttons\";\n@import \"./components/navbar\";\n\n// Sections\n@import \"./sections/contact\";\n@import \"./sections/footer\";\n@import \"./sections/masthead\";\n@import \"./sections/post\";\n@import \"./sass-code-highlight/github.scss\";",
 		"@import \"./variables/colors.scss\";\n@import \"./variables/typography.scss\";",
 		"// Custom color variables\n\n$teal: #0085A1;\n\n$primary: $teal;",
 		"// Override Bootstrap typography variables\n\n$font-family-base: Caladea, -apple-system, BlinkMacSystemFont, \"Segoe UI\",\n    Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\",\n    \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n\n$headings-font-family: Caladea, -apple-system, BlinkMacSystemFont,\n    \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\",\n    \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n",
