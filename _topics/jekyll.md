@@ -1,6 +1,7 @@
 ---
 layout: topic
-title:  "jekyll"
+title:  "Jekyll"
+image: /statick/image/tags/Jekyll.png
 name: jekyll
 icon: <i class="fa fa-pagelines" aria-hidden="true" style="font-size:15px;"></i>
 description: All posts are tagged Jekyll.

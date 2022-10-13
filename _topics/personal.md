@@ -1,6 +1,7 @@
 ---
 layout: topic
-title:  "personal"
+title:  "Personal"
+image: /statick/image/tags/personal.png
 name: personal
 icon: <i class="fa fa-grav" aria-hidden="true" style="font-size:15px"></i>
 description: All posts are tagged Personal.
