@@ -14,13 +14,9 @@ permalink: about-my-blog/
 11 months ago, I decided to develop a pet project. I mainly program in C Sharp, so I didn't have to think long about the choice of technologies for development. Since [ASP.Net Core MVC](https://en.wikipedia.org/wiki/ASP.NET_Core) is quite widespread, I thought it would be a good addition to my resume.
 
 <center>
-<img src="/img/posts/Jekyll/Genius.webp" alt="Network" class="responsive" style="width: 100%; height: auto;">
+<img src="/img/posts/Jekyll/Genius.webp" alt="Network" class="img-fluid">
+<p class="caption text-muted">©Genius 2016 by Michael Grandage</p>
 </center>
-<!--  For image
-<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
- -->
-
-
 
 Also, it could demonstrate my skills in testing, "devopsing", development and in general the whole stage of creating a product, maybe not perfect, with simple functionality and implementation, but a finished product. I allocated a period of one month for the development of the working version. This term included the development of the interface, database, architecture, as well as writing the code and testing it. I also set aside a few days to familiarize myself with available cloud technology solutions for my product deployment. One of the main advantages for me was the simplicity, clarity of the UI and the trial period.
 

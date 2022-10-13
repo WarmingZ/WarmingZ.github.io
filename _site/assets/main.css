@@ -2422,7 +2422,7 @@ blockquote { font-style: italic; color: #6c757d; padding-left: 15px; }
 
 .section-heading { font-size: 36px; font-weight: 700; margin-top: 60px; }
 
-.caption { font-size: 14px; font-style: italic; display: block; margin: 0; padding: 10px; text-align: center; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; }
+.caption { font-size: 14px; font-style: italic; display: block; margin: 0; padding: 0 0px; text-align: center; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; }
 
 ::-moz-selection { color: #fff; background: #0085A1; text-shadow: none; }
 
