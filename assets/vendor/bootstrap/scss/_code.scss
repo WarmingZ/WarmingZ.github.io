@@ -47,8 +47,8 @@ pre{
   display: block;
   @include font-size($code-font-size);
   color: $pre-color;
-	border-left: grey solid 4px;
-	padding-left: 10px;
+	border-left: lightgrey solid 4px;
+	padding-left: 15px;
 	margin-left: 25px;
 	padding-top: 5px ;
 	padding-bottom: 5px;

@@ -49,7 +49,7 @@ from user_private_message;
 {% endhighlight %}
 And we get the following result:
 
- | count(distinct if(user_from_id = 8609, 8592, user_from_id))  | 
+ | count(distinct if(user_from_id = 8609,8592, user_from_id))  | 
  |:------------------------------------:|
  | 176                                  |  
  {: .table .table-responsive }
@@ -122,7 +122,7 @@ So, `select user_id,first_name, is_active` - sort by `user` id, name and field `
 |    7635 | Zach       |         1 |
 |    7883 | Yvet       |         1 |
 |    8589 | Yvet       |         1 |
- {: .table .table-responsive }
+ {: .table  .table-responsive}
 
 Here we see our sorting by `is_active`. Our sample was divided into two groups, inactive users (in which the attribute `is_active = 0`) and active. That is, first we sort by `is_active` and already within this group is sorted by name. And the second group, in which `is_active = 1`, usernames are sorted in descending order. If we come across several identical names and want to sort them by adding the appropriate attributes to our query, then sorting for them will take place according to the third rule.
 

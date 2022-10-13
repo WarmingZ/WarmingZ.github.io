@@ -16,9 +16,13 @@ permalink: about-my-blog/
 <center>
 <img src="/img/posts/Jekyll/Genius.webp" alt="Network" class="responsive" style="width: 100%; height: auto;">
 </center>
+<!--  For image
+<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+ -->
+
+
 
 Also, it could demonstrate my skills in testing, "devopsing", development and in general the whole stage of creating a product, maybe not perfect, with simple functionality and implementation, but a finished product. I allocated a period of one month for the development of the working version. This term included the development of the interface, database, architecture, as well as writing the code and testing it. I also set aside a few days to familiarize myself with available cloud technology solutions for my product deployment. One of the main advantages for me was the simplicity, clarity of the UI and the trial period.
-
 
 The choice fell on Google Cloud Platform, because at that time I already had some experience with Amazon Web Services. After reading several interesting stories about how a developer wrote a not very successful script, after which his servers worked at full capacity for a day, by the way, this script cost him 20 thousand dollars, I was frankly scared to upload my project to AWS. So I signed up for Google cloud platform and got $200 free for 90 days to buy a virtual server on Linux.
 
