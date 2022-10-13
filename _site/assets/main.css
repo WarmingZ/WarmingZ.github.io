@@ -169,7 +169,7 @@ mark, .mark { padding: 0.2em; background-color: #fcf8e3; }
 
 .figure-caption { font-size: 90%; color: #6c757d; }
 
-code { font-size: 86%; color: #000; word-wrap: break-word; border: lightgray solid 1px; border-radius: 3px; background-color: lightgray; }
+code { font-size: 86%; color: #000; word-wrap: break-word; background-color: lightgray; border-radius: 3px; hyphens: none; padding: 0 4px; }
 
 a > code { color: inherit; }
 
@@ -177,11 +177,13 @@ kbd { padding: 0.2rem 0.4rem; font-size: 86%; color: #fff; background-color: #21
 
 kbd kbd { padding: 0; font-size: 100%; font-weight: 700; }
 
-pre { display: block; font-size: 86%; color: #212529; }
+.pre-scrollable { max-height: 340px; overflow-y: visible; }
 
-pre code { font-size: inherit; color: inherit; word-break: normal; }
+pre { display: block; font-size: 86%; color: #212529; border-left: grey solid 4px; padding-left: 10px; margin-left: 25px; padding-top: 5px; padding-bottom: 5px; background-color: none; }
 
-.pre-scrollable { max-height: 340px; overflow-y: scroll; }
+pre code { background-color: inherit; padding: 0; }
+
+@media only screen and (max-width: 600px) { pre { margin-left: 0; padding-left: 0; border-left: none; } }
 
 .container, .container-fluid, .container-xl, .container-lg, .container-md, .container-sm { width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; }
 

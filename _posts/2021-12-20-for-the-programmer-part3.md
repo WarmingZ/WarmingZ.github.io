@@ -24,9 +24,10 @@ In this post, I want to show the connection of the sample results vertically and
 ### Combining results vertically
 Let's learn to work with samples as sets and learn to combine them. To do this, we need a function that will help us know which elements are in the set.
 Let's start with the fact that we, for example, need to know what are the unique values for the column with the appropriate ratio, that is, for the table. Find out how many unique senders we have.
-{% highlight sql %}
+
+```sql
 select distinct user_from_id from user_private_message;
-{% endhighlight %}
+```
 
 And we get a result whose value is not repeated. In this case, we use `distinct` simply as a keyword, but it can be used as a function - passing it some value. Now, moving on to our task, let's find out the number of unique senders. To do this, we will use the already familiar function `count`.
 {% highlight sql %}

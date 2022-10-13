@@ -1,12 +1,13 @@
 // Inline code
+ 
 code {
   @include font-size($code-font-size);
   color: $code-color;
   word-wrap: break-word;
-	border: lightgray solid 1px;
-	border-radius: 3px;
 	background-color: lightgray;
-
+  border-radius: 3px;
+  hyphens: none;
+	padding: 0 4px;
 
   // Streamline the style when inside anchors to avoid broken underline and more
   a > & {
@@ -32,21 +33,42 @@ kbd {
 }
 
 // Blocks of code
-pre {
-  display: block;
-  @include font-size($code-font-size);
-  color: $pre-color;
 
-  // Account for some code outputs that place code tags in pre tags
-  code {
-    @include font-size(inherit);
-    color: inherit;
-    word-break: normal;
-  }
-}
 
 // Enable scrollable blocks of code
 .pre-scrollable {
   max-height: $pre-scrollable-max-height;
-  overflow-y: scroll;
+  overflow-y:visible;
+
+}
+
+
+pre{
+  display: block;
+  @include font-size($code-font-size);
+  color: $pre-color;
+	border-left: grey solid 4px;
+	padding-left: 10px;
+	margin-left: 25px;
+	padding-top: 5px ;
+	padding-bottom: 5px;
+	background-color: none;
+
+
+	
+	
+	code {
+    background-color: inherit;
+    padding: 0;
+  }
+
+  // Account for some code outputs that place code tags in pre tag
+}
+
+@media only screen and (max-width: 600px){
+	pre {
+		margin-left: 0;
+		padding-left: 0;
+		border-left: none;
+	}
 }
