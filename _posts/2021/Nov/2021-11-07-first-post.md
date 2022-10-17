@@ -1,5 +1,6 @@
 ---
 title: First post👋
+subtitle: This is the first post on my new blog and the desire to say hello
 layout: post
 date: '2021-11-07 17:04:39'
 tag: personal 

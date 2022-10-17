@@ -29,10 +29,10 @@
 
 
 		<!-- Favicons  -->
-		<link rel="apple-touch-icon" sizes="180x180" href="/statick/image/favicons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/statick/image/favicons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/statick/image/favicons/favicon-16x16.png">
-		<link rel="manifest" href="/statick/image/favicons/site.webmanifest">
+		<link rel="apple-touch-icon" sizes="180x180" href="//statick/image/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="//statick/image/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="//statick/image/favicons/favicon-16x16.png">
+		<link rel="manifest" href="//statick/image/favicons/site.webmanifest">
 		<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Відповіді на запитання 🇺🇦 | Soloviov Blog🇺🇦</title>
 <meta name="generator" content="Jekyll v4.2.2" />
@@ -80,6 +80,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/comments">Latest comments</a>
+        </li>
+				<li class="nav-item">
+          <a class="nav-link" href="/search">Search</a>
         </li>
       </ul>
     </div>
@@ -277,9 +280,61 @@
 <hr>
 
 <footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<style>
+	form.example{
+		text-align: center;
+	}
+	form.example input[type=text] {
+		padding: 5px;
+		font-size: 17px;
+		border: 1px solid grey;
+		float: center;
+		width: 50%;
+		background: white;
+		margin-bottom: 30px;
+	}
+	
+	form.example button {
+		width: 20%;
+		padding: 10px;
+		background: #2196F3;
+		color: white;
+		font-size: 17px;
+		border: 1px solid grey;
+		border-left: none;
+		cursor: pointer;
+	}
+	
+	form.example button:hover {
+		background: #0b7dda;
+	}
+	
+	form.example::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+	@media only screen and (max-width: 400px){
+		form.example input[type=text]{
+			width:100%;
+		
+		}
+	} 
+	</style>
+
+
+<div class="search">
+	<form method="get" class="example" action="https://www.google.com/search"
+		itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+			<input type="hidden" name="sitesearch" value="www.soloviov.fun" />
+			<input type="text" name="q" maxlength="255" placeholder="Search with Google" />
+			</>
+	</form>
+</div>
         <ul class="list-inline text-center">
           
           <li class="list-inline-item">
@@ -360,15 +415,14 @@
 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-211989430-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WZF1BC3LQD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-211989430-1');
+  gtag('config', 'G-WZF1BC3LQD');
 </script>
-
 
 
 	<script id="dsq-count-scr" src="//https-warmingz-github-io.disqus.com/count.js" async></script> 

@@ -6,9 +6,8 @@
 		padding: 5px;
 		font-size: 17px;
 		border: 1px solid grey;
-		border-radius: 10px;
 		float: center;
-		width: 70%;
+		width: 50%;
 		background: white;
 		margin-bottom: 30px;
 	}
@@ -36,7 +35,7 @@
 
 	@media only screen and (max-width: 400px){
 		form.example input[type=text]{
-			width:98%;
+			width:100%;
 		
 		}
 	} 
@@ -46,9 +45,8 @@
 <div class="search">
 	<form method="get" class="example" action="https://www.google.com/search"
 		itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
-		<meta itemprop="target" content="https://www.google.com/search?q={q}"/>
-		<input name="sitesearch" value="soloviov.fun" type="hidden"/>
-		<input itemprop="query-input" type="text" id="search-query" class="field field-text" required="required"
-			onfocus="$('.google').css('visibility', 'visible');" name="q" placeholder="Search..." autocomplete="off"/>
+			<input type="hidden" name="sitesearch" value="www.soloviov.fun" />
+			<input type="text" name="q" maxlength="255" placeholder="Search with Google" />
+			</>
 	</form>
 </div>
