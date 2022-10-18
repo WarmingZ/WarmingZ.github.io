@@ -36,7 +36,7 @@ layout: default
 				{% for post in site.posts limit : 10 %}
 				<article class="post-preview">
 					<a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-						<h2 class="post-title">{{ post.title }}</h2>
+						<h2 class="post-title all">{{ post.title }}</h2>
 						<!-- Subtitle -->
 						<!-- {% if post.subtitle %}
             <h3 class="post-subtitle">{{ post.subtitle }}</h3>
@@ -74,7 +74,7 @@ layout: default
 					<a class="read-more" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">Read more...</a>
 				</article>
 
-				<hr>
+				
 
 				{% endfor %}
 
