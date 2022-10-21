@@ -108,6 +108,7 @@
       <div class="col-lg-8 col-md-10 mx-auto">
 
         <h4>All site tags</h4>
+
 <br>
 
 <!-- All tags -->
@@ -166,7 +167,20 @@ a.tag {
 
 </style>
 
-
+<br>
+<style>
+		.chart {
+  margin: 0 auto;
+  min-width: 50%;
+  max-width: 100%;
+  min-height: 150px;
+  padding-bottom: 1em;
+}
+</style>
+<h4>Number of posts per tag</h4>
+<p>
+	<canvas id="radar-js"  class="chart"></canvas>
+</p>
 <p>A little statistics of my blog:
 	<span class="colortext"><b>13213</b></span> words in the entire blog,
 	<span class="colortext"><b>1468</b></span> average word count across posts,
@@ -177,25 +191,6 @@ a.tag {
 		}
 	</style>
 </p>
-
-	<!-- <div id='sorters'>
-	Sort by:
-	<span id="by_date" onclick="sort_by_date();" class="sorter active">date</span>
-	|
-	<span id="by_comments" onclick="sort_by_comments();" class="sorter">comments</span>
-	|
-	<span id="by_length" onclick="sort_by_length();" class="sorter">length</span>
-	</div>
-
-	<script>
-	function sort_by_date() {
-
-	}
-	function sort_by_comments() {
-		document.getElementById("test").innerHTML = "Hello btoh";
-	}
-	</script> -->
-
 	
 <article class="post-preview">
 	<a href="/about-my-blog/">
@@ -582,12 +577,6 @@ a.tag {
 						title="tips"><i class="fa fa-lightbulb-o" aria-hidden="true" style="font-size:15px;"></i> tips</a></li>
 				
 				
-				
-				
-				<li style="list-style-type: none;"><a class="tag" style="font-size: 14px; margin-top: 2px;" href="/topics/personal/"
-						title="Personal"><i class="fa fa-grav" aria-hidden="true" style="font-size:15px"></i> personal</a></li>
-				
-				
 			</ul>
 			
 		</li>
@@ -656,6 +645,9 @@ a.tag {
 
 <!-- Pager -->
 
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<script src="/js/stats.js"></script>
 
       </div>
     </div>

@@ -4,7 +4,7 @@ layout: post
 subtitle: The most interesting sites with a neural network in my opinion.
 date: '2021-11-08 13:17:39'
 background: "/img/AmAZUHZ.webp"
-tags: tips personal
+tags: tips
 lang: en
 lang-ref: neural-network
 image: /img/posts/NeuralNetwork/neuralNetwork.jpeg

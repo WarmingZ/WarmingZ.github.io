@@ -1,0 +1,24 @@
+---
+---
+
+{% assign totalWords = 0 %}
+{% assign dateOb = '' %}
+{
+  "posts": [
+  {% for post in site.posts %}
+    {% assign postWords = post.content | number_of_words %}
+    {% assign totalWords = totalWords | plus:  postWords %}
+    {% unless forloop.first %},{% endunless %}
+    {
+      "date": "{{ post.date | date: '%Y-%m-%d' }}",
+      "words": "{{ postWords }}",
+      "tags": "{{ post.tags }} "
+    }
+  {% endfor %}
+  ],
+  "totalPosts": {{ site.posts.size }},
+  "totalCategories": {{ site.categories.size }},
+  "totalTags": {{ site.tags.size }},
+  "totalWords": {{ totalWords }},
+  "averageWordsPerPost": {{ totalWords | divided_by: site.posts.size }}
+}

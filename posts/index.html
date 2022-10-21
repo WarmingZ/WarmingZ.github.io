@@ -7,11 +7,25 @@ lang: en
 ---
 
 <h4>All site tags</h4>
+
 <br>
 
 {% include topics.html %}
 
-
+<br>
+<style>
+		.chart {
+  margin: 0 auto;
+  min-width: 50%;
+  max-width: 100%;
+  min-height: 150px;
+  padding-bottom: 1em;
+}
+</style>
+<h4>Number of posts per tag</h4>
+<p>
+	<canvas id="radar-js"  class="chart"></canvas>
+</p>
 <p>A little statistics of my blog:
 	<span class="colortext"><b>{% posts_word_count total %}</b></span> words in the entire blog,
 	<span class="colortext"><b>{% posts_word_count average %}</b></span> average word count across posts,
@@ -22,25 +36,6 @@ lang: en
 		}
 	</style>
 </p>
-
-	<!-- <div id='sorters'>
-	Sort by:
-	<span id="by_date" onclick="sort_by_date();" class="sorter active">date</span>
-	|
-	<span id="by_comments" onclick="sort_by_comments();" class="sorter">comments</span>
-	|
-	<span id="by_length" onclick="sort_by_length();" class="sorter">length</span>
-	</div>
-
-	<script>
-	function sort_by_date() {
-
-	}
-	function sort_by_comments() {
-		document.getElementById("test").innerHTML = "Hello btoh";
-	}
-	</script> -->
-
 	{% for post in paginator.posts %}
 <article class="post-preview">
 	<a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
@@ -114,3 +109,6 @@ lang: en
 </div>
 
 {% endif %}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<script src="{{ '/js/stats.js' }}"></script>
