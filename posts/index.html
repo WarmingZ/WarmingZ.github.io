@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Posts
-description: All <span class="colortext"><b>9</b></span> posts on my blog
+description: All posts on my blog
 background: '/img/bg-post.webp'
 lang: en
 ---
 
-<h4>All site tags</h4>
+<h4>All<span class="colortext"><b> {{ site.tags.size }} </b></span>site tags</h4>
 
 <br>
 
@@ -36,6 +36,9 @@ lang: en
 		}
 	</style>
 </p>
+
+<h4>All <span class="colortext"><b>{{ site.posts.size }} </b></span>posts:</h4>
+
 	{% for post in paginator.posts %}
 <article class="post-preview">
 	<a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
@@ -89,26 +92,34 @@ lang: en
 
 {% endfor %}
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-
 <div class="clearfix">
 
-	{% if paginator.previous_page %}
-	<a class="btn btn-primary float-left"
-		href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
-		Newer<span class="d-none d-md-inline"> Posts</span></a>
-	{% endif %}
+	<a class="btn btn-primary float-left" href="{{"/" | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Home</span></a>
 
-	{% if paginator.next_page %}
-	<a class="btn btn-primary float-right"
-		href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span
-			class="d-none d-md-inline"> Posts</span> &rarr;</a>
-	{% endif %}
+	<a class="btn btn-primary float-right" id="up" onclick="topFunction()" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">Up</span></a>
 
-</div>
-
-{% endif %}
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 <script src="{{ '/js/stats.js' }}"></script>
+
+<script>
+	// Get the button
+	let mybutton = document.getElementById("up");
+	
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+	
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		} else {
+			mybutton.style.display = "none";
+		}
+	}
+	
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+	</script>
