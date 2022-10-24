@@ -9,7 +9,6 @@
     {% assign totalWords = totalWords | plus:  postWords %}
     {% unless forloop.first %},{% endunless %}
     {
-			"title": "{{ post.title }}",
       "date": "{{ post.date | date: '%Y-%m-%d' }}",
       "words": "{{ postWords }}",
       "tags": "{{ post.tags }} "
