@@ -5,7 +5,7 @@ description: Latest comments on the site
 ---
 
 <h4>The latest comments are sorted by the date of writing (newest first).</h4>
-<p>By the way, only  <b><span class="green">{{ site.disqus.shortname | size }}</span></b> comments were written on this site, so I invite you to comment.</p> 
+<!-- <p>By the way, only  <b><span class="green">{{ page.disqus.size }}</span></b> comments were written on this site, so I invite you to comment.</p>  -->
 
 
 {%- include latest_comments.html -%}
