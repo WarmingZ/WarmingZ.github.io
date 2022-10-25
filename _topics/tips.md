@@ -2,7 +2,7 @@
 layout: topic
 title:  "tips"
 image: /statick/image/tags/tips.png
-name: tips
+names: tips
 icon: <i class="fa fa-lightbulb-o" aria-hidden="true" style="font-size:15px;"></i>
 description: All posts are tagged Tips.
 description_page: |
