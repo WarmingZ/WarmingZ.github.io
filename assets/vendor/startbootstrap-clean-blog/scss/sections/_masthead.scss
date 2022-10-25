@@ -3,7 +3,7 @@ header.masthead {
     // TIP: Background images are set within the HTML using inline CSS!
     margin-bottom: 50px;
     background: no-repeat center center;
-    background-color: $gray-600;
+    background-color: #2f3f60;
     background-attachment: scroll;
     position: relative;
     background-size: cover;
@@ -15,7 +15,7 @@ header.masthead {
         height: 100%;
         width: 100%;
         background-color: $blue;
-       // opacity: 0.5;
+        opacity: 0.5;
     }
 
     .page-heading,
