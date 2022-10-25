@@ -1,4 +1,4 @@
  User-agent: *
  Disallow: /index.html
- Host: www.soloviov.fun
- Sitemap: https://www.soloviov.fun/sitemap.xml
+ Host: www.isoloviov.com
+ Sitemap: https://www.isoloviov.com/sitemap.xml  
