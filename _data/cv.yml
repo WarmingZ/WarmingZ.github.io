@@ -2,7 +2,7 @@
 
 Main:
   - name: Soloviov Ivan 
-    position: .Net Developer
+    position: Developer
     image: "/img/me.jpeg"
 
 Contact:
@@ -24,10 +24,9 @@ Education:
 
 Languages:
   - title: Languages
-    lang: English
-    level: 40
-  - lang: Ukrainian
-    level: 92
+    lang: 🇬🇧 English
+  - lang: 🇺🇦 Ukrainian
+
  
 # Right side 
 Profile:
@@ -59,19 +58,15 @@ Experience:
 Skills:
   - titleskill: Professional Skills
     tech: C#
-    percent: 60
   - tech: ASP.Net Core
-    percent: 55
-  - tech: Windows Forms
-    percent: 55
+  - tech: Win Forms
   - tech: HTML/CSS
-    percent: 55
   - tech: MySQL
-    percent: 45
   - tech: Rest Api
-    percent: 40
   - tech: Jekyll
-    percent: 30
+  - tech: MVC
+  - tech: Algorithms
+
 
     
   

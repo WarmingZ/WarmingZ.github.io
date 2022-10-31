@@ -14,6 +14,14 @@ description: Welcome to my summary
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+				<link href="{{"assets/fonts/fonts.css" | relative_url }}" rel='stylesheet' type='text/css'>
+
+				<!-- Favicons  -->
+		<link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/statick/image/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/statick/image/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/statick/image/favicons/favicon-16x16.png">
+		<link rel="manifest" href="{{site.baseurl}}/statick/image/favicons/site.webmanifest">
+		{% seo %}
 </head>
 
 <body>
@@ -78,9 +86,9 @@ description: Welcome to my summary
                 <ul>
                     <li>
                         <span class="text">{{item.lang}}</span>
-                        <span class="percent">
+                        <!-- <span class="percent">
                             <div style="width: {{item.level}}%;"></div>
-                        </span>
+                        </span> -->
                     </li>
                 </ul>
                 {% endfor %}
@@ -112,13 +120,15 @@ description: Welcome to my summary
             <div class="about skills">
                 {% for item in site.data.cv.Skills %}
                 <h2 class="title2">{{item.titleskill}}</h2>
+								{% endfor %} 
                 <div class="box">
-                    <h4>{{item.tech}}</h4>
-                    <div class="percent">
+									{% for item in site.data.cv.Skills %}
+									<h4><div style="color:lightgray; display: inline-block;">★</div> {{item.tech}}</h4> 
+										{% endfor %}
+                    <!-- <div class="percent">
                     <div style="width: {{item.percent}}%"></div>
-                    </div>
+                    </div>  -->
                 </div>
-                {% endfor %} 
             </div>
 
             <div class="about interest">
@@ -140,7 +150,6 @@ description: Welcome to my summary
 
 
 <style>
-    @import url('<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
     *
     {
         margin:0;
@@ -328,19 +337,23 @@ description: Welcome to my summary
         text-transform: uppercase;
         color: #2a7da2;
         font-size: 16px;
+				grid-template-columns: auto auto;
     }
     .skills .box{
-        position: relative;
+        position: relative; 
         width: 100%;
         display: grid;
-        grid-template-columns: 150px 1fr;
+        grid-template-columns: 250px 2fr;
         align-items: center;
+
     }
     .skills .box h4{
         text-transform: uppercase;
-        color: #848c99;
-        font-weight: 500;
+				color: #848c99;
+        font-weight: 800;
+				margin-bottom: 20px;
     }
+
     .skills .box .percent{
         position: relative;
         width: 100%;
