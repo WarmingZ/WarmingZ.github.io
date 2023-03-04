@@ -5,6 +5,7 @@ author:             Soloviov Ivan
 baseurl:           
 url:               "https://www.isoloviov.com"
 enforce_ssl: www.isoloviov.com
+host: 0.0.0.0
 
 # Social Profiles
 twitter_username:   
