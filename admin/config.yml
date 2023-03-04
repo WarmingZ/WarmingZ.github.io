@@ -1,7 +1,7 @@
 backend:
   name: github
   branch: master # Branch to update (optional; defaults to master)
-  repo: warmingz/WarmingZ.github.io
+  repo: WarmingZ/WarmingZ.github.io
   site_domain: stirring-hotteok-2a66a4.netlify.app
 
 
