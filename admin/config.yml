@@ -1,18 +1,22 @@
 backend:
-  name: WarmingZ
+  name: github
   branch: master # Branch to update (optional; defaults to master)
-  repo: warmingz/WarmingZ.github.io
+  repo: warmingz/www.isoloviov.com
   site_domain: stirring-hotteok-2a66a4.netlify.app
-media_folder: 'assets/uploads'
+
+
+media_folder: "img/" # Media files will be stored in the repo under images/uploads
+public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
 
 collections:
   - name: 'blog'
-    label: 'Blog'
-    folder: '_posts/'
+    label: 'Posts'
+    folder: '_posts/2022/Mar'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
       - { label: 'Title', name: 'title', widget: 'string' }
