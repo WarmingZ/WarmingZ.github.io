@@ -1,18 +1,11 @@
 backend:
-  name: github
+  name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-  repo: WarmingZ/WarmingZ.github.io
-  site_domain: stirring-hotteok-2a66a4.netlify.app
-
-
-media_folder: "img/" # Media files will be stored in the repo under images/uploads
-public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /images/uploads
-
-
+media_folder: 'assets/uploads'
 collections:
   - name: 'blog'
-    label: 'Posts'
-    folder: '_posts/2022/Mar'
+    label: 'Blog'
+    folder: '_posts/'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
