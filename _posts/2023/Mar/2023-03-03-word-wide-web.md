@@ -129,7 +129,7 @@ There are many ready-made infrastructure solutions that can be implemented in yo
 - **Simple storage service**
 	- We need to store a large amount of data. `Amazon s3`, for example, can help us with that.
 
-<a href="https://clickhouse.com"><img src="/img/posts/WEB/clickhouse.png" style="width:200px;max-width:100%;" align="right"></a>
+<a href="https://clickhouse.com"><img src="/img/posts/WEB/clickhouse.png" style="width:128px;max-width:100%;" align="right"></a>
 
 - **Analytics**
 	- Over time, as our service gained more users, we needed to store data about how our service is being used.
@@ -138,7 +138,7 @@ There are many ready-made infrastructure solutions that can be implemented in yo
 
 One of the most popular solutions for this is the `clickHouse` database.  
 
-<a href="https://kubernetes.io"><img src="/img/posts/WEB/Kubernete.png" style="width:200px;max-width:100%;" align="right"></a>
+<a href="https://kubernetes.io"><img src="/img/posts/WEB/Kubernete.png" style="width:128px;max-width:100%;" align="right"></a>
 
 - **Container management**
 	- Since we can have a large number of microservices, as we mentioned before, which are packaged in containers, we need a way to manage this large number of containers. And for this, there is a ready-made solution called `Kubernetes`.
@@ -149,7 +149,7 @@ There are many infrastructure solutions available for various tasks. I won't go 
 To exchange data between the Frontend and Backend, `RestApi`, `SOAP`, `GraphQL`, and so on are commonly used. There is a lot of information available online about all of these technologies.
 
 ## Processing large amounts of data
-<a href="https://kubernetes.io"><img src="/img/posts/WEB/h0.png" style="width:200px;max-width:100%;" align="right"></a>
+<a href="https://kubernetes.io"><img src="/img/posts/WEB/h0.png" style="width:128px;max-width:100%;" align="right"></a>
 If an application has a large user base, it makes sense to process a large amount of data, which is usually handled by analysts. For this, `Hadoop` and the `HDFS` file system are most commonly used. This is already a completely different field called "Big Data". The key here is to collect large data sets that we can collect from users, such as website behavior, etc. Such data is sometimes sold (it is very expensive) or passed on to neural networks, which are trained using this data.
 
 ***

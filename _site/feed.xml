@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-03-15T11:16:38+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Soloviov Blog🇺🇦</title><subtitle>This is my blog on IT theme and more.</subtitle><author><name>Soloviov Ivan</name></author><entry xml:lang="en"><title type="html">World Wide Web 🕸️</title><link href="http://0.0.0.0:4000/word-wide-web/" rel="alternate" type="text/html" title="World Wide Web 🕸️" /><published>2023-03-02T12:10:39+00:00</published><updated>2023-03-02T12:10:39+00:00</updated><id>http://0.0.0.0:4000/word-wide-web</id><content type="html" xml:base="http://0.0.0.0:4000/word-wide-web/"><![CDATA[<p>From the beginning, the web was made up of simple HTML documents that allowed people to exchange information. This construction worked thanks to the HTTP protocol, which was an application layer of the <code class="language-plaintext highlighter-rouge">TCP/IP</code> or <code class="language-plaintext highlighter-rouge">OSI</code> model. The connection between pages, which had their own address, was achieved through hyperlinks that allowed users to navigate between them. Therefore, the idea and concept were very simple: it was an exchange of HTML documents connected by hyperlinks.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-03-15T11:31:11+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Soloviov Blog🇺🇦</title><subtitle>This is my blog on IT theme and more.</subtitle><author><name>Soloviov Ivan</name></author><entry xml:lang="en"><title type="html">World Wide Web 🕸️</title><link href="http://0.0.0.0:4000/word-wide-web/" rel="alternate" type="text/html" title="World Wide Web 🕸️" /><published>2023-03-02T12:10:39+00:00</published><updated>2023-03-02T12:10:39+00:00</updated><id>http://0.0.0.0:4000/word-wide-web</id><content type="html" xml:base="http://0.0.0.0:4000/word-wide-web/"><![CDATA[<p>From the beginning, the web was made up of simple HTML documents that allowed people to exchange information. This construction worked thanks to the HTTP protocol, which was an application layer of the <code class="language-plaintext highlighter-rouge">TCP/IP</code> or <code class="language-plaintext highlighter-rouge">OSI</code> model. The connection between pages, which had their own address, was achieved through hyperlinks that allowed users to navigate between them. Therefore, the idea and concept were very simple: it was an exchange of HTML documents connected by hyperlinks.</p>
 
 <p>As technology developed, it became evident that simply displaying information was no longer enough, as users now expect more functionality. It’s also important to be able to receive information that users provide through forms and other communication channels. But just sending information is not enough, it must be saved and displayed upon the user’s request. Before moving to the next step, it’s important to understand how the interaction between the client (user) and the server takes place. When a user visits a website, their browser sends an <code class="language-plaintext highlighter-rouge">HTTP GET</code> request to the server. The server receives the request and understands which HTML page to send back to the user. Based on this information, the server generates a new HTML page and sends it back to the user as a response to the request. This way, the user gets the necessary information on their screen.</p>
 
@@ -105,7 +105,7 @@
   </li>
 </ul>
 
-<p><a href="https://clickhouse.com"><img src="/img/posts/WEB/clickhouse.png" style="width:200px;max-width:100%;" align="right" /></a></p>
+<p><a href="https://clickhouse.com"><img src="/img/posts/WEB/clickhouse.png" style="width:128px;max-width:100%;" align="right" /></a></p>
 
 <ul>
   <li><strong>Analytics</strong>
@@ -119,7 +119,7 @@
 
 <p>One of the most popular solutions for this is the <code class="language-plaintext highlighter-rouge">clickHouse</code> database.</p>
 
-<p><a href="https://kubernetes.io"><img src="/img/posts/WEB/Kubernete.png" style="width:200px;max-width:100%;" align="right" /></a></p>
+<p><a href="https://kubernetes.io"><img src="/img/posts/WEB/Kubernete.png" style="width:128px;max-width:100%;" align="right" /></a></p>
 
 <ul>
   <li><strong>Container management</strong>
@@ -134,7 +134,7 @@
 <p>To exchange data between the Frontend and Backend, <code class="language-plaintext highlighter-rouge">RestApi</code>, <code class="language-plaintext highlighter-rouge">SOAP</code>, <code class="language-plaintext highlighter-rouge">GraphQL</code>, and so on are commonly used. There is a lot of information available online about all of these technologies.</p>
 
 <h2 id="processing-large-amounts-of-data">Processing large amounts of data</h2>
-<p><a href="https://kubernetes.io"><img src="/img/posts/WEB/h0.png" style="width:200px;max-width:100%;" align="right" /></a>
+<p><a href="https://kubernetes.io"><img src="/img/posts/WEB/h0.png" style="width:128px;max-width:100%;" align="right" /></a>
 If an application has a large user base, it makes sense to process a large amount of data, which is usually handled by analysts. For this, <code class="language-plaintext highlighter-rouge">Hadoop</code> and the <code class="language-plaintext highlighter-rouge">HDFS</code> file system are most commonly used. This is already a completely different field called “Big Data”. The key here is to collect large data sets that we can collect from users, such as website behavior, etc. Such data is sometimes sold (it is very expensive) or passed on to neural networks, which are trained using this data.</p>
 
 <hr />
