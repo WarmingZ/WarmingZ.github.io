@@ -81,7 +81,7 @@ background: '/img/bg-about.webp'
 /* The Close Button */
 .close {
   position: absolute;
-  top: 100px;
+  top: 15px;
   right: 35px;
   color: #f1f1f1;
   font-size: 40px;
@@ -124,7 +124,7 @@ background: '/img/bg-about.webp'
 
 <p>My hobby is mobile and analog photography.&nbsp;I like technology and gadgets.</p>
 
-<strong>🔥[View]({{ site.baseurl }}{% link Summary.html %})</strong> or <strong>💡[download]({{ site.baseurl }}/img/download/Summary.pdf)</strong> summary.
+<strong>🔥[View]({{ site.baseurl }}{% link Summary.html %})</strong> or <strong>💡[download]({{ site.baseurl }}/img/download/Ivan_Soloviov_CV.pdf)</strong> summary.
 
 <p>
   Do you want to contact me? Fill out the form below to send me a message and I will get back to you as soon as possible! 
