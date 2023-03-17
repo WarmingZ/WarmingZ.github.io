@@ -1,0 +1,31 @@
+---
+label: Default
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: subtitle
+  label: subtitle
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: tag
+  label: tag
+- type: text
+  name: lang
+  label: lang
+- type: text
+  name: lang-ref
+  label: lang-ref
+- type: file
+  name: image
+  label: image
+- type: text
+  name: description
+  label: description
