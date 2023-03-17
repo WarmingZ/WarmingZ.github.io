@@ -5,6 +5,11 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: img
+  label: Image
+  create: none
+  match: "**/*"
+- type: directory
   path: _data
   label: Data
   create: documents
@@ -21,9 +26,6 @@ sections:
   label: Topics
   create: all
   match: "**/*"
-- type: document
-  path: img
-  label: img
 upload_dir: img
 public_path: "/img"
 front_matter_path: ''
