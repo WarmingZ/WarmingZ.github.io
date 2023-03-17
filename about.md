@@ -83,8 +83,8 @@ to {transform:scale(1)}
 .close {
 position: absolute;
 top: 15px;
-  bottom:15px;
 right: 35px;
+bottom:15px;
 color: #f1f1f1;
 font-size: 40px;
 font-weight: bold;
