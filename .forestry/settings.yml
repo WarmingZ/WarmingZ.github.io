@@ -7,7 +7,7 @@ sections:
 - type: directory
   path: img
   label: Img
-  create: all
+  create: documents
   match: "**/*"
 - type: jekyll-pages
   label: Pages
