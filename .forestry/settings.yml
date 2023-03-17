@@ -5,26 +5,26 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
-  path: img
-  label: Image
-  create: none
-  match: "**/*"
-- type: directory
   path: _data
   label: Data
   create: documents
   match: "**/*"
   new_doc_ext: yml
-- type: jekyll-pages
-  label: Pages
-  create: all
 - type: jekyll-posts
   label: Posts
+  create: all
+- type: jekyll-pages
+  label: Pages
   create: all
 - type: directory
   path: _topics
   label: Topics
   create: all
+  match: "**/*"
+- type: directory
+  path: img
+  label: Image
+  create: none
   match: "**/*"
 upload_dir: img
 public_path: "/img"
