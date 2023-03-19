@@ -1,16 +1,17 @@
 ---
-title: World Wide Web 🕸️
+title: "World Wide Web \U0001F578️"
 layout: post
-subtitle: Interesting architectural solutions for web applications with a brief history overview
-date: '2023-03-02 12:10:39'
-# background: "/img/Ukraine2.webp"
+subtitle: Interesting architectural solutions for web applications with a brief history
+  overview
+date: 2023-03-02 12:10:39
 tag: web
 lang: en
 lang-ref: web1
-image: /img/posts/WEB/WEB.png
-description: Interesting architectural solutions for web applications with a brief history overview
----
+image: "/img/posts/WEB/WEB.png"
+description: Interesting architectural solutions for web applications with a brief
+  history overview
 
+---
 From the beginning, the web was made up of simple HTML documents that allowed people to exchange information. This construction worked thanks to the HTTP protocol, which was an application layer of the `TCP/IP` or `OSI` model. The connection between pages, which had their own address, was achieved through hyperlinks that allowed users to navigate between them. Therefore, the idea and concept were very simple: it was an exchange of HTML documents connected by hyperlinks.
 
 
@@ -149,7 +150,7 @@ There are many infrastructure solutions available for various tasks. I won't go 
 To exchange data between the Frontend and Backend, `RestApi`, `SOAP`, `GraphQL`, and so on are commonly used. There is a lot of information available online about all of these technologies.
 
 ## Processing large amounts of data
-<a href="https://kubernetes.io"><img src="/img/posts/WEB/h0.png" style="width:128px;max-width:100%;" align="right"></a>
+<a href="https://hadoop.apache.org"><img src="/img/posts/WEB/h0.png" style="width:128px;max-width:100%;" align="right"></a>
 If an application has a large user base, it makes sense to process a large amount of data, which is usually handled by analysts. For this, `Hadoop` and the `HDFS` file system are most commonly used. This is already a completely different field called "Big Data". The key here is to collect large data sets that we can collect from users, such as website behavior, etc. Such data is sometimes sold (it is very expensive) or passed on to neural networks, which are trained using this data.
 
 ***
@@ -159,4 +160,3 @@ So, I have described a small part of the architectural solutions in building lar
 
 
 <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
-
