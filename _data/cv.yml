@@ -1,72 +1,66 @@
-# Left Side
-
+---
 Main:
-  - name: Soloviov Ivan 
-    position: Software Developer
-    image: "/img/me.jpeg"
-
+- name: Soloviov Ivan
+  position: Software Developer
+  image: "/img/me.jpeg"
 Contact:
-  - title: Contact Info 
-    phone: +380 93 866 5746
-    email: soloviov.ia@gmail.com
-    site:  www.isoloviov.com
-    github:  github.com/WarmingZ
-    location: Lviv, Ukrain
-
+- title: Contact Info
+  phone: "+380 93 866 5746"
+  email: soloviov.ia@gmail.com
+  site: www.isoloviov.com
+  github: github.com/WarmingZ
+  location: Lviv, Ukrain
 Education:
-  - title: Education
-    year: 2018 - 2020
-    degree: Bachelor`s degree, Computer Sciense
-    university: Lviv Polytechnic National University
-  - year: 2014 - 2018
-    degree: Junior specialist degree, Computer Sciense
-    university: Lviv Polytechnic National University
-
+- title: Education
+  year: 2018 - 2020
+  degree: Bachelor`s degree, Computer Sciense
+  university: Lviv Polytechnic National University
+- year: 2014 - 2018
+  degree: Junior specialist degree, Computer Sciense
+  university: Lviv Polytechnic National University
 Languages:
-  - title: Languages
-    lang: 🇬🇧 English
-  - lang: 🇺🇦 Ukrainian
-
- 
-# Right side 
+- title: Languages
+  lang: "\U0001F1EC\U0001F1E7 English"
+- lang: "\U0001F1FA\U0001F1E6 Ukrainian"
 Profile:
 - profile: Profile
-  text: I`m Soloviov Ivan a programmer without commercial experience, but with a great technical outlook.  I write mostly in С#
-   I often use ASP.Net Core to create web applications (watch my github) for this I use MySQL and a EntityFramework. 
-   <p> I was one of the founders of the company SavePC -  repair and maintenance of computer systems.
-    Then worked in a small company Helper where i was a system administrator.
-
+  text: I`m Soloviov Ivan a programmer without commercial experience, but with a great
+    technical outlook.  I write mostly in С# I often use ASP.Net Core to create web
+    applications (watch my github) for this I use MySQL and a EntityFramework. <p>
+    I was one of the founders of the company SavePC -  repair and maintenance of computer
+    systems. Then worked in a small company Helper where i was a system administrator.
 Experience:
-  - experience: Experience
-    projectyear: 2022
-    projectname: EPAM University 
-    technology: .Net QA Automation 🔥
-    descriptions: In this course, I improved my knowledge of .Net and SCRUM, learned about types of manual testing and got acquainted with Selenium.
-  - experience: Pet projects 
-    projectyear: 2021
-    projectname:  My WebSite
-    technology: ASP.Net Core MVC
-    descriptions: This is my home project where I developed a site with an admin panel and dynamic pages. It was designed to create a personal website. It was also deployed on Google Cloud.
-  - projectyear: 2021
-    projectname: Web Calculator
-    technology: ASP.Net Core
-    descriptions: The project is designed for learning purposes. The "Strategy" pattern was used in the development.
-  - projectyear: 2020
-    projectname: SavePC Web
-    technology: ASP.Net Core MVC
-    descriptions: Web application for service center automation. This site was developed during training, for my own business of maintenance of computer equipment.
+- experience: Experience
+  projectyear: "2022"
+  projectname: EPAM University
+  technology: ".Net (OOP), Scrum&Agile"
+  descriptions: In this course, I improved my knowledge of .Net and SCRUM, learned
+    about types of manual testing and got acquainted with Selenium.
+- experience: Pet projects
+  projectyear: "2021"
+  projectname: My WebSite
+  technology: ASP.Net Core MVC
+  descriptions: This is my home project where I developed a site with an admin panel
+    and dynamic pages. It was designed to create a personal website. It was also deployed
+    on Google Cloud.
+- projectyear: "2021"
+  projectname: Web Calculator
+  technology: ASP.Net Core
+  descriptions: The project is designed for learning purposes. The "Strategy" pattern
+    was used in the development.
+- projectyear: "2020"
+  projectname: SavePC Web
+  technology: ASP.Net Core MVC
+  descriptions: Web application for service center automation. This site was developed
+    during training, for my own business of maintenance of computer equipment.
 Skills:
-  - titleskill: Professional Skills
-    tech: C#
-  - tech: ASP.Net Core
-  - tech: Win Forms
-  - tech: HTML/CSS
-  - tech: MySQL
-  - tech: Rest Api
-  - tech: Jekyll
-  - tech: MVC
-  - tech: Algorithms
-
-
-    
-  
+- titleskill: Professional Skills
+  tech: C#
+- tech: ASP.Net Core
+- tech: Win Forms
+- tech: HTML/CSS
+- tech: MySQL
+- tech: Rest Api
+- tech: Jekyll
+- tech: MVC
+- tech: Algorithms
