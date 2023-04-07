@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Бази даних для програмістів - Частина 3🗂️ - Soloviov Blog🇺🇦
+    
+  </title>
+
+  <meta name="description" content="This is my blog on IT theme and more.">
+
+	<link href="/assets/fonts/fonts.css" rel='stylesheet' type='text/css'>
+  <!-- <link href='https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&display=swap' rel='stylesheet' type='text/css'> -->
+
+  <!-- <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script> -->
+
+	<script src="https://kit.fontawesome.com/65875454cf.js" crossorigin="anonymous"></script>
+	<script id="dsq-count-scr" src="//soloviov-blog.disqus.com/count.js" async></script> 
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/">
+  <link rel="alternate" type="application/rss+xml" title="Soloviov Blog🇺🇦" href="/feed.xml">
+
+
+		<!-- Favicons  -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/statick/image/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/statick/image/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/statick/image/favicons/favicon-16x16.png">
+		<link rel="manifest" href="/statick/image/favicons/site.webmanifest">
+		<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Бази даних для програмістів - Частина 3🗂️ | Soloviov Blog🇺🇦</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Бази даних для програмістів - Частина 3🗂️" />
+<meta name="author" content="Soloviov Ivan" />
+<meta property="og:locale" content="ua" />
+<meta name="description" content="З’єднання вибірок та сортування й обмеження результатів" />
+<meta property="og:description" content="З’єднання вибірок та сортування й обмеження результатів" />
+<link rel="canonical" href="https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/" />
+<meta property="og:url" content="https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/" />
+<meta property="og:site_name" content="Soloviov Blog🇺🇦" />
+<meta property="og:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-20T12:10:39+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="twitter:title" content="Бази даних для програмістів - Частина 3🗂️" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Soloviov Ivan"},"dateModified":"2021-12-20T12:10:39+00:00","datePublished":"2021-12-20T12:10:39+00:00","description":"З’єднання вибірок та сортування й обмеження результатів","headline":"Бази даних для програмістів - Частина 3🗂️","image":"https://www.isoloviov.com/img/posts/Database3/DB.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/"},"url":"https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Soloviov Blog🇺🇦</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+				<li class="nav-item">
+					<a class="nav-link" href="/posts"> All posts</a>
+				</li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/comments">Latest comments</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/AmAZUHZ.webp')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Бази даних для програмістів - Частина 3🗂️</h1>
+            <!-- 
+            <h2 class="subheading">З'єднання вибірок та сортування й обмеження результатів</h2>
+             -->
+            <!-- <span class="meta">Posted by
+              <a href="#">Soloviov Ivan</a> -->
+							
+					<ul class="post-meta">
+						<!-- Posted by
+							
+							Soloviov Ivan
+							
+							on -->
+						<li>
+							<time itemprop="Data"> 20 December 2021 </time>
+						</li>
+						<li itemprop="timeCount">
+							<span class="reading-time" title="Estimated read time">
+  
+   11 mins  read </span>
+
+						</li>
+						<li itemprop="wordCount">
+							<count>1547 words</count>
+						</li>
+						<li>
+						<count>
+							<i class="fa fa-comment"></i>
+							<a style="color: whitesmoke;" class="post-meta" href="/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/#disqus_thread"></a>
+						</count>
+					</li>
+				</ul>
+			Tags: 
+				<!-- Tags	 -->
+					
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+	
+
+  <div class="container">	
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+			
+        <p>В цьому пості я хочу продемонструвати з’єднання результатів вибірок по вертикалі і показати декілька прикладів з сортуванням й обмеженням результатів вибірки. Закликаю вас повторювати всі запити, які я навів в прикладах й модифікувати їх під свої потреби. Так ви будете краще розуміти та засвоювати матеріал. Почнімо без зайвих слів🥳. Приємного читання👋!</p>
+
+<center>
+<img src="/img/posts/Database3/DB.png" alt="Network" class="responsive" style="width: 65%; height: auto;" />
+</center>
+
+<hr />
+
+<h3 id="зєднання-результатів-вибірок-по-вертикалі">З’єднання результатів вибірок по вертикалі</h3>
+<p>Навчимось працювати з вибірками як з множинами та навчимось їх комбінувати. Для цього нам знадобиться функція, яка допоможе взнати, які елементи є в множині.
+Почнемо з того, що нам, для прикладу, потрібно взнати які є унікальні значення для колонки з відповідним відношенням, тобто, для таблиці. Взнаємо, скільки в нас є унікальних відправників приватних повідомлень.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="k">distinct</span> <span class="n">user_from_id</span> <span class="k">from</span> <span class="n">user_private_message</span><span class="p">;</span></code></pre></figure>
+
+<p>І ми отримаємо результат, значення яких не повторюється. В такому випадку ми використовуємо <code class="language-plaintext highlighter-rouge">distinct</code> просто як ключове слово, але його можна використовувати як функцію — передаючи в нього якесь значення. Тепер перейшовши до нашого завдання, взнаємо — кількість унікальних відправників. Для цього будемо використовувати вже знайому функцію <code class="language-plaintext highlighter-rouge">count</code>.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="k">count</span><span class="p">(</span><span class="k">distinct</span> <span class="n">user_from_id</span><span class="p">)</span> <span class="k">from</span> <span class="n">user_private_message</span><span class="p">;</span> </code></pre></figure>
+
+<p>І отримаємо кількість в числовій формі.
+Тут ми беремо нашу таблицю і беремо з неї кожну колонку, вибираємо поле <code class="language-plaintext highlighter-rouge">user_from_id</code> і накопичуємо деякий хеш — сет за допомогою <code class="language-plaintext highlighter-rouge">district</code>. Після чого, накопичене значення, ми передаємо в нашу агрегуючу функцію <code class="language-plaintext highlighter-rouge">count</code>. Таким чином, ми підрахували кількість унікальних значень.</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="text-align: center">select count(distinct user_from_id)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">177</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ми можемо протестувати нашу вибірку. А саме, перевірити, чи дійсно відбувається вивід саме унікальних значень. Це ми можемо реалізувати за допомогою <code class="language-plaintext highlighter-rouge">if</code>. Варто нагадати, що в минулому запиті, ми отримали всі унікальні <code class="language-plaintext highlighter-rouge">ID</code> з <code class="language-plaintext highlighter-rouge">user_from_id</code>.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="k">count</span>
+<span class="p">(</span><span class="k">distinct</span> <span class="n">if</span><span class="p">(</span><span class="n">user_from_id</span> <span class="o">=</span> <span class="mi">8609</span><span class="p">,</span> <span class="mi">8592</span><span class="p">,</span> <span class="n">user_from_id</span><span class="p">))</span>
+<span class="k">from</span> <span class="n">user_private_message</span><span class="p">;</span></code></pre></figure>
+
+<p>І отримаємо такий результат:</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="text-align: center">count(distinct if(user_from_id = 8609, 8592, user_from_id))</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">176</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ми беремо останнє число - 8609, та заміняємо його на 8592. Тобто повний запити <code class="language-plaintext highlighter-rouge">IF</code> звучить так, якщо колонка <code class="language-plaintext highlighter-rouge">user_from_id</code> дорівнює 8609, то заміни його на 8592, але якщо не дорівнює - поверни просто його значення <code class="language-plaintext highlighter-rouge">if(user_from_id = 8609, 8592, user_from_id)</code>.
+ Дивлячись на таблицю вище, ми бачимо, що кількість користувачів зменшилась на одного, відповідно, заміна спрацювала і тест вибірки пройшов як ми очікували.</p>
+
+<p>Також варто повернутись до <code class="language-plaintext highlighter-rouge">distinct</code> тому, що він може працювати як функція, так і ключовим словом.
+ Тепер ми можемо поставити завдання - отримати унікальні пари відправника та адресата.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"> <span class="k">select</span> <span class="k">distinct</span>
+ <span class="n">user_from_id</span><span class="p">,</span> <span class="n">user_to_id</span> 
+ <span class="k">from</span> <span class="n">user_private_message</span><span class="p">;</span></code></pre></figure>
+
+<p>І ми отримаємо унікальні пари, які спілкувались між собою. Тепер для того щоб порахувати, просто необхідно використати <code class="language-plaintext highlighter-rouge">count</code>.</p>
+
+<p>Тепер порахуємо кількість унікальних користувачів які відправляють і отримують повідомлення. ( Є користувачі, які ніколи не отримували й не писали повідомлення ) І нам необхідно порахувати скільки в нас унікальних користувачів в приватних дискусіях. Ми вже писали запити про відправників і адресатів, але ми можемо об’єднати два запита в один за допомогою <code class="language-plaintext highlighter-rouge">union</code>.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">user_from_id</span> 
+<span class="k">from</span> <span class="n">user_private_message</span>
+<span class="k">union</span> <span class="k">select</span> <span class="n">user_to_id</span> 
+<span class="k">from</span> <span class="n">user_private_message</span><span class="p">;</span> </code></pre></figure>
+
+<p><code class="language-plaintext highlighter-rouge">Union</code> - працює як об’єднання двох множин результатів. Тобто, він спочатку знаходить всі унікальні значення, а потім об’єднує їх в деяку результуючу множину. Таким чином, не потрібно для кожного запиту писати <code class="language-plaintext highlighter-rouge">distinct</code> . Тобто двигун SQL бачить що в нас є два запити й нам потрібно об’єднати їх результати. Таким чином отримати лише унікальні результати значення.
+Також, якщо нам знадобиться об’єднати стрічки без будь-якої фільтрації. Для цього нам потрібно після <code class="language-plaintext highlighter-rouge">Union</code> написати <code class="language-plaintext highlighter-rouge">all</code>.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">user_from_id</span> <span class="k">from</span> <span class="n">user_private_message</span>
+<span class="k">union</span> <span class="k">all</span> <span class="k">select</span> <span class="n">user_to_id</span>
+<span class="k">from</span> <span class="n">user_private_message</span><span class="p">;</span> </code></pre></figure>
+
+<p>Після чого, в нас виведуться данні з дублікатами.</p>
+
+<hr />
+
+<h3 id="сортування-й-обмеження-результатів-вибірки">Сортування й обмеження результатів вибірки</h3>
+<p>Дуже часто це використовується для організації посторінкового виводу результатів. Для прикладу першим запитом ми переглянули перших десять результатів і наступним запитом ми хочемо вибрати наступних 10 результатів ( тобто вже пропустити перші десять результатів ).
+Сортування не являє собою щось складне, це скоріше просто гнучкий інструмент.</p>
+
+<p>Результат будь-якої вибірки ми можемо відсортувати по значенню якогось поля або декількох полів. Так само можемо сортувати по збільшенню або по зменшенню. Звісно ми можемо так сортувати лише по полях в яких є операція порівняння ( тобто більше або менше ). Але оскільки ми знаємо MySQL – зокрема і реляційні СУБД, вони мають можливість передбачувано перетворювати значення різноманітних полів, для того аби ми мали можливість використовувати ці операції ( більше або менше ). Які використовуються в агрегованих функціях, або в сортуваннях, які я буду зараз використовувати.</p>
+
+<p>Почнемо з самої простої задачі, спробуємо відсортувати значення в комірці повідомлень, по даті прочитання. І заодно взнаємо як в нас працює сортування зі значеннями, які ще не вказані, тобто <code class="language-plaintext highlighter-rouge">null</code>. Ось мій запит на сортування:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">message_id</span><span class="p">,</span> <span class="n">read_time</span> 
+<span class="k">from</span> <span class="n">user_private_message</span> 
+<span class="k">order</span> <span class="k">by</span> <span class="n">read_time</span><span class="p">;</span></code></pre></figure>
+
+<p>Ключовим словом тут є <code class="language-plaintext highlighter-rouge">order by</code>, після цього слова ми вказуємо по якій колонці буде сортування. За замовчуванням відбувається сортування по збільшенню. Тобто першим відобразяться поля з <code class="language-plaintext highlighter-rouge">null</code>.</p>
+
+<p>Якщо ми хочемо сортувати не в порядку зростання, а в порядку спадання, ми будемо використовувати атрибут <code class="language-plaintext highlighter-rouge">desc</code>. Тобто ось так буде виглядати запит:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">message_id</span><span class="p">,</span> <span class="n">read_time</span>
+<span class="k">from</span> <span class="n">user_private_message</span> 
+<span class="k">order</span> <span class="k">by</span> <span class="n">read_time</span> <span class="k">desc</span><span class="p">;</span></code></pre></figure>
+
+<p>Також після ключового слова <code class="language-plaintext highlighter-rouge">order by</code> ми можемо перелічити декілька правил по яких буде сортування. Наприклад, відсортуємо користувачів по признаку чи активний цей користувача чи ні <code class="language-plaintext highlighter-rouge">(is_active)</code>, і по імені користувача. Ось запит:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">is_active</span> 
+<span class="k">from</span> <span class="k">user</span> <span class="k">order</span> <span class="k">by</span> <span class="n">is_active</span><span class="p">,</span> <span class="n">first_name</span> <span class="k">desc</span><span class="p">;</span></code></pre></figure>
+
+<p>Отже, <code class="language-plaintext highlighter-rouge">select user_id, first_name, is_active</code> — сортуємо по <code class="language-plaintext highlighter-rouge">id</code> користувача, імені та полю <code class="language-plaintext highlighter-rouge">is_active</code>. Спочатку ми сортуємо по признаку <code class="language-plaintext highlighter-rouge">is_active</code> і по імені <code class="language-plaintext highlighter-rouge">first_name</code> відсортуємо по зменшенню.</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="text-align: center">user_id</th>
+      <th style="text-align: center">first_name</th>
+      <th style="text-align: center">is_active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">7525</td>
+      <td style="text-align: center">Zorana</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8385</td>
+      <td style="text-align: center">Wilhelmus</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7498</td>
+      <td style="text-align: center">Sanjeet</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8163</td>
+      <td style="text-align: center">Saige</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8103</td>
+      <td style="text-align: center">Zachariah</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7635</td>
+      <td style="text-align: center">Zach</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7883</td>
+      <td style="text-align: center">Yvet</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8589</td>
+      <td style="text-align: center">Yvet</td>
+      <td style="text-align: center">1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Тут ми бачимо наше сортування по <code class="language-plaintext highlighter-rouge">is_active</code>. Наша вибірка розділилась на дві групи, на неактивних користувачів ( в яких атрибут <code class="language-plaintext highlighter-rouge">is_active=0</code> ) і на активних. Тобто, спочатку в нас відбувається сортування по <code class="language-plaintext highlighter-rouge">is_active</code> і вже всередині цієї групи відсортовується по іменах. І друга група, в яких <code class="language-plaintext highlighter-rouge">is_active=1</code>, імена користувачів відсортовані по зменшенню. Якщо ми зустрінемо декілька однакових імен та захочемо відсортувати їх, додавши в наш запит відповідні атрибути, то сортування для них буде відбуватись вже по третьому правилу.</p>
+
+<p>Також, що досить зручно, ми можемо відсортувати просто вказавши номери колонок.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">is_active</span> 
+<span class="k">from</span> <span class="k">user</span> <span class="k">order</span> <span class="k">by</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span> <span class="k">desc</span><span class="p">;</span> </code></pre></figure>
+
+<p>Тут ми сортуємо 3 і 2 колонку по зменшенню.</p>
+
+<p>Розберімось, як саме відбувається сортування.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">is_active</span> 
+<span class="k">from</span> <span class="k">user</span> <span class="k">order</span> <span class="k">by</span> <span class="n">is_active</span><span class="p">,</span> <span class="n">first_name</span> <span class="k">desc</span><span class="p">;</span></code></pre></figure>
+
+<p>І так, наша СУБД, вибирає кожну стрічку з <code class="language-plaintext highlighter-rouge">user</code>, потім вибирає з цієї стрічки <code class="language-plaintext highlighter-rouge">user_id, first_name</code> — ті поля, які необхідні для вибірки, і ті поля <code class="language-plaintext highlighter-rouge">order by is_active, first_name</code> — які потрібні для сортування. І по тій мірі як ітерується за результатами вибірки вона просто сортує ось ці результати <code class="language-plaintext highlighter-rouge">order by is_active, first_name</code> і як результати будуть відсортовані, віддає їх клієнту.</p>
+
+<p>Таким чином, ми можемо використовувати в якості поля для сортування, результат якоїсь функції.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">reverse</span><span class="p">(</span><span class="n">first_name</span><span class="p">)</span> 
+<span class="k">from</span> <span class="k">user</span> <span class="k">order</span> <span class="k">by</span> <span class="n">reverse</span><span class="p">(</span><span class="n">first_name</span><span class="p">)</span> <span class="k">desc</span><span class="p">;</span></code></pre></figure>
+
+<p>В даний вибірці ми просто в функцію <code class="language-plaintext highlighter-rouge">reverse</code> передаємо наше значення, після чого відбувається сортування.</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="text-align: center">first_name</th>
+      <th style="text-align: center">reverse(first_name)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Jean-guy</td>
+      <td style="text-align: center">yug-naeJ</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Chastity</td>
+      <td style="text-align: center">ytitsahC</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Clarity</td>
+      <td style="text-align: center">ytiralC</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Garry</td>
+      <td style="text-align: center">yrraG</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Jinny</td>
+      <td style="text-align: center">ynniJ</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Elhamy</td>
+      <td style="text-align: center">ymahlE</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Також ми можемо обмежити результат вибірки. Інколи, немає потреби навантажувати сервер для того, аби він видав нам гігабайти даних. Робиться це за допомогою команди <code class="language-plaintext highlighter-rouge">limit</code>.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">first_name</span> <span class="k">from</span> <span class="k">user</span> 
+<span class="k">order</span> <span class="k">by</span> <span class="n">first_name</span> <span class="k">limit</span> <span class="mi">3</span><span class="p">;</span></code></pre></figure>
+
+<p>Ось результати який ми отримали:</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="text-align: center">user_id</th>
+      <th style="text-align: center">first_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">7914</td>
+      <td style="text-align: center">Achamma</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7605</td>
+      <td style="text-align: center">Addie</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7705</td>
+      <td style="text-align: center">Adrianna</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Отже, що відбувається на стороні СУБД? MySQL з таблиці <code class="language-plaintext highlighter-rouge">user</code> починає вибирати всі колонки, які в нас є, а потім починає їх сортувати за допомогою <code class="language-plaintext highlighter-rouge">order by</code>. І як тільки вона відсортувала всі колонки, які є в нашій таблиці, тобто в наших результатах запиту, вона просто бере перших 3 колонок з цієї тимчасової таблиці та повертає їх клієнту, тобто вона не вертає всі запити, які залишились.</p>
+
+<p>Якщо ми візьмемо якийсь інший приклад, та просто без сортування виведемо 10 користувачів. В такому випадку СУБД починає дивитись всі дані, які зберігаються в таблиці <code class="language-plaintext highlighter-rouge">user</code>, але починає набирати результати до тих пір, доки не впреться в наш ліміт, або поки не закінчаться дані в таблиці. Це буває дуже корисно, коли ми познайомились з якоюсь базою даних і нам потрібно переглянути якусь інформацію, щоб приблизно розуміти, які в нас є збережені дані.</p>
+
+<p>Також варто пам’ятати що в <code class="language-plaintext highlighter-rouge">limit</code> є два режими роботи. В другому режимі роботи ми можемо ввести два числа. Тобто якщо ми вводимо <code class="language-plaintext highlighter-rouge">limit 10, 5</code> ми пропустимо перших десять результатів і виведемо п’ять.</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          
+
+        </div>
+				<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Бази даних для програмістів - Частина 3🗂️ | Soloviov Blog🇺🇦</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Бази даних для програмістів - Частина 3🗂️" />
+<meta name="author" content="Soloviov Ivan" />
+<meta property="og:locale" content="ua" />
+<meta name="description" content="З’єднання вибірок та сортування й обмеження результатів" />
+<meta property="og:description" content="З’єднання вибірок та сортування й обмеження результатів" />
+<link rel="canonical" href="https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/" />
+<meta property="og:url" content="https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/" />
+<meta property="og:site_name" content="Soloviov Blog🇺🇦" />
+<meta property="og:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-20T12:10:39+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="twitter:title" content="Бази даних для програмістів - Частина 3🗂️" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Soloviov Ivan"},"dateModified":"2021-12-20T12:10:39+00:00","datePublished":"2021-12-20T12:10:39+00:00","description":"З’єднання вибірок та сортування й обмеження результатів","headline":"Бази даних для програмістів - Частина 3🗂️","image":"https://www.isoloviov.com/img/posts/Database3/DB.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/"},"url":"https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/"}</script>
+<!-- End Jekyll SEO tag -->
+
+				<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://soloviov-blog.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<style>
+	form.example{
+		text-align: center;
+	}
+	form.example input[type=text] {
+		padding: 5px;
+		font-size: 17px;
+		border: 1px solid grey;
+		float: center;
+		width: 50%;
+		background: white;
+		margin-bottom: 30px;
+	}
+	
+	form.example button {
+		width: 20%;
+		padding: 10px;
+		background: #2196F3;
+		color: white;
+		font-size: 17px;
+		border: 1px solid grey;
+		border-left: none;
+		cursor: pointer;
+	}
+	
+	form.example button:hover {
+		background: #0b7dda;
+	}
+	
+	form.example::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+	@media only screen and (max-width: 400px){
+		form.example input[type=text]{
+			width:100%;
+		
+		}
+	} 
+	</style>
+
+
+<div itemscope itemtype="https://schema.org/WebSite">
+<div class="search">
+	<form method="get" class="example" action="https://www.google.com/search"
+		itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+			<input type="hidden" name="sitesearch" value="isoloviov.com" />
+			<input type="text" name="q" maxlength="255" placeholder="Search with Google" />
+		</div>
+	</form>
+</div>
+
+
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:vany.soloviov@gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/Soloviov.IA">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/ivan-soloviov-62403b193">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/WarmingZ">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/warmiddle/">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+					
+          <li class="list-inline-item">
+            <a href="https://www.isoloviov.com/feed.xml">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i style="color:orange;" class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+					
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Soloviov Ivan 2023</p>
+      </div>
+    </div>
+  </div>
+	<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Бази даних для програмістів - Частина 3🗂️ | Soloviov Blog🇺🇦</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Бази даних для програмістів - Частина 3🗂️" />
+<meta name="author" content="Soloviov Ivan" />
+<meta property="og:locale" content="ua" />
+<meta name="description" content="З’єднання вибірок та сортування й обмеження результатів" />
+<meta property="og:description" content="З’єднання вибірок та сортування й обмеження результатів" />
+<link rel="canonical" href="https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/" />
+<meta property="og:url" content="https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/" />
+<meta property="og:site_name" content="Soloviov Blog🇺🇦" />
+<meta property="og:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-20T12:10:39+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="twitter:title" content="Бази даних для програмістів - Частина 3🗂️" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Soloviov Ivan"},"dateModified":"2021-12-20T12:10:39+00:00","datePublished":"2021-12-20T12:10:39+00:00","description":"З’єднання вибірок та сортування й обмеження результатів","headline":"Бази даних для програмістів - Частина 3🗂️","image":"https://www.isoloviov.com/img/posts/Database3/DB.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/"},"url":"https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WZF1BC3LQD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WZF1BC3LQD');
+</script>
+
+	<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Бази даних для програмістів - Частина 3🗂️ | Soloviov Blog🇺🇦</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Бази даних для програмістів - Частина 3🗂️" />
+<meta name="author" content="Soloviov Ivan" />
+<meta property="og:locale" content="ua" />
+<meta name="description" content="З’єднання вибірок та сортування й обмеження результатів" />
+<meta property="og:description" content="З’єднання вибірок та сортування й обмеження результатів" />
+<link rel="canonical" href="https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/" />
+<meta property="og:url" content="https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/" />
+<meta property="og:site_name" content="Soloviov Blog🇺🇦" />
+<meta property="og:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-20T12:10:39+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="twitter:title" content="Бази даних для програмістів - Частина 3🗂️" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Soloviov Ivan"},"dateModified":"2021-12-20T12:10:39+00:00","datePublished":"2021-12-20T12:10:39+00:00","description":"З’єднання вибірок та сортування й обмеження результатів","headline":"Бази даних для програмістів - Частина 3🗂️","image":"https://www.isoloviov.com/img/posts/Database3/DB.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/"},"url":"https://www.isoloviov.com/Translate/2021-12-20-SQL-for-the-programmer-part3-ua/"}</script>
+<!-- End Jekyll SEO tag -->
+
+	<script id="dsq-count-scr" src="//soloviov-blog.disqus.com/count.js" async></script> 
+	
+</body>
+
+</html>

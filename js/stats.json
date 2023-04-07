@@ -1,0 +1,102 @@
+
+
+{
+  "posts": [
+  
+    
+    
+    
+    {
+      "date": "2023-03-02",
+      "words": "2302",
+      "tags": "web "
+    }
+  
+    
+    
+    ,
+    {
+      "date": "2022-07-21",
+      "words": "752",
+      "tags": "jekyll "
+    }
+  
+    
+    
+    ,
+    {
+      "date": "2022-06-12",
+      "words": "2210",
+      "tags": "personal "
+    }
+  
+    
+    
+    ,
+    {
+      "date": "2022-03-04",
+      "words": "2731",
+      "tags": "personal "
+    }
+  
+    
+    
+    ,
+    {
+      "date": "2021-12-20",
+      "words": "1985",
+      "tags": "sql "
+    }
+  
+    
+    
+    ,
+    {
+      "date": "2021-12-08",
+      "words": "1459",
+      "tags": "sql "
+    }
+  
+    
+    
+    ,
+    {
+      "date": "2021-12-02",
+      "words": "1951",
+      "tags": "sql "
+    }
+  
+    
+    
+    ,
+    {
+      "date": "2021-11-16",
+      "words": "818",
+      "tags": "personal "
+    }
+  
+    
+    
+    ,
+    {
+      "date": "2021-11-08",
+      "words": "1108",
+      "tags": "tips "
+    }
+  
+    
+    
+    ,
+    {
+      "date": "2021-11-07",
+      "words": "199",
+      "tags": "jekyll "
+    }
+  
+  ],
+  "totalPosts": 10,
+  "totalCategories": 0,
+  "totalTags": 5,
+  "totalWords": 15515,
+  "averageWordsPerPost": 1551
+}

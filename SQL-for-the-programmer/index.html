@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Databases for programmers - Part 1🗂️ - Soloviov Blog🇺🇦
+    
+  </title>
+
+  <meta name="description" content="I recently started studying databases, namely SQL🤓. Based on this, I want to share with you the information I learned during my studies. I will continue to w...">
+
+	<link href="/assets/fonts/fonts.css" rel='stylesheet' type='text/css'>
+  <!-- <link href='https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&display=swap' rel='stylesheet' type='text/css'> -->
+
+  <!-- <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script> -->
+
+	<script src="https://kit.fontawesome.com/65875454cf.js" crossorigin="anonymous"></script>
+	<script id="dsq-count-scr" src="//soloviov-blog.disqus.com/count.js" async></script> 
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.isoloviov.com/SQL-for-the-programmer/">
+  <link rel="alternate" type="application/rss+xml" title="Soloviov Blog🇺🇦" href="/feed.xml">
+
+
+		<!-- Favicons  -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/statick/image/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/statick/image/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/statick/image/favicons/favicon-16x16.png">
+		<link rel="manifest" href="/statick/image/favicons/site.webmanifest">
+		<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Databases for programmers - Part 1🗂️ | Soloviov Blog🇺🇦</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Databases for programmers - Part 1🗂️" />
+<meta name="author" content="Soloviov Ivan" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="In this post, we will look at simple server requests SQL" />
+<meta property="og:description" content="In this post, we will look at simple server requests SQL" />
+<link rel="canonical" href="https://www.isoloviov.com/SQL-for-the-programmer/" />
+<meta property="og:url" content="https://www.isoloviov.com/SQL-for-the-programmer/" />
+<meta property="og:site_name" content="Soloviov Blog🇺🇦" />
+<meta property="og:image" content="https://www.isoloviov.com/img/posts/Database/imageDatabase.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-02T17:10:39+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.isoloviov.com/img/posts/Database/imageDatabase.jpg" />
+<meta property="twitter:title" content="Databases for programmers - Part 1🗂️" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Soloviov Ivan"},"dateModified":"2021-12-02T17:10:39+00:00","datePublished":"2021-12-02T17:10:39+00:00","description":"In this post, we will look at simple server requests SQL","headline":"Databases for programmers - Part 1🗂️","image":"https://www.isoloviov.com/img/posts/Database/imageDatabase.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.isoloviov.com/SQL-for-the-programmer/"},"url":"https://www.isoloviov.com/SQL-for-the-programmer/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Soloviov Blog🇺🇦</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+				<li class="nav-item">
+					<a class="nav-link" href="/posts"> All posts</a>
+				</li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/comments">Latest comments</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/AmAZUHZ.webp')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Databases for programmers - Part 1🗂️</h1>
+            <!-- 
+            <h2 class="subheading">In this post, we will look at simple server requests SQL</h2>
+             -->
+            <!-- <span class="meta">Posted by
+              <a href="#">Soloviov Ivan</a> -->
+							
+					<ul class="post-meta">
+						<!-- Posted by
+							
+							Soloviov Ivan
+							
+							on -->
+						<li>
+							<time itemprop="Data"> 2 December 2021 </time>
+						</li>
+						<li itemprop="timeCount">
+							<span class="reading-time" title="Estimated read time">
+  
+   14 mins  read </span>
+
+						</li>
+						<li itemprop="wordCount">
+							<count>1951 words</count>
+						</li>
+						<li>
+						<count>
+							<i class="fa fa-comment"></i>
+							<a style="color: whitesmoke;" class="post-meta" href="/SQL-for-the-programmer/#disqus_thread"></a>
+						</count>
+					</li>
+				</ul>
+			Tags: 
+				<!-- Tags	 -->
+					
+					<ul class="post-meta-tags" style="margin-left: 0;padding-left: 0;">
+						
+						
+						
+						<li style="list-style-type: none; display:inline-block ;"><a class="tag" href="/topics/sql/" title="Sql"><i class="fa fa-database" aria-hidden="true" style="font-size:15px;"></i> sql</a></li>
+						
+						
+					</ul>
+					
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+	
+
+  <div class="container">	
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+			
+        <p><a href="https://dev.mysql.com/doc/"><img src="/img/posts/Database/SQL.png" style="width:128px;max-width:100%;" align="right" /></a>
+I recently started studying databases, namely SQL🤓. Based on this, I want to share with you the information I learned during my studies. I will continue to write about this topic, as it is impossible to describe everything in one post. I would also like to say in advance that I view databases from a programmer and how to use them for a programmer👨‍💻. This will not be a technical guide that will help you learn SQL, but I hope that I can interest people who know nothing about databases and perhaps show something new to people who work with them.</p>
+
+<p><img src="/img/posts/Database/imageDatabase.webp" alt="Network" class="responsive" style="width: 100%; height: auto;" /></p>
+
+<hr />
+
+<h3 id="a-little-theory-">A little theory 🥱</h3>
+
+<p>To begin with, as always, you need to understand the terminology. Unfortunately, no way without it. So, first of all, it is necessary to define what a database is? <br />
+ A <code class="language-plaintext highlighter-rouge">database</code> is a data that is organized according to certain rules and which can be managed following certain rules.</p>
+
+<p>A common example of a database is the folder hierarchy on your hard drive. You usually organize these folders according to your own rules, such as photo folders that are neatly packaged by year in your operating system.</p>
+
+<p>This example will help us understand what a DBMS is. After all, a database management system, we can imagine as your operating system, which contains folders with photos.<br />
+ A <mark>database management system (DBMS)</mark> is a software tool that allows you to create and use a database. Finally, it’s time to define SQL. It is a declarative language of structured queries, which is used to manage data in relational databases. SQL databases are built on a relational model, ie data can be stored in tables that are logically related to each other through common values, so there is no need for additional information to link them together. One of the most important features of SQL databases is that they are normalized. This means that there are at least two tables in each SQL database that should be combined if possible, as this reduces redundancy and simplifies data entry.</p>
+
+<hr />
+
+<h3 id="commands-to-interact-with-the-server-">Commands to interact with the server 💾</h3>
+
+<p>So, to work with databases, I installed a docker with an SQL server. Instructions for installing and configuring this program can
+<a href="https://docs.docker.com/get-started/"><img src="/img/posts/Database/docker.png" style="width:128px;max-width:100%;" align="right" /></a> be found online. It will also not be difficult to find a test database, which you can download to your Docker server. 
+If you downloaded Docker, but do not know how to start a container with a MySQL server, just enter the command in the terminal - <code class="language-plaintext highlighter-rouge">docker pull mysql</code>.  Then, to start the container with the image and parameters, write in the terminal - <code class="language-plaintext highlighter-rouge">docker run --name example-mysql -e MYSQL_ROOT_PASSWORD = pass -d mysql</code>. You can enter any name instead of “example”. In the future, to connect to our database you will need to enter the command - <code class="language-plaintext highlighter-rouge">docker exec -it example-mysql mysql -uroot -ppass</code>. <br />
+Now here are some commands to interact with our server:</p>
+<ul>
+  <li>View databases on the server - (<code class="language-plaintext highlighter-rouge">show databases;</code>)</li>
+  <li>Switch to the database - (<code class="language-plaintext highlighter-rouge">use nameDatabase;</code>)</li>
+  <li>View tables in the database - (<code class="language-plaintext highlighter-rouge">show tables;</code>)</li>
+  <li>View columns - (<code class="language-plaintext highlighter-rouge">describe Example;</code>)</li>
+</ul>
+
+<p>Next, if you find a test database on the Internet, to import a new dump, use the command - <code class="language-plaintext highlighter-rouge">docker exec -i example-mysql mysql -uroot -ppass &lt;example.sql</code>. In this case, example.sql is the file name of our dump. And we enter the same command to import data by changing the file name. Of course, you can find another way to install SQL Server without Docker. I’m just demonstrating how I installed the server SQL.</p>
+
+<hr />
+
+<h3 id="simple-select-query-️">Simple SELECT query 🌪️</h3>
+
+<p>It is also worth remembering that SQL is a declarative language, meaning that we do not give a command to the compiler or interpreter of the language, but we describe the desired result we want to get.</p>
+
+<p>Of course, my first query to the database was the well-known Select. It looked something like this - <code class="language-plaintext highlighter-rouge">select * from table_name;</code>. I don’t know if I need to explain this query, but it may be interesting for someone who doesn’t know SQL at all. Asterisk <mark>"*"</mark> means that we get all the data entered in the table, well, respectively, <mark>"From"</mark> means from which table.</p>
+
+<p>We can also retrieve data from multiple columns by renaming them at once. It should be noted that these requests do not make any changes to the server. Entering such a command on the server <br />
+<code class="language-plaintext highlighter-rouge">SELECT name NewName, example as NewID FROM example;</code><br />
+We will get about this result in the terminal.</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>NewName</th>
+      <th>NewID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Value 1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Value 2</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Having analyzed this query, you can understand the logic of almost all SQL queries. The query sounds something like this - select data from the name column (<mark>NewName</mark> in this case is not an explicit renaming of the column in the output), and the example column (where the keyword <mark>as</mark> means explicitly renaming the example column to <mark>NewID</mark>), from the example table.
+We can also perform mathematical operations on numbers on the server (I do not know who needs it, but it interestingly demonstrates the capabilities of MySQL). For example, write the following query: <br />
+ <code class="language-plaintext highlighter-rouge">select 5/3 as result;</code> <br />
+ and get the result of the division which is displayed in the column <mark>"result"</mark>.</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.6667</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>It does not sound very complicated, because it is a simple request to the server to obtain information from the database. In my practice, I have noticed that most SQL database server queries are simple select queries without using aggregate functions. But there are times when you need to write specific queries to get data that can be filtered right away or something.</p>
+
+<hr />
+
+<h3 id="filter-results-with-where-">Filter results with WHERE 💡</h3>
+
+<p>I selected a user table to filter the results. This will demonstrate the operation of the where parameter. For example, I have a table with the names and details of users of a site. Let’s say I want to get single-user data. My query will look like this: <br />
+<code class="language-plaintext highlighter-rouge">select * from user where first_name = 'Madelle';</code><br />
+ Here we select everything from the user table and then use the <mark>"where"</mark> keyword wherein the <mark>first_name</mark> column we look for the name Madelle. Now we have not received all the information about the user but simply filtered it among all users. We can also get the information we need about this user - <br /> <code class="language-plaintext highlighter-rouge">select first_name, last_name, user_id from user where first_name = 'Madelle';</code> <br />
+  Where we create a request to the server to get the user <mark>ID</mark> in the system, <mark>name</mark>, and <mark>surname</mark>. And this is the result we get.</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>first_name</th>
+      <th>last_name</th>
+      <th>user_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Madelle</td>
+      <td>Jonathan</td>
+      <td>8209</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If you remove this condition, we can display the name, surname, and id of all users of the site, which are entered into the database - <code class="language-plaintext highlighter-rouge">select first_name, last_name, user_id from user;</code>. <br />
+In general, <mark>“where”</mark> is a very flexible tool. It can meet almost any data filtering need. I will not list all the possibilities of the parameter, but I will demonstrate the most interesting in my opinion, which can be applied in real life.</p>
+
+<p>Imagine we have a database of users who have given us their email address and we need to filter it by domain. We will display all users who have a domain zone e-mail “gmail.com”.
+I will enter the following query: <br />
+ <code class="language-plaintext highlighter-rouge">Select email, user_id from user where email like '%@gmail.com';</code>. <br />
+The keyword here is <mark>"like"</mark> and the symbol <mark>"%"</mark> means that before the beginning of the tape (ie up to %) we can have as many characters as we want. This is the conclusion we will get in the terminal.</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>email</th>
+      <th>user_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>soloviov.ia@gmail.com</td>
+      <td>7498</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>mnda@gmail.com</td>
+      <td>7515</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>annekey@gmail.com</td>
+      <td>7519</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>alexey@gmail.com</td>
+      <td>7601</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sofi.grabova@gmail.com</td>
+      <td>7908</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Also, for a better understanding of the <mark>%</mark> sign, I would like to give a few small examples. We will also filter users. Let’s list the users whose name starts with the letter <mark>"A"</mark> <br />
+ <code class="language-plaintext highlighter-rouge">select first_name, last_name, user_id from user where first_name like 'A%';</code> <br />
+  Here we see that the <mark>%</mark> sign is located after the letter, and it means that after the beginning of the line we can have as many characters as we want. Another small example where we filter users at the beginning and end of the feed is <br />
+  <code class="language-plaintext highlighter-rouge">select first_name, last_name, user_id from user where first_name like 'A% e';</code>.</p>
+
+<p>Here I think it is clear that the tape should start on <mark>"A"</mark> and end on <mark>"e"</mark>. We can also filter users by id in which the id is less than 8000:<br />
+<code class="language-plaintext highlighter-rouge">select email, user_id from user where user_id &lt;8000;</code>. <br />
+We can also filter users by registration date, in ranges of specific calendar dates. My user table records the date the user registered.<br />
+ <code class="language-plaintext highlighter-rouge">(select email, registration_time from user where registration_time between '2019-01-31' and '2020-01-01';)</code><br />
+  The keywords here are <mark>"between"</mark> and <mark>"and"</mark>. And we get all the users who have been registered in this period.</p>
+
+<p>I have a cell <code class="language-plaintext highlighter-rouge">in_active</code> which stores a variable of type <code class="language-plaintext highlighter-rouge">int</code>. It holds the values ​​”1” and “0”. We can derive all values ​​where the variable is a unit value.<br />
+This is what my request to the server looks like: <br />
+ <code class="language-plaintext highlighter-rouge">select user_id, is_active from user where is_active = true;</code>. <br />
+ It should be explained that SQL is smart enough to understand that the so-called <code class="language-plaintext highlighter-rouge">true</code> flag is one and the <code class="language-plaintext highlighter-rouge">false</code> flag is zero.</p>
+
+<p>Finally, I would like to demonstrate the work of the query, where we can combine several conditions. The query will look like this: <br />
+<code class="language-plaintext highlighter-rouge">select first_name, is_active from user where (is_active = true and first_name like 'A%') or (is_active = false and last_name like '% n');</code> <br />
+And we will receive such an answer to the request.</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>first_name</th>
+      <th>is_active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ammit</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Addie</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Agnesse</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Anna-diane</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Adrianna</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Modesta</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Noellyn</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Amandi</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Now scroll through this query in your head, and think about why we received such data.😇</p>
+
+<hr />
+
+<p>So, in this post, which is the first in a series of posts about SQL for a programmer, I shared with you my knowledge of building queries on the server and some theoretical knowledge😉. My article should not be taken as an educational one. After all, I would not like to take on such a responsibility😏. In any case, I advise you to use Google! In the next post, I will try to tell you about the use of simple and aggregate functions. See you in the next post👋!</p>
+
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/recommendations/" data-toggle="tooltip" data-placement="top" title="Perception of the world through the prism of recommendations🕹️">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/SQL-for-programmer-part2/" data-toggle="tooltip" data-placement="top" title="Databases for programmers - Part 2🗂️">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+				<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Databases for programmers - Part 1🗂️ | Soloviov Blog🇺🇦</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Databases for programmers - Part 1🗂️" />
+<meta name="author" content="Soloviov Ivan" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="In this post, we will look at simple server requests SQL" />
+<meta property="og:description" content="In this post, we will look at simple server requests SQL" />
+<link rel="canonical" href="https://www.isoloviov.com/SQL-for-the-programmer/" />
+<meta property="og:url" content="https://www.isoloviov.com/SQL-for-the-programmer/" />
+<meta property="og:site_name" content="Soloviov Blog🇺🇦" />
+<meta property="og:image" content="https://www.isoloviov.com/img/posts/Database/imageDatabase.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-02T17:10:39+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.isoloviov.com/img/posts/Database/imageDatabase.jpg" />
+<meta property="twitter:title" content="Databases for programmers - Part 1🗂️" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Soloviov Ivan"},"dateModified":"2021-12-02T17:10:39+00:00","datePublished":"2021-12-02T17:10:39+00:00","description":"In this post, we will look at simple server requests SQL","headline":"Databases for programmers - Part 1🗂️","image":"https://www.isoloviov.com/img/posts/Database/imageDatabase.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.isoloviov.com/SQL-for-the-programmer/"},"url":"https://www.isoloviov.com/SQL-for-the-programmer/"}</script>
+<!-- End Jekyll SEO tag -->
+
+				<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://soloviov-blog.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<style>
+	form.example{
+		text-align: center;
+	}
+	form.example input[type=text] {
+		padding: 5px;
+		font-size: 17px;
+		border: 1px solid grey;
+		float: center;
+		width: 50%;
+		background: white;
+		margin-bottom: 30px;
+	}
+	
+	form.example button {
+		width: 20%;
+		padding: 10px;
+		background: #2196F3;
+		color: white;
+		font-size: 17px;
+		border: 1px solid grey;
+		border-left: none;
+		cursor: pointer;
+	}
+	
+	form.example button:hover {
+		background: #0b7dda;
+	}
+	
+	form.example::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+	@media only screen and (max-width: 400px){
+		form.example input[type=text]{
+			width:100%;
+		
+		}
+	} 
+	</style>
+
+
+<div itemscope itemtype="https://schema.org/WebSite">
+<div class="search">
+	<form method="get" class="example" action="https://www.google.com/search"
+		itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+			<input type="hidden" name="sitesearch" value="isoloviov.com" />
+			<input type="text" name="q" maxlength="255" placeholder="Search with Google" />
+		</div>
+	</form>
+</div>
+
+
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:vany.soloviov@gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/Soloviov.IA">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/ivan-soloviov-62403b193">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/WarmingZ">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/warmiddle/">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+					
+          <li class="list-inline-item">
+            <a href="https://www.isoloviov.com/feed.xml">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i style="color:orange;" class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+					
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Soloviov Ivan 2023</p>
+      </div>
+    </div>
+  </div>
+	<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Databases for programmers - Part 1🗂️ | Soloviov Blog🇺🇦</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Databases for programmers - Part 1🗂️" />
+<meta name="author" content="Soloviov Ivan" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="In this post, we will look at simple server requests SQL" />
+<meta property="og:description" content="In this post, we will look at simple server requests SQL" />
+<link rel="canonical" href="https://www.isoloviov.com/SQL-for-the-programmer/" />
+<meta property="og:url" content="https://www.isoloviov.com/SQL-for-the-programmer/" />
+<meta property="og:site_name" content="Soloviov Blog🇺🇦" />
+<meta property="og:image" content="https://www.isoloviov.com/img/posts/Database/imageDatabase.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-02T17:10:39+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.isoloviov.com/img/posts/Database/imageDatabase.jpg" />
+<meta property="twitter:title" content="Databases for programmers - Part 1🗂️" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Soloviov Ivan"},"dateModified":"2021-12-02T17:10:39+00:00","datePublished":"2021-12-02T17:10:39+00:00","description":"In this post, we will look at simple server requests SQL","headline":"Databases for programmers - Part 1🗂️","image":"https://www.isoloviov.com/img/posts/Database/imageDatabase.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.isoloviov.com/SQL-for-the-programmer/"},"url":"https://www.isoloviov.com/SQL-for-the-programmer/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WZF1BC3LQD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WZF1BC3LQD');
+</script>
+
+	<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Databases for programmers - Part 1🗂️ | Soloviov Blog🇺🇦</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Databases for programmers - Part 1🗂️" />
+<meta name="author" content="Soloviov Ivan" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="In this post, we will look at simple server requests SQL" />
+<meta property="og:description" content="In this post, we will look at simple server requests SQL" />
+<link rel="canonical" href="https://www.isoloviov.com/SQL-for-the-programmer/" />
+<meta property="og:url" content="https://www.isoloviov.com/SQL-for-the-programmer/" />
+<meta property="og:site_name" content="Soloviov Blog🇺🇦" />
+<meta property="og:image" content="https://www.isoloviov.com/img/posts/Database/imageDatabase.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-02T17:10:39+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.isoloviov.com/img/posts/Database/imageDatabase.jpg" />
+<meta property="twitter:title" content="Databases for programmers - Part 1🗂️" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Soloviov Ivan"},"dateModified":"2021-12-02T17:10:39+00:00","datePublished":"2021-12-02T17:10:39+00:00","description":"In this post, we will look at simple server requests SQL","headline":"Databases for programmers - Part 1🗂️","image":"https://www.isoloviov.com/img/posts/Database/imageDatabase.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.isoloviov.com/SQL-for-the-programmer/"},"url":"https://www.isoloviov.com/SQL-for-the-programmer/"}</script>
+<!-- End Jekyll SEO tag -->
+
+	<script id="dsq-count-scr" src="//soloviov-blog.disqus.com/count.js" async></script> 
+	
+</body>
+
+</html>

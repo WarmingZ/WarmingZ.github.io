@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Databases for programmers - Part 3 🗂️ - Soloviov Blog🇺🇦
+    
+  </title>
+
+  <meta name="description" content="In this post, I want to show the connection of the sample results vertically and show some examples of sorting and limiting the sample results. I urge you to...">
+
+	<link href="/assets/fonts/fonts.css" rel='stylesheet' type='text/css'>
+  <!-- <link href='https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&display=swap' rel='stylesheet' type='text/css'> -->
+
+  <!-- <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script> -->
+
+	<script src="https://kit.fontawesome.com/65875454cf.js" crossorigin="anonymous"></script>
+	<script id="dsq-count-scr" src="//soloviov-blog.disqus.com/count.js" async></script> 
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://www.isoloviov.com/for-the-programmer-part3/">
+  <link rel="alternate" type="application/rss+xml" title="Soloviov Blog🇺🇦" href="/feed.xml">
+
+
+		<!-- Favicons  -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/statick/image/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/statick/image/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/statick/image/favicons/favicon-16x16.png">
+		<link rel="manifest" href="/statick/image/favicons/site.webmanifest">
+		<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Databases for programmers - Part 3 🗂️ | Soloviov Blog🇺🇦</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Databases for programmers - Part 3 🗂️" />
+<meta name="author" content="Soloviov Ivan" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Combining selection and sorting and constraints of results" />
+<meta property="og:description" content="Combining selection and sorting and constraints of results" />
+<link rel="canonical" href="https://www.isoloviov.com/for-the-programmer-part3/" />
+<meta property="og:url" content="https://www.isoloviov.com/for-the-programmer-part3/" />
+<meta property="og:site_name" content="Soloviov Blog🇺🇦" />
+<meta property="og:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-20T12:10:39+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="twitter:title" content="Databases for programmers - Part 3 🗂️" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Soloviov Ivan"},"dateModified":"2021-12-20T12:10:39+00:00","datePublished":"2021-12-20T12:10:39+00:00","description":"Combining selection and sorting and constraints of results","headline":"Databases for programmers - Part 3 🗂️","image":"https://www.isoloviov.com/img/posts/Database3/DB.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.isoloviov.com/for-the-programmer-part3/"},"url":"https://www.isoloviov.com/for-the-programmer-part3/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Soloviov Blog🇺🇦</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+				<li class="nav-item">
+					<a class="nav-link" href="/posts"> All posts</a>
+				</li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/comments">Latest comments</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/AmAZUHZ.webp')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Databases for programmers - Part 3 🗂️</h1>
+            <!-- 
+            <h2 class="subheading">Combining selection and sorting and constraints of results</h2>
+             -->
+            <!-- <span class="meta">Posted by
+              <a href="#">Soloviov Ivan</a> -->
+							
+					<ul class="post-meta">
+						<!-- Posted by
+							
+							Soloviov Ivan
+							
+							on -->
+						<li>
+							<time itemprop="Data"> 20 December 2021 </time>
+						</li>
+						<li itemprop="timeCount">
+							<span class="reading-time" title="Estimated read time">
+  
+   14 mins  read </span>
+
+						</li>
+						<li itemprop="wordCount">
+							<count>1985 words</count>
+						</li>
+						<li>
+						<count>
+							<i class="fa fa-comment"></i>
+							<a style="color: whitesmoke;" class="post-meta" href="/for-the-programmer-part3/#disqus_thread"></a>
+						</count>
+					</li>
+				</ul>
+			Tags: 
+				<!-- Tags	 -->
+					
+					<ul class="post-meta-tags" style="margin-left: 0;padding-left: 0;">
+						
+						
+						
+						<li style="list-style-type: none; display:inline-block ;"><a class="tag" href="/topics/sql/" title="Sql"><i class="fa fa-database" aria-hidden="true" style="font-size:15px;"></i> sql</a></li>
+						
+						
+					</ul>
+					
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+	
+
+  <div class="container">	
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+			
+        <p>In this post, I want to show the connection of the sample results vertically and show some examples of sorting and limiting the sample results. I urge you to repeat all the commands I have given in the examples and modify them to suit your needs. This way you will better understand and assimilate the material. Let’s start without words. Enjoy reading 👋!</p>
+
+<center>
+<img src="/img/posts/Database3/DB.png" alt="Network" class="responsive" style="width: 65%; height: auto;" />
+</center>
+
+<hr />
+
+<h3 id="combining-results-vertically">Combining results vertically</h3>
+<p>Let’s learn to work with samples as sets and learn to combine them. To do this, we need a function that will help us know which elements are in the set.
+Let’s start with the fact that we, for example, need to know what are the unique values for the column with the appropriate ratio, that is, for the table. Find out how many unique senders we have.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">distinct</span> <span class="n">user_from_id</span> <span class="k">from</span> <span class="n">user_private_message</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>And we get a result whose value is not repeated. In this case, we use <code class="language-plaintext highlighter-rouge">distinct</code> simply as a keyword, but it can be used as a function - passing it some value. Now, moving on to our task, let’s find out the number of unique senders. To do this, we will use the already familiar function <code class="language-plaintext highlighter-rouge">count</code>.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="k">count</span><span class="p">(</span><span class="k">distinct</span> <span class="n">user_from_id</span><span class="p">)</span> <span class="k">from</span> <span class="n">user_private_message</span><span class="p">;</span> </code></pre></figure>
+
+<p>And we get the number in numerical form.
+Here we take our table and take each column from it, select the <code class="language-plaintext highlighter-rouge">user_from_id</code> field and accumulate some hash set with <code class="language-plaintext highlighter-rouge">district</code>. Then, we transfer the accumulated value to our aggregation function <code class="language-plaintext highlighter-rouge">count</code>. Thus, we counted the number of unique values.</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="text-align: center">select count(distinct user_from_id)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">177</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We can test our sample. Namely, check whether the unique values are really output. We can implement this with the help of <code class="language-plaintext highlighter-rouge">if</code>. It is worth recalling that in the last request, we received all the unique <code class="language-plaintext highlighter-rouge">ID</code> from <code class="language-plaintext highlighter-rouge">user_from_id</code>.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="k">count</span>
+<span class="p">(</span><span class="k">distinct</span> <span class="n">if</span><span class="p">(</span><span class="n">user_from_id</span> <span class="o">=</span> <span class="mi">8609</span><span class="p">,</span> <span class="mi">8592</span><span class="p">,</span> <span class="n">user_from_id</span><span class="p">))</span>
+<span class="k">from</span> <span class="n">user_private_message</span><span class="p">;</span></code></pre></figure>
+
+<p>And we get the following result:</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="text-align: center">count(distinct if(user_from_id = 8609,8592, user_from_id))</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">176</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We take the last number - 8609, and replace it with 8592. That is, the full query <code class="language-plaintext highlighter-rouge">IF</code> sounds like this, if the column <code class="language-plaintext highlighter-rouge">user_from_id</code> is 8609, then replace it with 8592, but if not - just return its value <code class="language-plaintext highlighter-rouge">if (user_from_id = 8609, 8592, user_from_id)</code>.
+Looking at the table above, we see that the number of users decreased by one, respectively, the replacement worked and the sampling test passed as we expected.</p>
+
+<p>It is also worth returning to <code class="language-plaintext highlighter-rouge">distinct</code> because it can work as a function and a keyword.
+Now we can set the task - to get unique pairs of sender and recipient.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"> <span class="k">select</span> <span class="k">distinct</span>
+ <span class="n">user_from_id</span><span class="p">,</span> <span class="n">user_to_id</span> 
+ <span class="k">from</span> <span class="n">user_private_message</span><span class="p">;</span></code></pre></figure>
+
+<p>And we will get unique couples who talked to each other. Now in order to count, you just need to use <code class="language-plaintext highlighter-rouge">count</code>.</p>
+
+<p>Now count the number of unique users who send and receive messages. (There are users who have never received or written messages) And we need to count how many unique users we have in private discussions. We have already written queries about senders and recipients, but we can combine two queries into one using union.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">user_from_id</span> 
+<span class="k">from</span> <span class="n">user_private_message</span>
+<span class="k">union</span> <span class="k">select</span> <span class="n">user_to_id</span> 
+<span class="k">from</span> <span class="n">user_private_message</span><span class="p">;</span> </code></pre></figure>
+
+<p><code class="language-plaintext highlighter-rouge">Union</code> - works as a combination of two sets of results. That is, it first finds all the unique values and then combines them into some result set. Thus, it is not necessary to write <code class="language-plaintext highlighter-rouge">distinct</code> for each request. That is, the SQL engine sees that we have two queries and we need to combine their results. So get only unique value results.
+Also, if we need to merge tapes without any filtering. To do this, we need to write <code class="language-plaintext highlighter-rouge">all</code> after<br />
+<code class="language-plaintext highlighter-rouge">Union</code>.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">user_from_id</span> <span class="k">from</span> <span class="n">user_private_message</span>
+<span class="k">union</span> <span class="k">all</span> <span class="k">select</span> <span class="n">user_to_id</span>
+<span class="k">from</span> <span class="n">user_private_message</span><span class="p">;</span> </code></pre></figure>
+
+<p>After that, we will display data with duplicates.</p>
+
+<hr />
+
+<h3 id="sorting-and-limiting-sampling-results">Sorting and limiting sampling results</h3>
+<p>Very often it is used to organize page-by-page output of results. For example, the first query we reviewed the first ten results and the next query we want to select the next 10 results (ie already skip the first ten results).
+Sorting is not something complicated, it’s just a flexible tool.</p>
+
+<p>We can sort the result of any sample by the value of a field or several fields. We can also sort in ascending or descending order. Of course, we can sort this way only by the fields in which there is a comparison operation (ie more or less). But because we know MySQL, including relational databases, they have the ability to predictably convert the values ​​of various fields so that we can use these operations (more or less). Used in aggregate functions, or in the sortings I will be using now.</p>
+
+<p>Let’s start with the simplest task, try to sort the values ​in the message cell by date of reading. And at the same time we learn how sorting works with values ​​that are not yet specified, ie <code class="language-plaintext highlighter-rouge">null</code>. Here is my sort request:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">message_id</span><span class="p">,</span> <span class="n">read_time</span> 
+<span class="k">from</span> <span class="n">user_private_message</span> 
+<span class="k">order</span> <span class="k">by</span> <span class="n">read_time</span><span class="p">;</span></code></pre></figure>
+
+<p>The key word here is <code class="language-plaintext highlighter-rouge">order by</code>, after this word we indicate which column will be sorted. By default, they are sorted in ascending order. That is, the fields with <code class="language-plaintext highlighter-rouge">null</code> will be displayed first.</p>
+
+<p>If we want to sort not in ascending order, but in descending order, we will use the <code class="language-plaintext highlighter-rouge">desc</code> attribute. That is what the query will look like:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">message_id</span><span class="p">,</span> <span class="n">read_time</span>
+<span class="k">from</span> <span class="n">user_private_message</span> 
+<span class="k">order</span> <span class="k">by</span> <span class="n">read_time</span> <span class="k">desc</span><span class="p">;</span></code></pre></figure>
+
+<p>Also after the keyword <code class="language-plaintext highlighter-rouge">order by</code> we can list some rules by which there will be sorting. For example, we sort users by whether this user is active or not <code class="language-plaintext highlighter-rouge">(is_active)</code>, and by username. Here is the query:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">is_active</span> 
+<span class="k">from</span> <span class="k">user</span> <span class="k">order</span> <span class="k">by</span> <span class="n">is_active</span><span class="p">,</span> <span class="n">first_name</span> <span class="k">desc</span><span class="p">;</span></code></pre></figure>
+
+<p>So, <code class="language-plaintext highlighter-rouge">select user_id,first_name, is_active</code> - sort by <code class="language-plaintext highlighter-rouge">user</code> id, name and field <code class="language-plaintext highlighter-rouge">is_active</code>. First, we sort by <code class="language-plaintext highlighter-rouge">is_active</code> and by name <code class="language-plaintext highlighter-rouge">first_name</code> sort in descending order.</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="text-align: center">user_id</th>
+      <th style="text-align: center">first_name</th>
+      <th style="text-align: center">is_active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">7525</td>
+      <td style="text-align: center">Zorana</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8385</td>
+      <td style="text-align: center">Wilhelmus</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7498</td>
+      <td style="text-align: center">Sanjeet</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8163</td>
+      <td style="text-align: center">Saige</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8103</td>
+      <td style="text-align: center">Zachariah</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7635</td>
+      <td style="text-align: center">Zach</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7883</td>
+      <td style="text-align: center">Yvet</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8589</td>
+      <td style="text-align: center">Yvet</td>
+      <td style="text-align: center">1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Here we see our sorting by <code class="language-plaintext highlighter-rouge">is_active</code>. Our sample was divided into two groups, inactive users (in which the attribute <code class="language-plaintext highlighter-rouge">is_active = 0</code>) and active. That is, first we sort by <code class="language-plaintext highlighter-rouge">is_active</code> and already within this group is sorted by name. And the second group, in which <code class="language-plaintext highlighter-rouge">is_active = 1</code>, usernames are sorted in descending order. If we come across several identical names and want to sort them by adding the appropriate attributes to our query, then sorting for them will take place according to the third rule.</p>
+
+<p>Also, which is quite convenient, we can sort by simply specifying the column numbers.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">is_active</span> 
+<span class="k">from</span> <span class="k">user</span> <span class="k">order</span> <span class="k">by</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span> <span class="k">desc</span><span class="p">;</span> </code></pre></figure>
+
+<p>Here we sort the 3rd and 2nd columns in descending order.</p>
+
+<p>Let’s understand exactly how sorting takes place.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">is_active</span> 
+<span class="k">from</span> <span class="k">user</span> <span class="k">order</span> <span class="k">by</span> <span class="n">is_active</span><span class="p">,</span> <span class="n">first_name</span> <span class="k">desc</span><span class="p">;</span></code></pre></figure>
+
+<p>And so, our DBMS, selects each tape from <code class="language-plaintext highlighter-rouge">user</code>, then selects from this tape <code class="language-plaintext highlighter-rouge">user_id, first_name</code> - those fields which are necessary for sampling, and those fields <code class="language-plaintext highlighter-rouge">order by is_active, first_name</code> - which are necessary for sorting. And as it is iterated by the results of the sample, it simply sorts these results <code class="language-plaintext highlighter-rouge">order by is_active, first_name</code> and as the results will be sorted, gives them to the client.</p>
+
+<p>Thus, we can use as a field for sorting, the result of a function.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">reverse</span><span class="p">(</span><span class="n">first_name</span><span class="p">)</span> 
+<span class="k">from</span> <span class="k">user</span> <span class="k">order</span> <span class="k">by</span> <span class="n">reverse</span><span class="p">(</span><span class="n">first_name</span><span class="p">)</span> <span class="k">desc</span><span class="p">;</span></code></pre></figure>
+
+<p>In this sample, we simply pass our value to the `reverse ‘function, followed by sorting.</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="text-align: center">first_name</th>
+      <th style="text-align: center">reverse(first_name)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Jean-guy</td>
+      <td style="text-align: center">yug-naeJ</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Chastity</td>
+      <td style="text-align: center">ytitsahC</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Clarity</td>
+      <td style="text-align: center">ytiralC</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Garry</td>
+      <td style="text-align: center">yrraG</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Jinny</td>
+      <td style="text-align: center">ynniJ</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Elhamy</td>
+      <td style="text-align: center">ymahlE</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We can also limit the result of the sample. Sometimes, we don’t need to load the server to give us gigabytes of data. This is done using the command <code class="language-plaintext highlighter-rouge">limit</code>.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">first_name</span> <span class="k">from</span> <span class="k">user</span> 
+<span class="k">order</span> <span class="k">by</span> <span class="n">first_name</span> <span class="k">limit</span> <span class="mi">3</span><span class="p">;</span></code></pre></figure>
+
+<p>Here are the results we got:</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="text-align: center">user_id</th>
+      <th style="text-align: center">first_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">7914</td>
+      <td style="text-align: center">Achamma</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7605</td>
+      <td style="text-align: center">Addie</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7705</td>
+      <td style="text-align: center">Adrianna</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>So what’s going on on the DBMS side? MySQL from the <code class="language-plaintext highlighter-rouge">user</code> table starts selecting all the columns we have, and then starts sorting them using<code class="language-plaintext highlighter-rouge"> order by</code>. And as soon as it sorts all the columns in our table, ie in our query results, it simply takes the first 3 columns from this temporary table and returns them to the client, ie it does not return all the remaining queries.</p>
+
+<p>If we take another example, we will simply output 10 users without sorting. In this case, the database begins to look at all the data stored in the <code class="language-plaintext highlighter-rouge">user</code> table, but begins to collect results until it rests on our limit, or until the data in the table runs out. This is very useful when we are familiar with a database and we need to review some information to roughly understand what data we have stored.</p>
+
+<p>Also keep in mind that there are two modes to the limit. In the second mode, we can enter two numbers. That is, if we enter a limit of 10, 5, we will skip the first ten results and output five.</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/SQL-for-programmer-part2/" data-toggle="tooltip" data-placement="top" title="Databases for programmers - Part 2🗂️">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/war-in-Ukraine/" data-toggle="tooltip" data-placement="top" title="The war in Ukraine">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+				<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Databases for programmers - Part 3 🗂️ | Soloviov Blog🇺🇦</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Databases for programmers - Part 3 🗂️" />
+<meta name="author" content="Soloviov Ivan" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Combining selection and sorting and constraints of results" />
+<meta property="og:description" content="Combining selection and sorting and constraints of results" />
+<link rel="canonical" href="https://www.isoloviov.com/for-the-programmer-part3/" />
+<meta property="og:url" content="https://www.isoloviov.com/for-the-programmer-part3/" />
+<meta property="og:site_name" content="Soloviov Blog🇺🇦" />
+<meta property="og:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-20T12:10:39+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="twitter:title" content="Databases for programmers - Part 3 🗂️" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Soloviov Ivan"},"dateModified":"2021-12-20T12:10:39+00:00","datePublished":"2021-12-20T12:10:39+00:00","description":"Combining selection and sorting and constraints of results","headline":"Databases for programmers - Part 3 🗂️","image":"https://www.isoloviov.com/img/posts/Database3/DB.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.isoloviov.com/for-the-programmer-part3/"},"url":"https://www.isoloviov.com/for-the-programmer-part3/"}</script>
+<!-- End Jekyll SEO tag -->
+
+				<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://soloviov-blog.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<style>
+	form.example{
+		text-align: center;
+	}
+	form.example input[type=text] {
+		padding: 5px;
+		font-size: 17px;
+		border: 1px solid grey;
+		float: center;
+		width: 50%;
+		background: white;
+		margin-bottom: 30px;
+	}
+	
+	form.example button {
+		width: 20%;
+		padding: 10px;
+		background: #2196F3;
+		color: white;
+		font-size: 17px;
+		border: 1px solid grey;
+		border-left: none;
+		cursor: pointer;
+	}
+	
+	form.example button:hover {
+		background: #0b7dda;
+	}
+	
+	form.example::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+	@media only screen and (max-width: 400px){
+		form.example input[type=text]{
+			width:100%;
+		
+		}
+	} 
+	</style>
+
+
+<div itemscope itemtype="https://schema.org/WebSite">
+<div class="search">
+	<form method="get" class="example" action="https://www.google.com/search"
+		itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+			<input type="hidden" name="sitesearch" value="isoloviov.com" />
+			<input type="text" name="q" maxlength="255" placeholder="Search with Google" />
+		</div>
+	</form>
+</div>
+
+
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:vany.soloviov@gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/Soloviov.IA">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/ivan-soloviov-62403b193">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/WarmingZ">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/warmiddle/">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+					
+          <li class="list-inline-item">
+            <a href="https://www.isoloviov.com/feed.xml">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i style="color:orange;" class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+					
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Soloviov Ivan 2023</p>
+      </div>
+    </div>
+  </div>
+	<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Databases for programmers - Part 3 🗂️ | Soloviov Blog🇺🇦</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Databases for programmers - Part 3 🗂️" />
+<meta name="author" content="Soloviov Ivan" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Combining selection and sorting and constraints of results" />
+<meta property="og:description" content="Combining selection and sorting and constraints of results" />
+<link rel="canonical" href="https://www.isoloviov.com/for-the-programmer-part3/" />
+<meta property="og:url" content="https://www.isoloviov.com/for-the-programmer-part3/" />
+<meta property="og:site_name" content="Soloviov Blog🇺🇦" />
+<meta property="og:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-20T12:10:39+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="twitter:title" content="Databases for programmers - Part 3 🗂️" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Soloviov Ivan"},"dateModified":"2021-12-20T12:10:39+00:00","datePublished":"2021-12-20T12:10:39+00:00","description":"Combining selection and sorting and constraints of results","headline":"Databases for programmers - Part 3 🗂️","image":"https://www.isoloviov.com/img/posts/Database3/DB.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.isoloviov.com/for-the-programmer-part3/"},"url":"https://www.isoloviov.com/for-the-programmer-part3/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WZF1BC3LQD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WZF1BC3LQD');
+</script>
+
+	<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Databases for programmers - Part 3 🗂️ | Soloviov Blog🇺🇦</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Databases for programmers - Part 3 🗂️" />
+<meta name="author" content="Soloviov Ivan" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Combining selection and sorting and constraints of results" />
+<meta property="og:description" content="Combining selection and sorting and constraints of results" />
+<link rel="canonical" href="https://www.isoloviov.com/for-the-programmer-part3/" />
+<meta property="og:url" content="https://www.isoloviov.com/for-the-programmer-part3/" />
+<meta property="og:site_name" content="Soloviov Blog🇺🇦" />
+<meta property="og:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-20T12:10:39+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.isoloviov.com/img/posts/Database3/DB.png" />
+<meta property="twitter:title" content="Databases for programmers - Part 3 🗂️" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Soloviov Ivan"},"dateModified":"2021-12-20T12:10:39+00:00","datePublished":"2021-12-20T12:10:39+00:00","description":"Combining selection and sorting and constraints of results","headline":"Databases for programmers - Part 3 🗂️","image":"https://www.isoloviov.com/img/posts/Database3/DB.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.isoloviov.com/for-the-programmer-part3/"},"url":"https://www.isoloviov.com/for-the-programmer-part3/"}</script>
+<!-- End Jekyll SEO tag -->
+
+	<script id="dsq-count-scr" src="//soloviov-blog.disqus.com/count.js" async></script> 
+	
+</body>
+
+</html>
